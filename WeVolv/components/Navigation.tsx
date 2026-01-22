@@ -5,10 +5,17 @@ import { useState } from "react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCoachingOpen, setIsCoachingOpen] = useState(false);
+
+  // Coaching dropdown items
+  const coachingItems = [
+    { href: "/consultations", label: "Consultations" },
+    { href: "/programs", label: "Programs" },
+    { href: "/membership", label: "Memberships" },
+  ];
 
   // Left navigation links
   const leftLinks = [
-    { href: "/consultations", label: "Coaching" },
     { href: "/resources", label: "Resources" },
     { href: "#", label: "Events" },
   ];
@@ -23,13 +30,13 @@ export default function Navigation() {
   // All links for mobile menu
   const allLinks = [
     { href: "/", label: "Home" },
+    ...coachingItems,
     ...leftLinks,
     { href: "/weight-management", label: "Weight Management" },
     { href: "/fitness", label: "Fitness" },
     { href: "/nutrition", label: "Nutrition" },
     { href: "/herbalife", label: "Herbalife" },
     { href: "/lifewave", label: "Lifewave" },
-    { href: "/membership", label: "Membership" },
     { href: "/programs-faq", label: "Programs & FAQ" },
     ...rightLinks,
   ];
@@ -42,13 +49,40 @@ export default function Navigation() {
         position: 'sticky',
         top: 0,
         zIndex: 100,
+        fontFamily: 'var(--font-inter), Inter, sans-serif',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center h-20 relative">
           {/* Left Navigation Links */}
-          <div className="flex gap-8 flex-1 justify-start">
+          <div className="flex gap-8 flex-1 justify-start items-center">
+            {/* Coaching Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsCoachingOpen(true)}
+              onMouseLeave={() => setIsCoachingOpen(false)}
+            >
+              <button className="text-[11px] font-semibold uppercase tracking-[0.25em] hover:opacity-60 transition-opacity py-2 px-2">
+                Coaching
+              </button>
+              {isCoachingOpen && (
+                <div className="absolute top-full left-0 pt-2 -ml-4 pl-4 pr-8">
+                  <div className="w-48 bg-white shadow-lg border border-gray-200 rounded-md py-2">
+                    {coachingItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] hover:bg-gray-100 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
             {leftLinks.map((link) => (
               <Link
                 key={link.href}

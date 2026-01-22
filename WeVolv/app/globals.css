@@ -12,14 +12,17 @@
   --footer-text: #2c2c2c;
   
   /* Typography */
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Montserrat', sans-serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-light);
-  font-family: var(--font-sans);
+  font-family: var(--font-montserrat);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -39,11 +42,12 @@ main {
 
 /* Typography Classes */
 .serif-text {
-  font-family: var(--font-serif);
+  font-family: var(--font-montserrat);
+  font-weight: 600;
 }
 
 .sans-text {
-  font-family: var(--font-sans);
+  font-family: var(--font-montserrat);
 }
 
 /* Custom Button Styles */
@@ -100,7 +104,7 @@ main {
 }
 
 .hero-section h3 {
-  font-family: var(--font-sans);
+  font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 400;
   color: var(--text-muted);
@@ -111,11 +115,11 @@ main {
 }
 
 .hero-section h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-montserrat);
   font-size: 3.5rem;
   line-height: 1.2;
   margin-bottom: 40px;
-  font-weight: 400;
+  font-weight: 600;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -171,11 +175,11 @@ main {
 }
 
 .grid-card h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-montserrat);
   font-size: 2.5rem;
   margin-bottom: 20px;
   line-height: 1.1;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .grid-card h2 .accent {
@@ -184,7 +188,7 @@ main {
 }
 
 .grid-card h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 400;
   color: var(--text-muted);

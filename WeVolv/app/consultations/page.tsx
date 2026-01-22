@@ -34,7 +34,7 @@ export default function Consultations() {
       <main className="w-full max-w-[95vw] mx-auto px-5 pt-3 pb-10">
         
         {/* Weight Management Card */}
-        <section className="consultation-card bg-[#f5f7f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[400px] p-6 md:p-10 gap-8 transition-all hover:shadow-lg hover:bg-white">
+        <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white">
           <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
             <Image 
               src="/images/Photos by Placement/Consultations Page/Consult 1.jpg" 
@@ -61,7 +61,7 @@ export default function Consultations() {
         </section>
 
         {/* Fitness Card (Reversed) */}
-        <section className="consultation-card bg-[#f5f7f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[400px] p-6 md:p-10 gap-8 transition-all hover:shadow-lg hover:bg-white">
+        <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white">
           <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
             <Image 
               src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
@@ -88,7 +88,7 @@ export default function Consultations() {
         </section>
 
         {/* Nutrition Card */}
-        <section className="consultation-card bg-[#f5f7f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[400px] p-6 md:p-10 gap-8 transition-all hover:shadow-lg hover:bg-white">
+        <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white">
           <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
             <Image 
               src="/images/Photos by Placement/Consultations Page/Consult 3.jpg" 

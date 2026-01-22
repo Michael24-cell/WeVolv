@@ -10,7 +10,7 @@ export default function About() {
         {/* Header Card */}
         <div className="bg-white rounded-[8px] shadow-sm p-[60px_40px]">
           <header className="text-center max-w-[700px] mx-auto">
-            <h1 className="font-['Playfair_Display',serif] text-[3rem] font-medium mb-6 leading-tight tracking-tight text-black">
+            <h1 className="text-[3rem] font-semibold mb-6 leading-tight tracking-tight text-black">
               About WeVolv Wellness
             </h1>
             <h3 className="text-[1.1rem] text-[#555] leading-relaxed font-normal">

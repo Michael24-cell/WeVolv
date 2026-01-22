@@ -16,7 +16,7 @@ export default function Herbalife() {
           />
           {/* Text Overlay */}
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center p-5">
-            <h2 className="text-white text-[3rem] md:text-[4rem] font-['Georgia',serif] text-center drop-shadow-lg">
+            <h2 className="text-white text-[3rem] md:text-[4rem] text-center drop-shadow-lg font-semibold">
               Fuel Your Body with Herbalife
             </h2>
           </div>
@@ -36,7 +36,7 @@ export default function Herbalife() {
 
             {/* Content Card - Overlaps on desktop */}
             <div className="col-span-12 md:col-start-5 md:col-span-8 bg-white p-8 md:p-[60px] z-[2] relative min-h-[400px] flex flex-col justify-center -mt-10 md:-mt-48">
-              <h3 className="font-['Georgia',serif] text-[2.5rem] text-[#2c3e50] mb-5 font-normal">
+              <h3 className="text-[2.5rem] text-[#2c3e50] mb-5 font-semibold">
                 Nutrition Philosophy
               </h3>
               <h5 className="text-[#666] text-[0.95rem] mb-5 font-normal leading-relaxed">
@@ -60,7 +60,7 @@ export default function Herbalife() {
 
             {/* Content Card - Overlaps on desktop */}
             <div className="col-span-12 md:col-start-5 md:col-span-8 bg-white p-8 md:p-[60px] z-[2] relative min-h-[400px] flex flex-col justify-center -mt-10 md:-mt-80">
-              <h3 className="font-['Georgia',serif] text-[2.5rem] text-[#2c3e50] mb-5 font-normal">
+              <h3 className="text-[2.5rem] text-[#2c3e50] mb-5 font-semibold">
                 Science & Quality
               </h3>
               <h5 className="text-[#666] text-[0.95rem] mb-5 font-normal leading-relaxed">
@@ -73,7 +73,7 @@ export default function Herbalife() {
         {/* Stats Section */}
         <div className="max-w-[700px] mx-auto rounded-md overflow-hidden shadow-lg mt-20 mb-10">
           <div className="bg-[#2e522e] text-white p-8 md:p-10">
-            <div className="font-['Georgia',serif] text-[3.5rem] md:text-[4.5rem] leading-none mb-6 text-center">
+            <div className="text-[3.5rem] md:text-[4.5rem] leading-none mb-6 text-center font-bold">
               Herbalife is the #1
             </div>
             <div className="h-[2px] bg-white w-full mb-10"></div>
