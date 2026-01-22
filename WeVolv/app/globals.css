@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* WeVolv Color Scheme */
+  --bg-color: #384638;
+  --text-light: #f4f8f4;
+  --text-muted: #d1dcd3;
+  --accent-green: #9abd97;
+  --footer-bg: #f9f9f9;
+  --footer-text: #2c2c2c;
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-light);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Typography Classes */
+.serif-text {
+  font-family: var(--font-serif);
+}
+
+.sans-text {
+  font-family: var(--font-sans);
+}
+
+/* Custom Button Styles */
+.btn-custom {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-white {
+  background-color: white;
+  color: var(--bg-color);
+  border: 1px solid white;
+}
+
+.btn-white:hover {
+  background-color: #f8f8f8;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.btn-dark {
+  background-color: #2a332a;
+  color: white;
+  border: 1px solid #2a332a;
+}
+
+.btn-dark:hover {
+  background-color: #1f261f;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section h3 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-section h1 {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-image-container {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 500px;
+}
+
+.hero-img {
+  max-height: 100%;
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-buttons {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Grid Cards */
+.grid-card {
+  background-color: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
+              0 0 12px rgba(0, 0, 0, 0.08),
+              0 0 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.grid-card:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12),
+              0 0 20px rgba(0, 0, 0, 0.12),
+              0 0 35px rgba(154, 189, 151, 0.15);
+}
+
+.grid-card h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.grid-card h2 .accent {
+  color: var(--accent-green);
+  font-style: italic;
+}
+
+.grid-card h4 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  max-width: 350px;
+}
+
+.grid-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  max-width: 350px;
+}
+
+.card-img-placeholder {
+  width: 100%;
+  height: auto;
+  background-color: #4a5a4a;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+  overflow: hidden;
+}
+
+.card-img-placeholder img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.bmi-link {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bmi-link:hover {
+  border-bottom-color: rgba(255,255,255,0.6);
+}
+
+/* Consultation Cards */
+.consultation-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.consultation-card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Hero Image Section */
+.hero-image-wrapper {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-full {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Enhanced Card Shadows - Applied globally to Tailwind shadow classes */
+.shadow-lg {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05),
+              0 0 15px rgba(0, 0, 0, 0.08),
+              0 0 25px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s ease;
+}
+
+.shadow-lg:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08),
+              0 0 25px rgba(0, 0, 0, 0.12),
+              0 0 40px rgba(99, 102, 241, 0.1) !important;
+}
+
+.shadow-md {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04),
+              0 0 12px rgba(0, 0, 0, 0.06),
+              0 0 20px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s ease;
+}
+
+.shadow-md:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
+              0 0 20px rgba(0, 0, 0, 0.1),
+              0 0 35px rgba(99, 102, 241, 0.08) !important;
+}
+
+/* Gradient Card Enhancements */
+.bg-gradient-to-br {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05),
+              0 0 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.bg-gradient-to-br:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08),
+              0 0 20px rgba(0, 0, 0, 0.12),
+              0 0 35px rgba(0, 0, 0, 0.08);
+}
+
+/* FAQ Page Styles */
+.faq-page-wrapper {
+  background-color: #e3e6e8;
+  min-height: 100vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h3 {
+    font-size: 0.9rem;
+    max-width: 400px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    max-width: 500px;
+  }
+  
+  .hero-image-full {
+    border-radius: 12px;
+  }
+  
+  .hero-buttons {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+  
+  .hero-image-container {
+    height: auto;
+  }
+  
+  .grid-card h2 {
+    font-size: 2rem;
+  }
+}
