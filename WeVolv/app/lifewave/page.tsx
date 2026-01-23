@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export default function LifeWave() {
-  const [selectedPatch, setSelectedPatch] = useState('x39');
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
 
   return (
     <div className="bg-[#f4f6f8] min-h-screen py-10 px-5">
@@ -12,11 +12,26 @@ export default function LifeWave() {
         {/* Hero Section */}
         <section className="bg-white py-16 px-10 flex flex-col md:flex-row gap-10 items-center mb-8 rounded-lg max-w-[1000px] mx-auto">
           <div className="flex-[2.5] relative aspect-video rounded overflow-hidden bg-black">
+            {/* Loading Spinner */}
+            {isVideoLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black z-10">
+                <div style={{
+                  width: '50px',
+                  height: '50px',
+                  border: '4px solid rgba(255, 255, 255, 0.3)',
+                  borderTop: '4px solid #fff',
+                  borderRadius: '50%',
+                  animation: 'spin 1s linear infinite'
+                }} />
+              </div>
+            )}
+            
             <iframe 
               src="https://www.youtube.com/embed/SXMvqTQ4J1Y?start=90&autoplay=1&mute=1&loop=1&playlist=SXMvqTQ4J1Y" 
               title="LifeWave - Be the Light"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              onLoad={() => setIsVideoLoading(false)}
               className="w-full h-full absolute inset-0"
             />
           </div>
@@ -103,45 +118,19 @@ export default function LifeWave() {
         </section>
 
         {/* Patch Guide */}
-        <section className="flex flex-col md:flex-row gap-4 mb-20">
-          {/* Placement Panel */}
-          <div className="flex-1 bg-white p-8 rounded-lg shadow-sm flex flex-col">
-            <div className="flex flex-col gap-2 items-center w-full mb-4">
-              <h3 className="text-[1.5rem] font-light text-[#194D8D] mb-0 w-full text-center">
-                Patch Uses & Placement Guide
-              </h3>
-              <h5 className="text-[0.85rem] text-[#555] font-normal w-full text-center mb-2">
-                Click the blue arrow below and select the patch you want to learn about.
-              </h5>
-              <div className="flex items-center justify-center gap-2 w-full">
-                <span className="text-[0.75rem] text-[#333] font-bold">Tell me about the</span>
-                <select 
-                  value={selectedPatch}
-                  onChange={(e) => setSelectedPatch(e.target.value)}
-                  className="px-2 py-1.5 text-[0.75rem] border border-[#ccc] rounded bg-white text-[#333] font-bold cursor-pointer"
-                >
-                  <option value="x39">LifeWave X39® Patches</option>
-                </select>
-              </div>
-            </div>
-            <div className="w-full overflow-hidden rounded-lg shadow-sm" style={{ height: '320px' }}>
-              <img 
-                src="/images/Photos by Placement/Lifewave Page/LW 4.png" 
-                alt="Placement Guide"
-                className="w-full h-auto"
-                style={{ marginTop: '-100px', transform: 'scale(1.2)' }}
-              />
-            </div>
-          </div>
-
-          {/* Product Panel */}
-          <div className="flex-1 bg-white rounded-lg shadow-sm flex items-start justify-center p-8 pt-9 overflow-hidden">
-            <img 
-              src="/images/Photos by Placement/Lifewave Page/LW 3.png" 
-              alt="X39 Product"
-              className="w-full h-auto"
-              style={{ transform: 'scale(1.14) translate(9px, -1px)' }}
-            />
+        <section id="patch-placement-guide" className="mb-20">
+          <div className="bg-[#E5EDF2] p-12 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
+            <h3 className="text-[2.2rem] font-light text-black mb-4">
+              Patches and Placement Guide
+            </h3>
+            <a 
+              href="https://lifewave.com/wevolv/home/patch-placement-guide"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[1rem] text-black hover:text-[#194D8D] underline font-normal"
+            >
+              https://lifewave.com/wevolv/home/patch-placement-guide
+            </a>
           </div>
         </section>
 

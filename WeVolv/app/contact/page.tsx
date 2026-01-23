@@ -64,16 +64,16 @@ export default function Contact() {
         }
 
         .sub-header {
-            font-size: 0.75rem;
+            font-size: 1rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 15px;
             font-weight: 600;
         }
 
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 2.8rem;
+        h3 {
+            font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+            font-size: 3.4rem;
             font-weight: 400;
             margin-bottom: 25px;
             color: #222;
@@ -84,8 +84,8 @@ export default function Contact() {
         }
 
         .intro-text {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 1rem;
+            font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+            font-size: 1.25rem;
             line-height: 1.6;
             margin-bottom: 30px;
             color: #333;
@@ -95,14 +95,14 @@ export default function Contact() {
         }
 
         .contact-details {
-            font-size: 0.85rem;
+            font-size: 1.15rem;
             line-height: 1.8;
             color: #333;
         }
 
         .contact-details strong {
             display: block;
-            font-size: 0.75rem;
+            font-size: 1rem;
             letter-spacing: 1px;
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -129,7 +129,7 @@ export default function Contact() {
 
         label {
             display: block;
-            font-size: 0.75rem;
+            font-size: 0.95rem;
             font-weight: 700;
             text-transform: uppercase;
             color: #555;
@@ -149,7 +149,7 @@ export default function Contact() {
             padding: 12px 15px;
             border: 1px solid #dcdcdc;
             border-radius: 4px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-family: inherit;
             color: #555;
             background-color: #fafafa;
@@ -170,7 +170,7 @@ export default function Contact() {
             color: white;
             border: none;
             padding: 12px 24px;
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 700;
             text-transform: uppercase;
             border-radius: 4px;
@@ -195,7 +195,7 @@ export default function Contact() {
       <div className="contact-page">
         <div className="header-section">
           <div className="sub-header">Contact Us</div>
-          <h1>Do you have questions?</h1>
+          <h3>Do you have questions?</h3>
           
           <h5 className="intro-text">
             Have any questions or ready to begin? Our wellness team is here to support you. Reach out and we'll respond shortly.
@@ -203,11 +203,11 @@ export default function Contact() {
 
           <div className="contact-details">
             <h5>Customer Service Hours</h5>
-            <p>Monday – Friday 9am – 6pm (PST)</p>
+            <p>Monday - Friday 9am - 6pm (PST)</p>
             <br />
             <p>Email: <a href="mailto:connect@wevolv.us">connect@wevolv.us</a></p>
             <br />
-            <p>Text: <a href="tel:+17025278520">(702) 527 – 8520</a></p>
+            <p>Text: <a href="tel:+17025278520">(702) 527-8520</a></p>
             <br />
             <p>Schedule a Call <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
             <br />
@@ -215,6 +215,7 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* Contact form hidden
         <div className="form-wrapper">
           <div className="form-container">
           <form onSubmit={handleSubmit}>
@@ -286,6 +287,7 @@ export default function Contact() {
           </form>
           </div>
         </div>
+        */}
       </div>
     </>
   );

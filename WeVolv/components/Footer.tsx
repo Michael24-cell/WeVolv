@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,7 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 md:items-stretch" style={{ minHeight: '300px' }}>
           {/* Company Info */}
           <div className="flex flex-col py-10">
-            <span className="text-2xl tracking-wider block mb-4 font-bold" style={{ fontFamily: 'var(--font-playfair), Playfair Display, serif' }}>WEVOLV</span>
+            <div className="mb-4">
+              <Image
+                src="/images/WeVolv-H-500x137-T.webp"
+                alt="WeVolv Logo"
+                width={180}
+                height={90}
+                className="object-contain"
+              />
+            </div>
             <p style={{ fontSize: '0.7rem', color: '#777', lineHeight: '1.5', maxWidth: '300px' }}>
               WeVolv Wellness provides wellness and lifestyle support and does not replace medical care. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment—especially if you have a medical condition, take medications, or are pregnant/nursing.
             </p>
@@ -56,8 +65,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-xs uppercase tracking-wide font-medium">
-                <Link href="/programs-faq" className="hover:opacity-70 transition-opacity">
-                  Programs & FAQ
+                <Link href="/programs" className="hover:opacity-70 transition-opacity">
+                  Programs
                 </Link>
               </li>
               <li className="text-xs uppercase tracking-wide font-medium">
@@ -83,18 +92,13 @@ export default function Footer() {
             <h5 className="text-2xl mb-4 font-semibold" style={{ fontFamily: 'var(--font-playfair), Playfair Display, serif' }}>Information</h5>
             <ul className="space-y-3">
               <li className="text-xs uppercase tracking-wide font-medium">
-                <Link href="/programs-faq" className="hover:opacity-70 transition-opacity">
+                <Link href="/faq" className="hover:opacity-70 transition-opacity">
                   FAQ
                 </Link>
               </li>
               <li className="text-xs uppercase tracking-wide font-medium">
                 <Link href="/contact" className="hover:opacity-70 transition-opacity">
                   Contact
-                </Link>
-              </li>
-              <li className="text-xs uppercase tracking-wide font-medium">
-                <Link href="/about" className="hover:opacity-70 transition-opacity">
-                  Careers
                 </Link>
               </li>
             </ul>

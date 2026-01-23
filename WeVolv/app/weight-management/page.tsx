@@ -18,30 +18,30 @@ export default function WeightManagement() {
 
         <div className="w-full max-w-[750px] mx-auto flex flex-col gap-[2px] relative">
           {/* Card 1 - Herbalife */}
-          <div className="relative h-[185px] rounded-[12px] overflow-hidden">
+          <Link href="/herbalife" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
             <img 
               src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
               alt="Herbalife" 
               className="w-full absolute top-0 left-0"
               style={{ height: '559px', objectFit: 'cover' }}
             />
-            <div className="absolute inset-0 bg-white/20 flex items-center p-[20px_40px] z-10">
+            <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
               <h3 className="text-[2rem] text-white font-semibold">Herbalife</h3>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2 - Lifewave */}
-          <div className="relative h-[185px] rounded-[12px] overflow-hidden">
+          <Link href="/lifewave" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
             <img 
               src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
               alt="Lifewave" 
               className="w-full absolute left-0"
               style={{ height: '559px', objectFit: 'cover', top: '-187px' }}
             />
-            <div className="absolute inset-0 bg-white/20 flex items-center p-[20px_40px] z-10">
+            <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
               <h3 className="text-[2rem] text-white font-semibold">Lifewave</h3>
             </div>
-          </div>
+          </Link>
 
           {/* Card 3 - Dissolvable Strips */}
           <div className="relative h-[185px] rounded-[12px] overflow-hidden">

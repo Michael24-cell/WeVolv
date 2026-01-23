@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navigation() {
@@ -17,14 +18,14 @@ export default function Navigation() {
   // Left navigation links
   const leftLinks = [
     { href: "/resources", label: "Resources" },
-    { href: "#", label: "Events" },
+    { href: "/events", label: "Events" },
   ];
 
   // Right navigation links
   const rightLinks = [
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
-    { href: "#", label: "Portal" },
+    { href: "/portal", label: "Portal" },
   ];
 
   // All links for mobile menu
@@ -54,16 +55,16 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center h-20 relative">
+        <div className="hidden lg:flex items-center h-28 relative">
           {/* Left Navigation Links */}
-          <div className="flex gap-8 flex-1 justify-start items-center">
+          <div className="flex gap-10 flex-1 justify-start items-center">
             {/* Coaching Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setIsCoachingOpen(true)}
               onMouseLeave={() => setIsCoachingOpen(false)}
             >
-              <button className="text-[11px] font-semibold uppercase tracking-[0.25em] hover:opacity-60 transition-opacity py-2 px-2">
+              <button className="text-[13px] font-semibold uppercase tracking-[0.2em] hover:opacity-60 transition-opacity py-2 px-2">
                 Coaching
               </button>
               {isCoachingOpen && (
@@ -73,7 +74,7 @@ export default function Navigation() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] hover:bg-gray-100 transition-colors"
+                        className="block px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] hover:bg-gray-100 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -87,7 +88,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[11px] font-semibold uppercase tracking-[0.25em] hover:opacity-60 transition-opacity"
+                className="text-[13px] font-semibold uppercase tracking-[0.2em] hover:opacity-60 transition-opacity"
               >
                 {link.label}
               </Link>
@@ -97,18 +98,25 @@ export default function Navigation() {
           {/* Centered Logo */}
           <Link
             href="/"
-            className="text-2xl font-light tracking-[0.4em] uppercase absolute left-1/2 transform -translate-x-1/2"
+            className="absolute left-1/2 transform -translate-x-1/2 flex items-center"
           >
-            WEVOLV
+            <Image
+              src="/images/WeVolv-H-500x137-T.webp"
+              alt="WeVolv Logo"
+              width={150}
+              height={75}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           {/* Right Navigation Links */}
-          <div className="flex gap-8 flex-1 justify-end">
+          <div className="flex gap-10 flex-1 justify-end">
             {rightLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[11px] font-semibold uppercase tracking-[0.25em] hover:opacity-60 transition-opacity"
+                className="text-[13px] font-semibold uppercase tracking-[0.2em] hover:opacity-60 transition-opacity"
               >
                 {link.label}
               </Link>
@@ -117,13 +125,20 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="lg:hidden flex justify-between items-center h-16">
+        <div className="lg:hidden flex justify-between items-center h-20">
           {/* Mobile Logo */}
           <Link
             href="/"
-            className="text-lg font-semibold tracking-[0.15em] uppercase"
+            className="flex items-center"
           >
-            WEVOLV
+            <Image
+              src="/images/WeVolv-H-500x137-T.webp"
+              alt="WeVolv Logo"
+              width={120}
+              height={60}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           {/* Mobile Menu Button */}

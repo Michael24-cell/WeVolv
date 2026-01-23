@@ -1,0 +1,8 @@
+# Large media files
+*.mov
+*.mp4
+*.zip
+
+# Video files in specific directories
+public/images/**/*.mov
+public/images/**/*.mp4

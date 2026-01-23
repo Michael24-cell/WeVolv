@@ -130,24 +130,22 @@ export default function Programs() {
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
               <h3 className="serif-text text-3xl md:text-4xl mb-5 text-[#222] leading-tight">What you can expect</h3>
-              <ul className="space-y-3 text-center max-w-[550px] list-none">
-                <li className="text-base font-normal text-[#666] leading-relaxed flex items-center justify-center">
-                  <span className="text-[#7a8ba0] font-bold mr-3 text-xl">✓</span>
-                  <span>A non-judgmental space to be honest about what's really going on</span>
-                </li>
-                <li className="text-base font-normal text-[#666] leading-relaxed flex items-center justify-center">
-                  <span className="text-[#7a8ba0] font-bold mr-3 text-xl">✓</span>
-                  <span>Coaching that honors both your emotional landscape and your desire for progress</span>
-                </li>
-                <li className="text-base font-normal text-[#666] leading-relaxed flex items-center justify-center">
-                  <span className="text-[#7a8ba0] font-bold mr-3 text-xl">✓</span>
-                  <span>A blend of deep internal work and practical next steps</span>
-                </li>
-                <li className="text-base font-normal text-[#666] leading-relaxed flex items-center justify-center">
-                  <span className="text-[#7a8ba0] font-bold mr-3 text-xl">✓</span>
-                  <span>Support that's tailored to your real life—not a one-size-fits-all plan</span>
-                </li>
-              </ul>
+              <div className="w-full flex justify-center">
+                <ul className="space-y-3 text-left max-w-[550px] list-none">
+                  <li className="text-base font-normal text-[#666] leading-relaxed">
+                    A non-judgmental space to be honest about what's really going on
+                  </li>
+                  <li className="text-base font-normal text-[#666] leading-relaxed">
+                    Coaching that honors both your emotional landscape and your desire for progress
+                  </li>
+                  <li className="text-base font-normal text-[#666] leading-relaxed">
+                    A blend of deep internal work and practical next steps
+                  </li>
+                  <li className="text-base font-normal text-[#666] leading-relaxed">
+                    Support that's tailored to your real life—not a one-size-fits-all plan
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         </div>

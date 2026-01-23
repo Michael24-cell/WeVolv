@@ -1,14 +1,253 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+
+// Flip Card Component
+interface FlipCardProps {
+  image: string;
+  imageAlt: string;
+  title: string;
+  content: React.ReactNode;
+  imagePosition?: string;
+  height?: string;
+  compact?: boolean;
+}
+
+function FlipCard({ image, imageAlt, title, content, imagePosition = "center", height = "h-[450px] sm:h-[500px]", compact = false }: FlipCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+    // Auto-flip on hover for desktop
+    if (window.matchMedia('(hover: hover)').matches) {
+      setIsFlipped(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    // Auto flip back on mouse leave for desktop
+    if (window.matchMedia('(hover: hover)').matches) {
+      setIsFlipped(false);
+    }
+  };
+
+  return (
+    <div 
+      className={`flip-card-container ${height} group`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{ perspective: '1000px' }}
+    >
+      <div 
+        className="flip-card-inner relative w-full h-full"
+        style={{
+          transformStyle: 'preserve-3d',
+          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          transition: 'transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)',
+          willChange: 'transform'
+        }}
+      >
+        {/* Front of card - Image */}
+        <div 
+          className="flip-card-face absolute w-full h-full rounded-[24px] overflow-hidden shadow-sm"
+          style={{ 
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transform: 'translateZ(0)'
+          }}
+        >
+          <img 
+            src={image}
+            alt={imageAlt}
+            className={`w-full h-full object-cover ${imagePosition}`}
+          />
+          {/* Title overlay with localized shadow */}
+          <div className="absolute top-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-b from-black/65 via-black/30 to-transparent pb-20">
+            <h5 className="text-white text-[1.5rem] sm:text-[1.8rem] font-semibold leading-tight drop-shadow-lg">
+              {title}
+            </h5>
+          </div>
+        </div>
+
+        {/* Back of card - Text */}
+        <div 
+          className={`flip-card-face absolute w-full h-full bg-white rounded-[24px] overflow-hidden shadow-lg flex flex-col justify-center ${
+            compact ? 'p-4 sm:p-5' : 'p-6 sm:p-7'
+          }`}
+          style={{ 
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg) translateZ(0)'
+          }}
+        >
+          <div className="overflow-hidden">
+            <h5 className={`font-semibold leading-tight text-black ${
+              compact ? 'text-[0.95rem] sm:text-[1rem] mb-1.5 sm:mb-2' : 'text-[1.2rem] sm:text-[1.3rem] mb-2 sm:mb-3'
+            }`}>
+              {title}
+            </h5>
+            <div className={`text-[#444] ${
+              compact ? 'text-[0.7rem] sm:text-[0.75rem] leading-snug' : 'text-[0.8rem] sm:text-[0.85rem] leading-relaxed'
+            }`}>
+              {content}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .flip-card-container:focus {
+          outline: 2px solid #4a503d;
+          outline-offset: 4px;
+          border-radius: 24px;
+        }
+        .flip-card-container:focus-visible {
+          outline: 3px solid #4a503d;
+          outline-offset: 4px;
+        }
+        @media (hover: none) {
+          .flip-card-container {
+            -webkit-tap-highlight-color: transparent;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
 
 export default function About() {
+  // Card data extracted from original sections
+  const cardsData = [
+    {
+      id: 1,
+      image: "/images/Photos by Placement/About Page/About 1.jpg",
+      imageAlt: "Our Approach",
+      imagePosition: "object-center",
+      title: "Our Approach",
+      content: (
+        <>
+          <p className="mb-2 font-medium">
+            Our coaching integrates:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Nutrition and metabolic science</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Habit formation and behavior change</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Mindset work, emotional awareness, and self-compassion</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Practical tools that promote consistency over perfection</span>
+            </li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 2,
+      image: "/images/Photos by Placement/About Page/About 2.jpg",
+      imageAlt: "Our Commitment",
+      imagePosition: "object-center",
+      title: "Our Commitment",
+      content: (
+        <>
+          <p className="mb-2">
+            WeVolv is committed to providing <span className="text-black font-semibold underline decoration-[#4a503d]/30 underline-offset-4">compassionate, inclusive, and evidence-based</span> coaching.
+          </p>
+          <p className="mb-2">
+            We meet people where they are, honor their lived experience, and support them in building skills they can carry forward long after coaching ends.
+          </p>
+          <p className="font-medium text-black">
+            We help you feel more confident, capable, and grounded in your health, from the inside out.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 3,
+      image: "/images/Photos by Placement/About Page/About 3.jpg",
+      imageAlt: "Our Values",
+      imagePosition: "object-center",
+      title: "Our Values",
+      content: (
+        <>
+          <ul className="space-y-1">
+            <li className="flex items-start gap-2 italic">
+              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Health is not one-size-fits-all</span>
+            </li>
+            <li className="flex items-start gap-2 italic">
+              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Shame and restriction do not create lasting change</span>
+            </li>
+            <li className="flex items-start gap-2 italic">
+              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Education empowers better decisions</span>
+            </li>
+            <li className="flex items-start gap-2 italic">
+              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Support and community accelerate growth</span>
+            </li>
+            <li className="flex items-start gap-2 italic">
+              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span>Progress comes from consistency, not perfection</span>
+            </li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 4,
+      image: "/images/Photos by Placement/About Page/About 4.jpg",
+      imageAlt: "Meet Your Coach",
+      imagePosition: "object-center",
+      title: "Meet Your Coach",
+      content: (
+        <>
+          <p className="mb-2">
+            I believe that good health isn't just about diet or exercise; it's about understanding how every part of your day influences your well-being.
+          </p>
+          <p className="mb-2">
+            That's why I take the time to learn about your unique routines, habits, and environment.
+          </p>
+          <p className="font-medium text-black">
+            By looking at the full picture, I can help you make small, sustainable changes that lead to meaningful results.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 5,
+      image: "/images/Photos by Placement/About Page/About 5.jpg",
+      imageAlt: "Who we Serve",
+      imagePosition: "object-top",
+      title: "Who we Serve",
+      content: (
+        <>
+          <p className="font-medium">
+            We support adults who want a more compassionate and realistic approach to health and weight management.
+          </p>
+        </>
+      )
+    }
+  ];
+
   return (
     <div className="bg-[#eef1f4] min-h-screen py-10 px-5">
-      <div className="max-w-[1000px] mx-auto space-y-6">
+      <div className="max-w-[1000px] mx-auto space-y-10">
         
         {/* Header Card */}
-        <div className="bg-white rounded-[8px] shadow-sm p-[60px_40px]">
+        <div className="bg-white rounded-[24px] shadow-sm p-[60px_40px]">
           <header className="text-center max-w-[700px] mx-auto">
             <h1 className="text-[3rem] font-semibold mb-6 leading-tight tracking-tight text-black">
               About WeVolv Wellness
@@ -19,189 +258,70 @@ export default function About() {
           </header>
         </div>
 
-        {/* Content Card */}
-        <div className="bg-white rounded-[8px] shadow-sm p-[60px_40px]">
-          {/* Bento Grid */}
-          <div className="flex flex-col md:flex-row gap-5 mb-10">
+        {/* Flip Cards Grid - Bento Box Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {/* Card 1 - Top Left */}
+          <FlipCard
+            key={cardsData[0].id}
+            image={cardsData[0].image}
+            imageAlt={cardsData[0].imageAlt}
+            title={cardsData[0].title}
+            content={cardsData[0].content}
+            imagePosition={cardsData[0].imagePosition}
+            height="h-[340px] sm:h-[380px]"
+          />
           
-          {/* Column 1 */}
-          <div className="flex flex-col gap-5 flex-1">
-            <div className="relative h-[400px] rounded-[24px] overflow-hidden bg-[#eee] group">
-              <img 
-                src="/images/Photos by Placement/About Page/About 1.jpg" 
-                alt="Our Approach"
-                className="w-full h-full object-cover object-[30%_center] transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Dark gradient overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-              
-              {/* Text content positioned at the top */}
-              <div className="absolute inset-0 flex flex-col justify-start p-8">
-                <div className="text-white">
-                  <h5 className="text-[1.6rem] font-semibold mb-3 leading-tight">
-                    Our Approach
-                  </h5>
-                  <div className="text-[0.9rem] leading-relaxed opacity-95">
-                    <p className="mb-3 font-medium text-white/90">
-                      Our coaching integrates:
-                    </p>
-                    <ul className="grid grid-cols-1 gap-2">
-                      <li className="flex items-start gap-2">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Nutrition and metabolic science</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Habit formation and behavior change</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Mindset work, emotional awareness, and self-compassion</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Practical tools that promote consistency over perfection</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative h-[380px] rounded-[24px] overflow-hidden bg-[#eee] group">
-              <img 
-                src="/images/Photos by Placement/About Page/About 3.jpg" 
-                alt="Our Values"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Dark gradient overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-              
-              {/* Text content positioned at the top */}
-              <div className="absolute inset-0 flex flex-col justify-start p-8">
-                <div className="text-white">
-                  <h5 className="text-[1.6rem] font-semibold mb-3 leading-tight">
-                    Our Values
-                  </h5>
-                  <div className="text-[0.9rem] leading-relaxed opacity-95">
-                    <ul className="space-y-2 mb-4">
-                      <li className="flex items-start gap-2 italic text-white/90">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Health is not one-size-fits-all</span>
-                      </li>
-                      <li className="flex items-start gap-2 italic text-white/90">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Shame and restriction do not create lasting change</span>
-                      </li>
-                      <li className="flex items-start gap-2 italic text-white/90">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Education empowers better decisions</span>
-                      </li>
-                      <li className="flex items-start gap-2 italic text-white/90">
-                        <span className="text-white/60 mt-1.5 h-1.5 w-1.5 rounded-full bg-white shrink-0"></span>
-                        <span>Support and community accelerate growth</span>
-                      </li>
-                    </ul>
-                    <p className="text-[1rem] font-medium pt-2 border-t border-white/20 text-center">
-                      Progress comes from consistency, not perfection
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative h-[320px] rounded-[24px] overflow-hidden bg-[#eee] group">
-              <img 
-                src="/images/Photos by Placement/About Page/About 5.jpg" 
-                alt="Who we Serve"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Dark gradient overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-              
-              {/* Text content positioned at the top */}
-              <div className="absolute inset-0 flex flex-col justify-start p-8">
-                <div className="text-white">
-                  <h5 className="text-[1.6rem] font-semibold mb-3 leading-tight">
-                    Who we Serve
-                  </h5>
-                  <div className="text-[1rem] leading-relaxed opacity-95 font-medium">
-                    <p>
-                      We support adults who want a more compassionate and realistic approach to health and weight management.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Card 2 - Top Right */}
+          <FlipCard
+            key={cardsData[1].id}
+            image={cardsData[1].image}
+            imageAlt={cardsData[1].imageAlt}
+            title={cardsData[1].title}
+            content={cardsData[1].content}
+            imagePosition={cardsData[1].imagePosition}
+            height="h-[340px] sm:h-[380px]"
+          />
+          
+          {/* Left Column - Cards 3 and 5 Stacked */}
+          <div className="flex flex-col gap-3">
+            {/* Card 3 - Middle Left Top */}
+            <FlipCard
+              key={cardsData[2].id}
+              image={cardsData[2].image}
+              imageAlt={cardsData[2].imageAlt}
+              title={cardsData[2].title}
+              content={cardsData[2].content}
+              imagePosition={cardsData[2].imagePosition}
+              height="h-[218px] sm:h-[244px]"
+              compact={true}
+            />
+            
+            {/* Card 5 - Middle Left Bottom */}
+            <FlipCard
+              key={cardsData[4].id}
+              image={cardsData[4].image}
+              imageAlt={cardsData[4].imageAlt}
+              title={cardsData[4].title}
+              content={cardsData[4].content}
+              imagePosition={cardsData[4].imagePosition}
+              height="h-[218px] sm:h-[244px]"
+              compact={true}
+            />
           </div>
 
-          {/* Column 2 */}
-          <div className="flex flex-col gap-5 flex-1">
-            <div className="relative h-[450px] rounded-[24px] overflow-hidden bg-[#eee] group">
-              <img 
-                src="/images/Photos by Placement/About Page/About 2.jpg" 
-                alt="Our Commitment"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Dark gradient overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-              
-              {/* Text content positioned at the top */}
-              <div className="absolute inset-0 flex flex-col justify-start p-8">
-                <div className="text-white">
-                  <h5 className="text-[1.6rem] font-semibold mb-3 leading-tight">
-                    Our Commitment
-                  </h5>
-                  <div className="text-[0.95rem] leading-relaxed opacity-95 space-y-4">
-                    <p>
-                      WeVolv is committed to providing <span className="text-white font-semibold underline decoration-white/30 underline-offset-4">compassionate, inclusive, and evidence-based</span> coaching.
-                    </p>
-                    <p className="text-white/90">
-                      We meet people where they are, honor their lived experience, and support them in building skills they can carry forward long after coaching ends.
-                    </p>
-                    <p className="text-[1.1rem] font-medium text-white pt-2">
-                      We help you feel more confident, capable, and grounded in your health, from the inside out.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative h-[650px] rounded-[24px] overflow-hidden bg-[#eee] group">
-              <img 
-                src="/images/Photos by Placement/About Page/About 4.jpg" 
-                alt="Meet Your Coach"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Dark gradient overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
-              
-              {/* Text content positioned at the top */}
-              <div className="absolute inset-0 flex flex-col justify-start p-10">
-                <div className="text-white">
-                  <h5 className="text-[1.8rem] font-semibold mb-4 leading-tight">
-                    Meet Your Coach
-                  </h5>
-                  <div className="text-[1rem] leading-relaxed opacity-95 space-y-5">
-                    <p className="first-letter:text-4xl first-letter:font-bold first-letter:mr-2 first-letter:float-left">
-                      I believe that good health isn't just about diet or exercise; it's about understanding how every part of your day influences your well-being.
-                    </p>
-                    <p className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10">
-                      That's why I take the time to learn about your unique routines, habits, and environment.
-                    </p>
-                    <p className="font-medium text-[1.1rem]">
-                      By looking at the full picture, I can help you make small, sustainable changes that lead to meaningful results.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          {/* Card 4 - Middle Right - Full Height */}
+          <FlipCard
+            key={cardsData[3].id}
+            image={cardsData[3].image}
+            imageAlt={cardsData[3].imageAlt}
+            title={cardsData[3].title}
+            content={cardsData[3].content}
+            imagePosition={cardsData[3].imagePosition}
+          />
         </div>
 
         {/* Promo Banner */}
-        <section className="relative bg-[#4a503d] rounded-[24px] overflow-hidden text-white min-h-[300px]">
+        <section className="relative bg-[#4a503d] rounded-[24px] overflow-hidden text-white min-h-[300px] mb-8">
           <img 
             className="absolute inset-0 w-full h-full object-cover"
             src="/images/Photos by Placement/About Page/About 6.jpg" 
@@ -236,7 +356,6 @@ export default function About() {
             </p>
           </div>
         </section>
-        </div>
 
       </div>
     </div>

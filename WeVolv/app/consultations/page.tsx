@@ -34,85 +34,82 @@ export default function Consultations() {
       <main className="w-full max-w-[95vw] mx-auto px-5 pt-3 pb-10">
         
         {/* Weight Management Card */}
-        <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white">
-          <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
-            <Image 
-              src="/images/Photos by Placement/Consultations Page/Consult 1.jpg" 
-              alt="Women stretching" 
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
-            <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Weight Management</h3>
-            <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
-              Personalized natural wellness coaching to help you create a balanced, vibrant life.
-            </p>
-            <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-8">
-              We combine motivational weight management coaching, proven strategies, and intentional supplement support—including Herbalife products and other trusted supplements—to help you feel stronger, healthier, and more energized in your everyday life.
-            </p>
-            <Link 
-              href="/weight-management"
-              className="btn-custom btn-dark"
-            >
-              Weight Management
-            </Link>
-          </div>
-        </section>
+        <Link href="/weight-management" className="block">
+          <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white cursor-pointer">
+            <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
+              <Image 
+                src="/images/Photos by Placement/Consultations Page/Consult 1.jpg" 
+                alt="Women stretching" 
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
+              <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Weight Management</h3>
+              <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
+                Personalized natural wellness coaching to help you create a balanced, vibrant life.
+              </p>
+              <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-8">
+                We combine motivational weight management coaching, proven strategies, and intentional supplement support—including Herbalife products and other trusted supplements—to help you feel stronger, healthier, and more energized in your everyday life.
+              </p>
+              <span className="btn-custom btn-dark">
+                Weight Management
+              </span>
+            </div>
+          </section>
+        </Link>
 
         {/* Fitness Card (Reversed) */}
-        <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white">
-          <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
-            <Image 
-              src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
-              alt="Women running" 
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
-            <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Fitness</h3>
-            <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
-              Targeted solutions to support whole-body performance and boost vitality.
-            </p>
-            <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-8">
-              We focus on movement that fits your lifestyle. Our fitness approach is designed to enhance your body&apos;s natural strength and endurance through sustainable habits and intelligent training.
-            </p>
-            <Link 
-              href="/fitness"
-              className="btn-custom btn-dark"
-            >
-              Fitness
-            </Link>
-          </div>
-        </section>
+        <Link href="/fitness" className="block">
+          <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white cursor-pointer">
+            <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
+              <Image 
+                src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
+                alt="Women running" 
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
+              <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Fitness</h3>
+              <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
+                Targeted solutions to support whole-body performance and boost vitality.
+              </p>
+              <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-8">
+                We focus on movement that fits your lifestyle. Our fitness approach is designed to enhance your body&apos;s natural strength and endurance through sustainable habits and intelligent training.
+              </p>
+              <span className="btn-custom btn-dark">
+                Fitness
+              </span>
+            </div>
+          </section>
+        </Link>
 
         {/* Nutrition Card */}
-        <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white">
-          <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
-            <Image 
-              src="/images/Photos by Placement/Consultations Page/Consult 3.jpg" 
-              alt="Healthy nutrition" 
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
-            <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Nutrition</h3>
-            <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
-              Science-backed products and plans that help you nourish a healthy life.
-            </p>
-            <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-8">
-              True wellness begins from within. We provide the tools and high-quality nutritional support you need to fuel your body intelligently and maintain lasting energy.
-            </p>
-            <Link 
-              href="/nutrition"
-              className="btn-custom btn-dark"
-            >
-              Nutrition
-            </Link>
-          </div>
-        </section>
+        <Link href="/nutrition" className="block">
+          <section className="consultation-card bg-[#f5f6f8] border border-[#7a8ba0] rounded-[0.5px] mb-8 overflow-hidden flex flex-col md:flex-row min-h-[320px] p-5 md:p-8 gap-6 transition-all hover:shadow-lg hover:bg-white cursor-pointer">
+            <div className="flex-1 relative h-[300px] md:h-auto rounded overflow-hidden shadow-inner">
+              <Image 
+                src="/images/Photos by Placement/Consultations Page/Consult 3.jpg" 
+                alt="Healthy nutrition" 
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
+              <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Nutrition</h3>
+              <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
+                Science-backed products and plans that help you nourish a healthy life.
+              </p>
+              <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-8">
+                True wellness begins from within. We provide the tools and high-quality nutritional support you need to fuel your body intelligently and maintain lasting energy.
+              </p>
+              <span className="btn-custom btn-dark">
+                Nutrition
+              </span>
+            </div>
+          </section>
+        </Link>
 
     </main>
 
