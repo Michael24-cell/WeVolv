@@ -37,5 +37,5 @@ next-env.d.ts
 
 # large media files
 *.mov
-*.mp4
+# *.mp4 - commented out to allow video deployment to Vercel
 *.zip

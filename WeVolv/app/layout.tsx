@@ -35,6 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable} ${playfair.variable}`}>
+      <head>
+      </head>
       <body className="flex flex-col min-h-screen">
         <Navigation />
         <main className="flex-grow">{children}</main>

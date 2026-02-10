@@ -1,8 +1,8 @@
 # Large media files
 *.mov
-*.mp4
+# *.mp4 - commented out to allow hero video deployment
 *.zip
 
 # Video files in specific directories
 public/images/**/*.mov
-public/images/**/*.mp4
+# public/images/**/*.mp4 - commented out to allow videos

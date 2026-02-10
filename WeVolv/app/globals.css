@@ -4,11 +4,11 @@
 
 :root {
   /* WeVolv Color Scheme */
-  --bg-color: #384638;
+  --bg-color: #f4e6df;
   --text-light: #f4f8f4;
   --text-muted: #d1dcd3;
   --accent-green: #9abd97;
-  --footer-bg: #f9f9f9;
+  --footer-bg: #f4f4f4;
   --footer-text: #2c2c2c;
   
   /* Typography */
@@ -40,6 +40,17 @@ main {
   }
 }
 
+/* ========================================
+   WeVolv Typography Scale
+   ========================================
+   H1: 3.5rem  (56px)
+   H2: 2.5rem  (40px)
+   H3: 1.5rem  (24px)
+   H4: 1.25rem (20px)
+   H5: 1.125rem (18px)
+   Body: 1rem  (16px)
+   ======================================== */
+
 /* Typography Classes */
 .serif-text {
   font-family: var(--font-montserrat);
@@ -48,6 +59,22 @@ main {
 
 .sans-text {
   font-family: var(--font-montserrat);
+}
+
+/* Base Heading Styles */
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.4;
 }
 
 /* Custom Button Styles */
@@ -103,11 +130,22 @@ main {
   margin: 0 auto;
 }
 
+.hero-section h2 {
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-section h3 {
   font-family: var(--font-montserrat);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: var(--text-muted);
+  color: #000000;
   margin-bottom: 15px;
   max-width: 600px;
   margin-left: auto;
@@ -123,6 +161,7 @@ main {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  color: #000000;
 }
 
 .hero-image-container {
@@ -154,7 +193,7 @@ main {
 
 /* Grid Cards */
 .grid-card {
-  background-color: rgba(255,255,255,0.05);
+  background-color: #e8d5ca;
   padding: 40px;
   border-radius: 20px;
   text-align: center;
@@ -163,15 +202,17 @@ main {
   align-items: center;
   position: relative;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
-              0 0 12px rgba(0, 0, 0, 0.08),
-              0 0 20px rgba(0, 0, 0, 0.04);
+              0 4px 8px rgba(0, 0, 0, 0.04),
+              inset 0 1px 2px rgba(255, 255, 255, 0.15),
+              inset 0 -1px 2px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 .grid-card:hover {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12),
-              0 0 20px rgba(0, 0, 0, 0.12),
-              0 0 35px rgba(154, 189, 151, 0.15);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
+              0 4px 8px rgba(0, 0, 0, 0.04),
+              inset 0 1px 2px rgba(255, 255, 255, 0.15),
+              inset 0 -1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .grid-card h2 {
@@ -180,6 +221,7 @@ main {
   margin-bottom: 20px;
   line-height: 1.1;
   font-weight: 600;
+  color: #000000;
 }
 
 .grid-card h2 .accent {
@@ -189,18 +231,28 @@ main {
 
 .grid-card h4 {
   font-family: var(--font-montserrat);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  color: var(--text-muted);
+  color: #000000;
   margin-bottom: 30px;
   max-width: 350px;
 }
 
 .grid-card p {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: #000000;
   margin-bottom: 30px;
   max-width: 350px;
+}
+
+.grid-card .btn-outline {
+  color: #000000;
+  border: 1px solid rgba(0,0,0,0.4);
+}
+
+.grid-card .btn-outline:hover {
+  background-color: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.6);
 }
 
 .card-img-placeholder {
@@ -331,7 +383,7 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-section h3 {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     max-width: 400px;
   }
   

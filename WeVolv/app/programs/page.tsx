@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Programs() {
   return (
-    <div className="bg-[#f2f4f6]">
+    <div className="bg-[#f4e6df]">
       {/* Hero Section */}
-      <header className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden pt-12 pb-8 bg-[#f2f4f6]">
+      <header className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden pt-12 pb-8 bg-[#f4e6df]">
         {/* Background Layer - Constrained Width */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative w-full max-w-[95vw] h-full opacity-90">
@@ -34,7 +34,7 @@ export default function Programs() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-3xl md:text-4xl mb-5 text-[#222] leading-tight">Why inside-out coaching?</h3>
+              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">Why inside-out coaching?</h3>
               <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-4">
                 Many coaching approaches focus on changing what you do. That matters—but lasting change begins with understanding why you do it. When beliefs, emotions, and identity are ignored, new habits struggle to stick.
               </p>
@@ -57,7 +57,7 @@ export default function Programs() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-3xl md:text-4xl mb-5 text-[#222] leading-tight">Collaborative Process</h3>
+              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">Collaborative Process</h3>
               <p className="text-base font-semibold text-[#444] mb-4">We work together to:</p>
               <ul className="space-y-3 text-left max-w-[550px] mb-5">
                 <li className="text-base font-normal text-[#666] leading-relaxed">
@@ -89,7 +89,7 @@ export default function Programs() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-3xl md:text-4xl mb-5 text-[#222] leading-tight">Who is this for?</h3>
+              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">Who is this for?</h3>
               <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-4">
                 Inside-Out Coaching is ideal for anyone who:
               </p>
@@ -129,7 +129,7 @@ export default function Programs() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-3xl md:text-4xl mb-5 text-[#222] leading-tight">What you can expect</h3>
+              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">What you can expect</h3>
               <div className="w-full flex justify-center">
                 <ul className="space-y-3 text-left max-w-[550px] list-none">
                   <li className="text-base font-normal text-[#666] leading-relaxed">
@@ -155,7 +155,7 @@ export default function Programs() {
       {/* Bottom CTA */}
       <div className="w-full max-w-[95vw] mx-auto px-5 pb-[100px]">
         <div className="bg-white border border-[#7a8ba0] rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] p-8 md:p-12 text-center max-w-[800px] mx-auto">
-          <h3 className="text-[1.1rem] font-semibold mb-4 text-[#333]">
+          <h3 className="text-[1.125rem] font-semibold mb-4 text-[#333]">
             This is your moment to choose growth. To choose strength. To choose yourself.
           </h3>
           <p className="text-[0.9rem] text-[#555] mb-10">

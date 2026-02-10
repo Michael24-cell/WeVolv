@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Consultations() {
   return (
-    <div className="bg-[#f2f4f6]">
+    <div className="bg-[#f4e6df]">
       {/* Hero Section */}
-      <header className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden py-12 bg-[#f2f4f6]">
+      <header className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden py-12 bg-[#f4e6df]">
         <div className="relative w-full max-w-[1100px] px-5 flex flex-col items-center gap-6 text-[#333]">
           {/* Hero Image */}
           <div className="w-full max-w-[800px] h-[400px] md:h-[500px] rounded-md overflow-hidden relative">
@@ -19,7 +19,7 @@ export default function Consultations() {
 
           <div className="flex flex-col items-center text-center">
             <div className="max-w-[400px]">
-              <h3 className="text-[1.8rem] md:text-[2.5rem] font-semibold leading-tight mb-3">
+              <h3 className="text-[1.5rem] font-semibold leading-tight mb-3">
                 Better health<br />starts with insight.
               </h3>
               <p className="text-[0.9rem] md:text-[1rem] leading-relaxed">
@@ -45,7 +45,7 @@ export default function Consultations() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
-              <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Weight Management</h3>
+              <h3 className="serif-text text-[1.5rem] mb-4 text-[#222]">Weight Management</h3>
               <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
                 Personalized natural wellness coaching to help you create a balanced, vibrant life.
               </p>
@@ -71,7 +71,7 @@ export default function Consultations() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
-              <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Fitness</h3>
+              <h3 className="serif-text text-[1.5rem] mb-4 text-[#222]">Fitness</h3>
               <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
                 Targeted solutions to support whole-body performance and boost vitality.
               </p>
@@ -97,7 +97,7 @@ export default function Consultations() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center md:items-start text-center md:text-left py-4">
-              <h3 className="serif-text text-3xl md:text-4xl mb-4 text-[#222]">Nutrition</h3>
+              <h3 className="serif-text text-[1.5rem] mb-4 text-[#222]">Nutrition</h3>
               <p className="text-lg font-semibold text-[#444] mb-4 leading-snug max-w-[500px]">
                 Science-backed products and plans that help you nourish a healthy life.
               </p>
@@ -116,7 +116,7 @@ export default function Consultations() {
       {/* Bottom CTA */}
       <div className="w-full max-w-[95vw] mx-auto px-5 pb-[100px]">
         <div className="bg-white border border-[#7a8ba0] rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] p-8 md:p-12 text-center max-w-[800px] mx-auto">
-          <h3 className="text-[1.1rem] font-semibold mb-4 text-[#333]">
+          <h3 className="text-[1.125rem] font-semibold mb-4 text-[#333]">
             This is your moment to choose growth. To choose strength. To choose yourself.
           </h3>
           <p className="text-[0.9rem] text-[#555] mb-10">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 // Flip Card Component
@@ -59,16 +60,19 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
             transform: 'translateZ(0)'
           }}
         >
-          <img 
+          <Image 
             src={image}
             alt={imageAlt}
-            className={`w-full h-full object-cover ${imagePosition}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 500px"
+            className={`object-cover ${imagePosition}`}
+            quality={75}
           />
           {/* Title overlay with localized shadow */}
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-t from-black/65 via-black/30 to-transparent pt-20">
-            <h5 className="text-white text-[1.5rem] sm:text-[1.8rem] font-semibold leading-tight drop-shadow-lg">
+            <h3 className="text-white text-[1.5rem] font-semibold leading-tight drop-shadow-lg">
               {title}
-            </h5>
+            </h3>
           </div>
         </div>
 
@@ -290,7 +294,7 @@ export default function Nutrition() {
   ];
 
   return (
-    <div className="bg-[#eef1f4] min-h-screen py-10 px-5">
+    <div className="bg-[#f4e6df] min-h-screen py-10 px-5">
       <div className="max-w-[1000px] mx-auto space-y-10">
         
         {/* Header Card */}
@@ -299,7 +303,7 @@ export default function Nutrition() {
             <h1 className="text-[3rem] font-semibold mb-6 leading-tight tracking-tight text-black">
               Nourish Your Body. Evolve Your Life.
             </h1>
-            <h3 className="text-[1.1rem] text-[#555] leading-relaxed font-normal">
+            <h3 className="text-[1.125rem] text-[#555] leading-relaxed font-normal">
               At Wevolv Wellness, nutrition isn&apos;t about restriction—it&apos;s about alignment. We help you build sustainable habits through personalized nutrition coaching, intentional meal planning, and high-quality Herbalife® supplements, all designed to support strategic, life-enhancing change.
             </h3>
           </header>
@@ -369,17 +373,20 @@ export default function Nutrition() {
 
         {/* Promo Banner */}
         <section className="relative bg-[#4a503d] rounded-[24px] overflow-hidden text-white min-h-[300px] mb-8">
-          <img 
-            className="absolute inset-0 w-full h-full object-cover"
+          <Image 
+            className="object-cover"
             src="/images/Photos by Placement/Nutrition Page/Nutrition 6.jpg" 
             alt="Hormone Guide"
+            fill
+            sizes="(max-width: 1000px) 100vw, 1000px"
+            quality={75}
           />
           
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="relative p-[30px_40px] z-10 max-w-full md:max-w-[50%]">
-            <h2 className="text-[2.2rem] font-normal mb-6 leading-tight">
+            <h2 className="text-[2.5rem] font-normal mb-6 leading-tight">
               Your next level starts with one intentional decision.
             </h2>
             <p className="text-[0.9rem] opacity-90 mb-8 leading-relaxed">

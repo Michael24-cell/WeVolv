@@ -66,9 +66,9 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
           />
           {/* Title overlay with localized shadow */}
           <div className="absolute top-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-b from-black/65 via-black/30 to-transparent pb-20">
-            <h5 className="text-white text-[1.5rem] sm:text-[1.8rem] font-semibold leading-tight drop-shadow-lg">
+            <h3 className="text-white text-[1.5rem] font-semibold leading-tight drop-shadow-lg">
               {title}
-            </h5>
+            </h3>
           </div>
         </div>
 
@@ -243,7 +243,7 @@ export default function About() {
   ];
 
   return (
-    <div className="bg-[#eef1f4] min-h-screen py-10 px-5">
+    <div className="bg-[#f4e6df] min-h-screen py-10 px-5">
       <div className="max-w-[1000px] mx-auto space-y-10">
         
         {/* Header Card */}
@@ -252,7 +252,7 @@ export default function About() {
             <h1 className="text-[3rem] font-semibold mb-6 leading-tight tracking-tight text-black">
               About WeVolv Wellness
             </h1>
-            <h3 className="text-[1.1rem] text-[#555] leading-relaxed font-normal">
+            <h3 className="text-[1.125rem] text-[#555] leading-relaxed font-normal">
               At Wevolv Wellness, we believe that everyone deserves to live their healthiest, most vibrant life. Our mission is to provide personalized, science-backed wellness solutions that create lasting transformation through fitness, nutrition, and holistic support.
             </h3>
           </header>
@@ -332,7 +332,7 @@ export default function About() {
           <div className="absolute inset-0 bg-black/20"></div>
 
           <div className="relative p-[30px_40px] z-10 max-w-full md:max-w-[50%]">
-            <h2 className="text-[2rem] font-normal mb-6 leading-tight">
+            <h2 className="text-[2.5rem] font-normal mb-6 leading-tight">
               To get started,<br />
               schedule a discovery call
             </h2>

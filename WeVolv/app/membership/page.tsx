@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Membership() {
   return (
-    <div className="bg-[#f2f4f6] min-h-screen">
+    <div className="bg-[#f4e6df] min-h-screen">
       {/* Header Section */}
       <header className="pt-24 pb-16 px-5 text-center">
         <h1 className="serif-text font-bold text-5xl md:text-7xl text-[#222] tracking-tight mb-8">
@@ -12,17 +12,18 @@ export default function Membership() {
       </header>
 
       {/* Content Section */}
-      <main className="w-full max-w-[95vw] mx-auto px-5 pb-20 flex flex-col items-center gap-10">
+      <main className="w-full max-w-[1400px] mx-auto px-5 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         
         {/* 1:1 Coaching Online Card */}
-        <section className="bg-[#fafbfc] border border-[#7a8ba0] rounded-[0.5px] p-10 md:p-16 text-center max-w-[850px] w-full transition-all hover:bg-white">
-          <h2 className="serif-text font-bold text-3xl md:text-4xl mb-8 text-[#222]">1:1 Coaching Online</h2>
+        <section className="bg-[#fafbfc] border border-[#7a8ba0] rounded-[0.5px] p-8 lg:p-10 text-center w-full transition-all hover:bg-white flex flex-col">
+          <h2 className="serif-text font-bold text-2xl lg:text-3xl mb-6 text-[#222]">1:1 Coaching Online</h2>
           
-          <div className="space-y-6 mb-12">
-            <p className="text-xl md:text-2xl font-medium text-[#444] leading-relaxed">
+          <div className="space-y-4 mb-8 flex-grow">
+            <p className="text-lg lg:text-xl font-medium text-[#444] leading-relaxed">
               12 Bi-weekly Sessions (max. 50 mins.)
             </p>
-            <div className="text-lg md:text-xl text-[#555] flex flex-col items-center gap-2">
+            <div className="text-base lg:text-lg text-[#555] flex flex-col items-center gap-2">
               <p>$900 one-time payment</p>
               <div className="w-12 h-px bg-[#7a8ba0] opacity-30 my-1"></div>
               <p className="font-semibold text-[#333]">or $150 monthly</p>
@@ -31,21 +32,21 @@ export default function Membership() {
 
           <Link 
             href="/contact"
-            className="btn-custom btn-dark"
+            className="btn-custom btn-dark mt-auto"
           >
-            Start Your Journey
+            Learn More
           </Link>
         </section>
 
         {/* 1:1 Coaching In-Person Card */}
-        <section className="bg-[#fafbfc] border border-[#7a8ba0] rounded-[0.5px] p-10 md:p-16 text-center max-w-[850px] w-full transition-all hover:bg-white">
-          <h2 className="serif-text font-bold text-3xl md:text-4xl mb-8 text-[#222]">1:1 Coaching In-Person</h2>
+        <section className="bg-[#fafbfc] border border-[#7a8ba0] rounded-[0.5px] p-8 lg:p-10 text-center w-full transition-all hover:bg-white flex flex-col">
+          <h2 className="serif-text font-bold text-2xl lg:text-3xl mb-6 text-[#222]">1:1 Coaching In-Person</h2>
           
-          <div className="space-y-6 mb-12">
-            <p className="text-xl md:text-2xl font-medium text-[#444] leading-relaxed">
+          <div className="space-y-4 mb-8 flex-grow">
+            <p className="text-lg lg:text-xl font-medium text-[#444] leading-relaxed">
               12 Bi-weekly Sessions (max. 50 mins.)
             </p>
-            <div className="text-lg md:text-xl text-[#555] flex flex-col items-center gap-2">
+            <div className="text-base lg:text-lg text-[#555] flex flex-col items-center gap-2">
               <p>$1200 one-time payment</p>
               <div className="w-12 h-px bg-[#7a8ba0] opacity-30 my-1"></div>
               <p className="font-semibold text-[#333]">or $300 monthly</p>
@@ -54,30 +55,31 @@ export default function Membership() {
 
           <Link 
             href="/contact"
-            className="btn-custom btn-dark"
+            className="btn-custom btn-dark mt-auto"
           >
-            Start Your Journey
+            Learn More
           </Link>
         </section>
 
         {/* Group Coaching Online Card */}
-        <section className="bg-[#fafbfc] border border-[#7a8ba0] rounded-[0.5px] p-10 md:p-16 text-center max-w-[850px] w-full transition-all hover:bg-white">
-          <h2 className="serif-text font-bold text-3xl md:text-4xl mb-8 text-[#222]">Group Coaching Online</h2>
+        <section className="bg-[#fafbfc] border border-[#7a8ba0] rounded-[0.5px] p-8 lg:p-10 text-center w-full transition-all hover:bg-white flex flex-col">
+          <h2 className="serif-text font-bold text-2xl lg:text-3xl mb-6 text-[#222]">Group Coaching Online</h2>
           
-          <div className="mb-12">
-            <p className="text-xl md:text-2xl font-medium text-[#444] leading-relaxed">
+          <div className="mb-8 flex-grow">
+            <p className="text-lg lg:text-xl font-medium text-[#444] leading-relaxed">
               Free with product purchase or $25 per session
             </p>
           </div>
 
           <Link 
             href="/contact"
-            className="btn-custom btn-dark"
+            className="btn-custom btn-dark mt-auto"
           >
-            Start Your Journey
+            Learn More
           </Link>
         </section>
 
+        </div>
       </main>
     </div>
   );

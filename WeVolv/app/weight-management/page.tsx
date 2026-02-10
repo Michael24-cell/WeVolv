@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function WeightManagement() {
   return (
-    <div className="bg-[#eef1f4] min-h-screen font-sans text-[#222]">
+    <div className="bg-[#f4e6df] min-h-screen font-sans text-[#222]">
       {/* --- Section 1: Labs Reveal --- */}
       <section className="max-w-[1000px] bg-white mx-auto mb-[30px] py-[60px] px-[80px] text-center rounded-[8px] shadow-sm">
         <div className="max-w-[900px] mx-auto">
@@ -11,7 +12,7 @@ export default function WeightManagement() {
             <span className="block text-[#9abd97] font-light mt-[5px]">Transform Your Life.</span>
           </h1>
 
-          <div className="max-w-[500px] mx-auto mb-[50px] text-[0.9rem] text-[#666]">
+          <div className="max-w-[500px] mx-auto mb-[50px] text-[1.25rem] text-[#666]">
             <p>At Wevolv Wellness, we believe lasting change is possible for everyone. No extremes. No quick fixes. Just powerful, supportive coaching that helps you take control of your health, your habits, and your confidence.</p>
           </div>
         </div>
@@ -19,61 +20,78 @@ export default function WeightManagement() {
         <div className="w-full max-w-[750px] mx-auto flex flex-col gap-[2px] relative">
           {/* Card 1 - Herbalife */}
           <Link href="/herbalife" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
-            <img 
-              src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
-              alt="Herbalife" 
-              className="w-full absolute top-0 left-0"
-              style={{ height: '559px', objectFit: 'cover' }}
-            />
+            <div className="absolute w-full h-[559px] left-0 top-0">
+              <Image 
+                src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
+                alt="Herbalife" 
+                fill
+                sizes="(max-width: 768px) 100vw, 750px"
+                className="object-cover"
+                quality={75}
+                priority
+              />
+            </div>
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h3 className="text-[2rem] text-white font-semibold">Herbalife</h3>
+              <h3 className="text-[1.5rem] text-white font-semibold">Herbalife</h3>
             </div>
           </Link>
 
           {/* Card 2 - Lifewave */}
           <Link href="/lifewave" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
-            <img 
-              src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
-              alt="Lifewave" 
-              className="w-full absolute left-0"
-              style={{ height: '559px', objectFit: 'cover', top: '-187px' }}
-            />
+            <div className="absolute w-full h-[559px] left-0 top-[-187px]">
+              <Image 
+                src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
+                alt="Lifewave" 
+                fill
+                sizes="(max-width: 768px) 100vw, 750px"
+                className="object-cover"
+                quality={75}
+              />
+            </div>
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h3 className="text-[2rem] text-white font-semibold">Lifewave</h3>
+              <h3 className="text-[1.5rem] text-white font-semibold">Lifewave</h3>
             </div>
           </Link>
 
           {/* Card 3 - Dissolvable Strips */}
           <div className="relative h-[185px] rounded-[12px] overflow-hidden">
-            <img 
-              src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
-              alt="Dissolvable Strips" 
-              className="w-full absolute left-0"
-              style={{ height: '559px', objectFit: 'cover', top: '-374px' }}
-            />
+            <div className="absolute w-full h-[559px] left-0 top-[-374px]">
+              <Image 
+                src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
+                alt="Dissolvable Strips" 
+                fill
+                sizes="(max-width: 768px) 100vw, 750px"
+                className="object-cover"
+                quality={75}
+              />
+            </div>
             <div className="absolute inset-0 bg-white/20 flex items-center p-[20px_40px] z-10">
-              <h3 className="text-[2rem] text-white font-semibold">Dissolvable Strips</h3>
+              <h3 className="text-[1.5rem] text-white font-semibold">Purefusion Dissolvable Strips</h3>
             </div>
           </div>
         </div>
     </section>
 
       {/* --- Section 2: Full Width Image --- */}
-      <section className="max-w-[1300px] mx-auto h-[500px] overflow-hidden">
-        <img 
+      <section className="max-w-[1300px] mx-auto h-[500px] overflow-hidden relative">
+        <Image 
           src="/images/Photos by Placement/Weight Management Page/WM 2.jpg" 
           alt="Wellness" 
-          className="w-full h-full object-cover object-[center_15%]"
+          fill
+          sizes="(max-width: 1300px) 100vw, 1300px"
+          className="object-cover object-[center_15%]"
+          quality={75}
+          priority
         />
       </section>
 
       {/* --- Section 3: Info Cards Grid --- */}
-      <section className="bg-[#eef1f4] pt-[30px] pb-[60px] px-5">
+      <section className="bg-[#f4e6df] pt-[30px] pb-[60px] px-5">
         <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           
           <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
-            <h3 className="text-[0.85rem] uppercase tracking-[2px] text-[#9abd97] mb-[15px] font-bold">This Is More Than Weight Loss</h3>
-            <h5 className="text-[1.35rem] text-[#111] mb-[25px] font-medium leading-tight">Weight Management Coaching That Empowers You</h5>
+            <h3 className="text-[1.125rem] uppercase tracking-[2px] text-[#9abd97] mb-[15px] font-bold">This Is More Than Weight Loss</h3>
+            <h5 className="text-[1.5rem] text-[#111] mb-[25px] font-medium leading-tight">Weight Management Coaching That Empowers You</h5>
             <p className="text-[1rem] text-[#555] mb-8 leading-relaxed">Your journey is personal—and your coaching should be too. At Wevolv Wellness, we guide you step by step with:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-[0.95rem] text-[#444]">
@@ -97,8 +115,8 @@ export default function WeightManagement() {
           </div>
 
           <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
-            <h3 className="text-[0.85rem] uppercase tracking-[2px] text-[#9abd97] mb-[15px] font-bold">Strategies Designed for Real Life</h3>
-            <h5 className="text-[1.35rem] text-[#111] mb-[25px] font-medium leading-tight">You don&apos;t need perfection—you need consistency.</h5>
+            <h3 className="text-[1.125rem] uppercase tracking-[2px] text-[#9abd97] mb-[15px] font-bold">Strategies Designed for Real Life</h3>
+            <h5 className="text-[1.5rem] text-[#111] mb-[25px] font-medium leading-tight">You don&apos;t need perfection—you need consistency.</h5>
             <p className="text-[1rem] text-[#555] mb-8 leading-relaxed">Our approach focuses on building sustainable habits that fit into your busy life:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-[0.95rem] text-[#444]">
@@ -121,8 +139,8 @@ export default function WeightManagement() {
           </div>
 
           <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col md:col-span-2">
-            <h3 className="text-[0.85rem] uppercase tracking-[2px] text-[#9abd97] mb-[15px] font-bold">Supplement Support With Purpose</h3>
-            <h5 className="text-[1.35rem] text-[#111] mb-[25px] font-medium leading-tight">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
+            <h3 className="text-[1.125rem] uppercase tracking-[2px] text-[#9abd97] mb-[15px] font-bold">Supplement Support With Purpose</h3>
+            <h5 className="text-[1.5rem] text-[#111] mb-[25px] font-medium leading-tight">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
             <p className="text-[1rem] text-[#555] mb-8 leading-relaxed">We thoughtfully incorporate tools that support the work you&apos;re already doing:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-[0.95rem] text-[#444]">

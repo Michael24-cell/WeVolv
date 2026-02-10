@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Herbalife() {
   return (
-    <div className="bg-[#f0f0f0] min-h-screen py-10 px-5">
+    <div className="bg-[#f4e6df] min-h-screen py-10 px-5">
       <div className="max-w-[1200px] mx-auto space-y-10">
         
         {/* Hero Section */}
@@ -23,10 +23,10 @@ export default function Herbalife() {
         </div>
 
         {/* Feature Section 1 - Nutrition Philosophy */}
-        <div className="relative bg-[#f7f7f2] rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-8 md:p-10">
+        <div className="relative bg-[#f7f7f2] rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-8 md:p-10 -mt-10 md:-mt-48">
           <div className="grid grid-cols-12 items-center gap-0">
             {/* Image */}
-            <div className="col-span-12 md:col-span-5 w-full h-[250px] overflow-hidden rounded-lg relative z-[1]">
+            <div className="col-span-12 md:col-span-5 w-full h-[380px] overflow-hidden rounded-lg relative z-[1]">
               <img 
                 src="/images/Photos by Placement/Herbalife Page/HL 1.jpg" 
                 alt="Nutrition Philosophy"
@@ -36,10 +36,10 @@ export default function Herbalife() {
 
             {/* Content Card - Overlaps on desktop */}
             <div className="col-span-12 md:col-start-5 md:col-span-8 bg-white p-8 md:p-[60px] z-[2] relative min-h-[400px] flex flex-col justify-center -mt-10 md:-mt-48">
-              <h3 className="text-[2.5rem] text-[#2c3e50] mb-5 font-semibold">
+              <h3 className="text-[1.5rem] text-[#2c3e50] mb-5 font-semibold">
                 Nutrition Philosophy
               </h3>
-              <h5 className="text-[#666] text-[0.95rem] mb-5 font-normal leading-relaxed">
+              <h5 className="text-[#666] text-[1.125rem] mb-5 font-normal leading-relaxed">
                 A personalized approach to nutrition that supports a healthy, active lifestyle. The right foods, combined with a wide range of supplements give your body what it needs every day to help you meet your goals. At WeVolv, we can help customize a plan that&apos;s right for you.
               </h5>
             </div>
@@ -60,10 +60,10 @@ export default function Herbalife() {
 
             {/* Content Card - Overlaps on desktop */}
             <div className="col-span-12 md:col-start-5 md:col-span-8 bg-white p-8 md:p-[60px] z-[2] relative min-h-[400px] flex flex-col justify-center -mt-10 md:-mt-80">
-              <h3 className="text-[2.5rem] text-[#2c3e50] mb-5 font-semibold">
+              <h3 className="text-[1.5rem] text-[#2c3e50] mb-5 font-semibold">
                 Science & Quality
               </h3>
-              <h5 className="text-[#666] text-[0.95rem] mb-5 font-normal leading-relaxed">
+              <h5 className="text-[#666] text-[1.125rem] mb-5 font-normal leading-relaxed">
                 Every Herbalife ingredient is held to high-quality standards, from Seed to Feed. We scientifically verify and test each ingredient with a multilevel quality control system to guarantee you receive the best nutrition possible.
               </h5>
             </div>
@@ -80,13 +80,13 @@ export default function Herbalife() {
             
             <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-center text-center">
               <div className="flex-1 px-6">
-                <h5 className="text-[1.1rem] text-white leading-tight font-light">
+                <h5 className="text-[1.125rem] text-white leading-tight font-light">
                   active and lifestyle nutrition brand in the world.
                 </h5>
               </div>
               <div className="hidden md:block w-[1px] h-16 bg-white/20"></div>
               <div className="flex-1 px-6">
-                <h5 className="text-[1.1rem] text-white leading-tight font-light">
+                <h5 className="text-[1.125rem] text-white leading-tight font-light">
                   protein shake in the world.
                 </h5>
               </div>

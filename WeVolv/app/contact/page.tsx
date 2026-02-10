@@ -30,7 +30,7 @@ export default function Contact() {
         /* --- RESET & GLOBAL STYLES --- */
         .contact-page {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #eef1f3;
+            background-color: #f4e6df;
             color: #222;
             display: flex;
             flex-direction: column;
@@ -209,7 +209,7 @@ export default function Contact() {
             <br />
             <p>Text: <a href="tel:+17025278520">(702) 527-8520</a></p>
             <br />
-            <p>Schedule a Call <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
+            <p>Schedule a Call <a href="https://calendly.com/wevolvlife/slink" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
             <br />
             <p>You can also check our <a href="/faq" style={{fontWeight: 'bold'}}>FAQ Page</a> to find answers to our most commonly asked questions.</p>
           </div>

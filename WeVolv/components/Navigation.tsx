@@ -45,7 +45,7 @@ export default function Navigation() {
   return (
     <nav
       style={{
-        backgroundColor: 'white',
+        backgroundColor: '#f4f4f4',
         color: 'black',
         position: 'sticky',
         top: 0,
@@ -69,7 +69,7 @@ export default function Navigation() {
               </button>
               {isCoachingOpen && (
                 <div className="absolute top-full left-0 pt-2 -ml-4 pl-4 pr-8">
-                  <div className="w-48 bg-white shadow-lg border border-gray-200 rounded-md py-2">
+                  <div className="w-48 shadow-lg border border-gray-200 rounded-md py-2" style={{ backgroundColor: '#f4f4f4' }}>
                     {coachingItems.map((item) => (
                       <Link
                         key={item.href}
@@ -168,7 +168,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200">
+        <div className="lg:hidden border-t border-gray-200" style={{ backgroundColor: '#f4f4f4' }}>
           <div className="px-4 pt-2 pb-3 space-y-1">
             {allLinks.map((link) => (
               <Link
