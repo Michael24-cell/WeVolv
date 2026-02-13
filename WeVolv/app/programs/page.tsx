@@ -153,18 +153,18 @@ export default function Programs() {
     </main>
 
       {/* Bottom CTA */}
-      <div className="w-full max-w-[95vw] mx-auto px-5 pb-[100px]">
-        <div className="bg-white border border-[#7a8ba0] rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] p-8 md:p-12 text-center max-w-[800px] mx-auto">
-          <h3 className="text-[1.125rem] font-semibold mb-4 text-[#333]">
-            This is your moment to choose growth. To choose strength. To choose yourself.
+      <div className="w-full max-w-[98vw] mx-auto px-5 pb-[100px]">
+        <div className="bg-white rounded-[20px] p-12 md:p-16 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center pt-8">
+          <h3 className="text-[2.5rem] font-semibold mb-8 text-[#333] mt-4">
+            This is your moment to choose growth.<br />To choose strength. To choose yourself.
           </h3>
-          <p className="text-[0.9rem] text-[#555] mb-10">
+          <p className="text-[2.5rem] text-[#555] mb-10 max-w-[1150px] mx-auto">
             Whether your goal is weight management, more energy, or renewed confidence, Wevolv Wellness is here to walk with you—every step, every win, every evolution.
           </p>
           
           <Link 
             href="/contact"
-            className="inline-block bg-[#4A9DB5] border border-[#3a8da5] text-white px-[30px] py-3 font-bold no-underline uppercase text-[0.8rem] tracking-wide rounded transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.1)] hover:bg-[#3a8da5]"
+            className="inline-block bg-[#333333] border border-[#333333] text-white px-[40px] py-4 font-bold no-underline uppercase text-[0.8rem] tracking-wide rounded transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.1)] hover:bg-[#1a1a1a] mb-6"
           >
             Start Your Wevolv Journey
           </Link>

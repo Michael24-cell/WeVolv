@@ -19,7 +19,7 @@ export default function WeightManagement() {
 
         <div className="w-full max-w-[750px] mx-auto flex flex-col gap-[2px] relative">
           {/* Card 1 - Herbalife */}
-          <Link href="https://wevolv.herbalife.com/en-us/u" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+          <Link href="https://wevolv.herbalife.com/en-us/u" target="_blank" rel="noopener noreferrer" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
             <div className="absolute w-full h-[559px] left-0 top-0">
               <Image 
                 src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
@@ -91,8 +91,8 @@ export default function WeightManagement() {
           
           <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
             <h3 className="text-[1.5rem] text-[#9abd97] mb-[15px] font-bold">This Is More Than Weight Loss</h3>
-            <h5 className="text-[1.5rem] text-[#111] mb-[25px] font-medium leading-tight">Weight Management Coaching That Empowers You</h5>
-            <h5 className="text-[1.125rem] text-[#111] mb-[25px] font-normal leading-relaxed">Your journey is personal—and your coaching should be too.</h5>
+            <h5 className="text-[1.5rem] text-[#111] mb-[35px] font-normal leading-tight mt-[10px]">Weight Management Coaching That<br />Empowers You</h5>
+            <h5 className="text-[1.125rem] text-[#111] mb-[25px] font-bold leading-relaxed">Your journey is personal—and your coaching should be too.</h5>
             <p className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">At Wevolv Wellness, we guide you step by step with:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
@@ -112,12 +112,12 @@ export default function WeightManagement() {
                 <span>Tools to build confidence, discipline, and momentum</span>
               </li>
             </ul>
-            <p className="font-semibold text-[1.5rem] text-[#222] mt-auto pt-2 border-t border-[#eee]">We don&apos;t just tell you what to do—we help you believe you can do it.</p>
+            <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-5 border-t border-[#9abd97]">We don&apos;t just tell you what to do—we help you believe you can do it.</p>
           </div>
 
           <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
             <h3 className="text-[1.5rem] text-[#9abd97] mb-[15px] font-bold">Strategies Designed for Real Life</h3>
-            <h5 className="text-[1.125rem] text-[#111] mb-[25px] font-normal leading-tight">You don&apos;t need perfection—you need consistency.</h5>
+            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-tight mt-[20px]">You don&apos;t need perfection—you need consistency.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">Our approach focuses on building sustainable habits that fit into your busy life:</h3>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
@@ -141,7 +141,7 @@ export default function WeightManagement() {
 
           <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col md:col-span-2">
             <h3 className="text-[1.5rem] text-[#9abd97] mb-[15px] font-bold">Supplement Support With Purpose</h3>
-            <h5 className="text-[1.125rem] text-[#111] mb-[25px] font-normal leading-tight">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
+            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-tight mt-[20px]">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">We thoughtfully incorporate tools that support the work you&apos;re already doing:</h3>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
@@ -153,7 +153,7 @@ export default function WeightManagement() {
                 <span>Additional high-quality supplements selected to complement individual goals</span>
               </li>
             </ul>
-            <p className="font-semibold text-[1.5rem] text-[#222] mt-auto pt-2 border-t border-[#eee]">Supplements are never shortcuts—they&apos;re tools that support the work you&apos;re already doing.</p>
+            <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-5 border-t border-[#9abd97]">Supplements are never shortcuts—they&apos;re tools that support the work you&apos;re already doing.</p>
           </div>
 
         </div>

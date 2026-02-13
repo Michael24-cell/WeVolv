@@ -73,7 +73,13 @@ export default function Navigation() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.12em] border-l-4 border-transparent hover:bg-white hover:border-l-[#EFE0DB] hover:font-bold transition-all"
+                        className={`block px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.12em] border-l-4 border-transparent hover:bg-white hover:font-bold transition-all ${
+                          item.label === "Consultations"
+                            ? "hover:border-l-[#017174]"
+                            : item.label === "Memberships"
+                            ? "hover:border-l-[#943888]"
+                            : "hover:border-l-[#ED9E52]"
+                        }`}
                       >
                         {item.label}
                       </Link>

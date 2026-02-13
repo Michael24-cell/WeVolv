@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Fitness() {
   return (
     <div className="bg-[#f4e6df] min-h-screen pt-10 pb-20 px-5">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         
         {/* Hero Banner */}
         <div className="w-full h-[300px] bg-[#d8e0d8] rounded-md mb-5 overflow-hidden relative">
@@ -12,7 +12,7 @@ export default function Fitness() {
             src="/images/Photos by Placement/Fitness Page/Fit Hero 1.jpg" 
             alt="Wellness Product"
             fill
-            sizes="(max-width: 1000px) 100vw, 1000px"
+            sizes="(max-width: 1100px) 100vw, 1100px"
             className="object-cover"
             quality={85}
             priority
@@ -20,14 +20,14 @@ export default function Fitness() {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.8fr_1fr] gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1.1fr] gap-3">
           
           {/* Left Column */}
           <div className="flex flex-col gap-3">
             {/* Header Card (Top Left) - Primary Focus */}
-            <div className="bg-white rounded-md pl-10 pr-8 pt-10 pb-5 overflow-visible">
-              <h3 className="text-[1.5rem] font-bold mb-4 text-black leading-tight">Exercise Coaching at WeVolve Wellness</h3>
-              <p className="text-[1rem] text-[#666666] leading-relaxed mb-6">
+            <div className="bg-white rounded-md pl-10 pr-8 pt-8 pb-6 overflow-visible min-h-[400px] flex flex-col justify-center">
+              <h2 className="serif-text text-[2.5rem] mb-6 text-black leading-tight">Exercise Coaching at WeVolve Wellness</h2>
+              <p className="text-[1.125rem] text-[#666666] leading-relaxed mb-8">
                 Our Exercise Coaching program is designed to help you build consistency, strength, and confidence through structured support and personalized guidance. We combine movement, mindset, and nutrition strategies to create sustainable results—without burnout.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -73,8 +73,8 @@ export default function Fitness() {
 
           {/* Right Sidebar List - Supporting Info */}
           <div className="flex flex-col gap-3 md:row-span-2">
-            <div className="bg-white rounded-md px-2 pt-3 pb-4 text-center border border-gray-200/60">
-              <div className="relative w-full h-[200px] rounded-md mb-4 overflow-hidden">
+            <div className="bg-white rounded-md overflow-hidden border border-gray-200/60">
+              <div className="relative w-full h-[200px] overflow-hidden mb-6">
                 <Image 
                   src="/images/Photos by Placement/Fitness Page/Fit 2.jpg" 
                   alt="Vegetables"
@@ -84,14 +84,16 @@ export default function Fitness() {
                   quality={85}
                 />
               </div>
-              <h3 className="text-[1.5rem] font-bold mb-2 text-black">Accountability Check-Ins</h3>
-              <p className="text-[1.25rem] text-[#666666] leading-snug">
-                Regular one-on-one check-ins to track progress, address challenges, and keep you consistent with your goals.
-              </p>
+              <div className="px-5 pt-4 pb-6 text-center">
+                <h3 className="serif-text text-[1.5rem] mb-4 text-black leading-tight">Accountability Check-Ins</h3>
+                <p className="text-[1.25rem] text-[#666666] leading-relaxed">
+                  Regular one-on-one check-ins to track progress, address challenges, and keep you consistent with your goals.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white rounded-md px-2 pt-3 pb-4 text-center border border-gray-200/60">
-              <div className="relative w-full h-[200px] rounded-md mb-4 overflow-hidden">
+            <div className="bg-white rounded-md overflow-hidden border border-gray-200/60">
+              <div className="relative w-full h-[200px] overflow-hidden mb-6">
                 <Image 
                   src="/images/Photos by Placement/Fitness Page/Fit 3.jpg" 
                   alt="Colorful Salad"
@@ -101,14 +103,16 @@ export default function Fitness() {
                   quality={85}
                 />
               </div>
-              <h3 className="text-[1.5rem] font-bold mb-2 text-black">Weekly Group Coaching</h3>
-              <p className="text-[1.25rem] text-[#666666] leading-snug">
-                Supportive, coach-led group sessions focused on education, motivation, and shared accountability—so you never feel like you&apos;re doing it alone.
-              </p>
+              <div className="px-5 pt-4 pb-6 text-center">
+                <h3 className="serif-text text-[1.5rem] mb-4 text-black leading-tight">Weekly Group Coaching</h3>
+                <p className="text-[1.25rem] text-[#666666] leading-relaxed">
+                  Supportive, coach-led group sessions focused on education, motivation, and shared accountability—so you never feel like you&apos;re doing it alone.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white rounded-md px-2 pt-3 pb-4 text-center border border-gray-200/60">
-              <div className="relative w-full h-[200px] rounded-md mb-4 overflow-hidden">
+            <div className="bg-white rounded-md overflow-hidden border border-gray-200/60">
+              <div className="relative w-full h-[200px] overflow-hidden mb-6">
                 <Image 
                   src="/images/Photos by Placement/Fitness Page/Fit 4.jpg" 
                   alt="Fruit and Water"
@@ -118,10 +122,12 @@ export default function Fitness() {
                   quality={85}
                 />
               </div>
-              <h3 className="text-[1.5rem] font-bold mb-2 text-black">Targeted Supplement Support</h3>
-              <p className="text-[1.25rem] text-[#666666] leading-snug">
-                Personalized supplement recommendations to support energy, recovery, metabolism, and overall wellness, aligned with your training and lifestyle.
-              </p>
+              <div className="px-5 pt-4 pb-6 text-center">
+                <h3 className="serif-text text-[1.5rem] mb-4 text-black leading-tight">Targeted Supplement Support</h3>
+                <p className="text-[1.25rem] text-[#666666] leading-relaxed">
+                  Personalized supplement recommendations to support energy, recovery, metabolism, and overall wellness, aligned with your training and lifestyle.
+                </p>
+              </div>
             </div>
           </div>
 
