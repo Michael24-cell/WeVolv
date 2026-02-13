@@ -38,11 +38,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-xs uppercase tracking-wide font-medium">
-                <Link href="/herbalife" className="hover:opacity-70 transition-opacity">
-                  Herbalife Products
-                </Link>
-              </li>
-              <li className="text-xs uppercase tracking-wide font-medium">
                 <Link href="/lifewave" className="hover:opacity-70 transition-opacity">
                   Lifewave Technology
                 </Link>

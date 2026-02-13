@@ -53,18 +53,22 @@ export default function Fitness() {
             </div>
             
             {/* Herbalife Logo */}
-            <Link href="/herbalife" className="block mx-auto mt-4">
-              <div className="relative w-[150px] h-[50px] mx-auto cursor-pointer hover:opacity-80 transition-opacity">
-                <Image 
-                  src="/images/Photos by Placement/Fitness Page/herbalife-logo.png" 
-                  alt="Herbalife Nutrition"
-                  fill
-                  sizes="150px"
-                  className="object-contain"
-                  quality={90}
-                />
-              </div>
-            </Link>
+            <div className="flex justify-center">
+              <Link href="https://wevolv.herbalife.com/en-us/u" target="_blank" rel="noopener noreferrer" className="block">
+                <div className="bg-white rounded-md px-8 py-6 border border-gray-200/60 flex justify-center w-fit cursor-pointer hover:opacity-80 transition-opacity">
+                  <div className="relative w-[180px] h-[60px]">
+                    <Image 
+                      src="/images/Photos by Placement/Fitness Page/herbalife-logo.png" 
+                      alt="Herbalife Nutrition"
+                      fill
+                      sizes="180px"
+                      className="object-contain"
+                      quality={90}
+                    />
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
 
           {/* Right Sidebar List - Supporting Info */}
@@ -80,8 +84,8 @@ export default function Fitness() {
                   quality={85}
                 />
               </div>
-              <h5 className="text-[1.125rem] font-bold mb-2 text-black">Accountability Check-Ins</h5>
-              <p className="text-[0.75rem] text-[#666666] leading-snug">
+              <h3 className="text-[1.5rem] font-bold mb-2 text-black">Accountability Check-Ins</h3>
+              <p className="text-[1.25rem] text-[#666666] leading-snug">
                 Regular one-on-one check-ins to track progress, address challenges, and keep you consistent with your goals.
               </p>
             </div>
@@ -97,8 +101,8 @@ export default function Fitness() {
                   quality={85}
                 />
               </div>
-              <h5 className="text-[1.125rem] font-bold mb-2 text-black">Weekly Group Coaching</h5>
-              <p className="text-[0.75rem] text-[#666666] leading-snug">
+              <h3 className="text-[1.5rem] font-bold mb-2 text-black">Weekly Group Coaching</h3>
+              <p className="text-[1.25rem] text-[#666666] leading-snug">
                 Supportive, coach-led group sessions focused on education, motivation, and shared accountability—so you never feel like you&apos;re doing it alone.
               </p>
             </div>
@@ -114,8 +118,8 @@ export default function Fitness() {
                   quality={85}
                 />
               </div>
-              <h5 className="text-[1.125rem] font-bold mb-2 text-black">Targeted Supplement Support</h5>
-              <p className="text-[0.75rem] text-[#666666] leading-snug">
+              <h3 className="text-[1.5rem] font-bold mb-2 text-black">Targeted Supplement Support</h3>
+              <p className="text-[1.25rem] text-[#666666] leading-snug">
                 Personalized supplement recommendations to support energy, recovery, metabolism, and overall wellness, aligned with your training and lifestyle.
               </p>
             </div>

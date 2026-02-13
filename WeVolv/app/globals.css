@@ -80,10 +80,10 @@ h5 {
 /* Custom Button Styles */
 .btn-custom {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 16px 36px;
   border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
@@ -193,7 +193,7 @@ h5 {
 
 /* Grid Cards */
 .grid-card {
-  background-color: #e8d5ca;
+  background-color: #EDD7CB;
   padding: 40px;
   border-radius: 20px;
   text-align: center;
@@ -219,9 +219,20 @@ h5 {
   font-family: var(--font-montserrat);
   font-size: 2.5rem;
   margin-bottom: 20px;
-  line-height: 1.1;
-  font-weight: 600;
-  color: #000000;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #2D2D2D;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.grid-card:nth-child(1) h2:nth-of-type(2) {
+  padding-bottom: 5px;
+}
+
+.grid-card:nth-child(1) h2:nth-of-type(3) {
+  margin-top: -25px;
+  margin-bottom: 26px;
 }
 
 .grid-card h2 .accent {
@@ -246,33 +257,56 @@ h5 {
 }
 
 .grid-card .btn-outline {
-  color: #000000;
-  border: 1px solid rgba(0,0,0,0.4);
+  color: #ffffff;
+  background-color: #3a3a3a;
+  border: 1px solid #3a3a3a;
+  width: 70%;
+}
+
+.grid-card:nth-child(1) .btn-outline {
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .grid-card .btn-outline:hover {
-  background-color: rgba(0,0,0,0.05);
-  border-color: rgba(0,0,0,0.6);
+  background-color: #2a2a2a;
+  border-color: #2a2a2a;
+}
+
+.grid-card:nth-child(2) h2:nth-of-type(2) {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.grid-card:nth-child(2) .btn-outline {
+  white-space: nowrap;
 }
 
 .card-img-placeholder {
   width: 100%;
   height: auto;
+  min-height: 400px;
   background-color: #4a5a4a;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.3);
   overflow: hidden;
+  position: relative;
 }
 
 .card-img-placeholder img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.grid-card:nth-child(2) .card-img-placeholder img {
+  object-position: center 20%;
 }
 
 .bmi-link {

@@ -36,7 +36,6 @@ export default function Navigation() {
     { href: "/weight-management", label: "Weight Management" },
     { href: "/fitness", label: "Fitness" },
     { href: "/nutrition", label: "Nutrition" },
-    { href: "/herbalife", label: "Herbalife" },
     { href: "/lifewave", label: "Lifewave" },
     { href: "/programs-faq", label: "Programs & FAQ" },
     ...rightLinks,
@@ -69,12 +68,12 @@ export default function Navigation() {
               </button>
               {isCoachingOpen && (
                 <div className="absolute top-full left-0 pt-2 -ml-4 pl-4 pr-8">
-                  <div className="w-48 shadow-lg border border-gray-200 rounded-md py-2" style={{ backgroundColor: '#f4f4f4' }}>
+                  <div className="w-64 shadow-lg border border-gray-200 rounded-md py-3" style={{ backgroundColor: '#f4f4f4' }}>
                     {coachingItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] hover:bg-gray-100 transition-colors"
+                        className="block px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.12em] border-l-4 border-transparent hover:bg-white hover:border-l-[#EFE0DB] hover:font-bold transition-all"
                       >
                         {item.label}
                       </Link>

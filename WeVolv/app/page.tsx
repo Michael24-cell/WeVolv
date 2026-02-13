@@ -49,37 +49,41 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-5 py-10 pb-48">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="grid-card">
-            <h2>Small Shifts.</h2>
+            <h2 style={{ fontWeight: 600 }}>Small Shifts.</h2>
             
             <div className="card-img-placeholder">
-              <img 
+              <Image 
                 src="/images/Photos by Placement/Home Page/Home Image 2.JPG" 
                 alt="Home Image 2"
-                loading="lazy"
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
               />
             </div>
 
-            <h2>Big Direction.</h2>
+            <h2 style={{ fontWeight: 600 }}>Big Direction.</h2>
             
-            <h4>Whole person wellness intelligently aligned.</h4>
+            <h2>Whole person wellness intelligently aligned.</h2>
             
-            <Link href="/programs" className="btn-custom btn-outline">
+            <Link href="/programs" className="btn-custom btn-outline" style={{ marginTop: '9px' }}>
               Let&apos;s get started
             </Link>
           </div>
 
           <div className="grid-card">
-            <h2>Wellness in Motion</h2>
-            
-            <h4>Where modern science meets sustainable well-being.</h4>
+            <h2 style={{ fontWeight: 600 }}>Wellness in Motion</h2>
 
             <div className="card-img-placeholder">
-              <img 
+              <Image 
                 src="/images/Photos by Placement/Home Page/Home Image 3.jpg" 
                 alt="Home Image 3"
-                loading="lazy"
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
               />
             </div>
+            
+            <h2>Where modern science meets sustainable well-being.</h2>
             
             <Link href="/consultations" className="btn-custom btn-outline" style={{ marginTop: '30px' }}>
               Are you ready to feel the difference?
