@@ -261,7 +261,7 @@ export default function About() {
             title={cardsData[0].title}
             content={cardsData[0].content}
             imagePosition={cardsData[0].imagePosition}
-            height="h-[400px] sm:h-[450px]"
+            height="h-[355px] sm:h-[395px]"
           />
           
           {/* Card 2 - Top Right */}
@@ -272,7 +272,7 @@ export default function About() {
             title={cardsData[1].title}
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
-            height="h-[400px] sm:h-[450px]"
+            height="h-[355px] sm:h-[395px]"
           />
           
           {/* Left Column - Cards 3 and 5 Stacked */}
@@ -285,7 +285,7 @@ export default function About() {
               title={cardsData[2].title}
               content={cardsData[2].content}
               imagePosition={cardsData[2].imagePosition}
-              height="h-[280px] sm:h-[320px]"
+              height="h-[355px] sm:h-[395px]"
               compact={true}
             />
             
@@ -297,7 +297,7 @@ export default function About() {
               title={cardsData[4].title}
               content={cardsData[4].content}
               imagePosition={cardsData[4].imagePosition}
-              height="h-[280px] sm:h-[320px]"
+              height="h-[355px] sm:h-[395px]"
               compact={true}
             />
           </div>
@@ -310,7 +310,7 @@ export default function About() {
             title={cardsData[3].title}
             content={cardsData[3].content}
             imagePosition={cardsData[3].imagePosition}
-            height="h-[560px] sm:h-[640px]"
+            height="h-[635px] sm:h-[715px]"
           />
         </div>
 

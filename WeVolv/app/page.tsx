@@ -53,7 +53,7 @@ export default function Home() {
             
             <div className="card-img-placeholder">
               <Image 
-                src="/images/Photos by Placement/Home Page/Home Image 2.JPG" 
+                src="/images/Photos by Placement/Home Page/Home Image 2.jpg" 
                 alt="Home Image 2"
                 fill
                 style={{ objectFit: 'cover' }}
