@@ -75,7 +75,7 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
         {/* Back of card - Text */}
         <div 
           className={`flip-card-face absolute w-full h-full bg-white rounded-[24px] overflow-hidden shadow-lg flex flex-col justify-center ${
-            compact ? 'p-4 sm:p-5' : 'p-6 sm:p-7'
+            compact ? 'pt-[40px] px-[31px] pb-[31px] sm:pt-[48px] sm:px-[35px] sm:pb-[35px]' : 'pt-[48px] px-[39px] pb-[39px] sm:pt-[56px] sm:px-[43px] sm:pb-[43px]'
           }`}
           style={{ 
             backfaceVisibility: 'hidden',
@@ -122,24 +122,24 @@ export default function About() {
       title: "Our Approach",
       content: (
         <>
-          <p className="mb-2 font-medium">
+          <p className="mb-6 font-bold">
             Our coaching integrates:
           </p>
-          <ul className="space-y-2">
+          <ul className="space-y-4">
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Nutrition and metabolic science</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Habit formation and behavior change</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Mindset work, emotional awareness, and self-compassion</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Practical tools that promote consistency over perfection</span>
             </li>
           </ul>
@@ -154,10 +154,10 @@ export default function About() {
       title: "Our Commitment",
       content: (
         <>
-          <p className="mb-2">
+          <p className="mb-4">
             WeVolv is committed to providing <span className="text-black font-semibold underline decoration-[#4a503d]/30 underline-offset-4">compassionate, inclusive, and evidence-based</span> coaching.
           </p>
-          <p className="mb-2">
+          <p className="mb-4">
             We meet people where they are, honor their lived experience, and support them in building skills they can carry forward long after coaching ends.
           </p>
           <p className="font-medium text-black">
@@ -174,25 +174,25 @@ export default function About() {
       title: "Our Values",
       content: (
         <>
-          <ul className="space-y-1">
-            <li className="flex items-start gap-2 italic">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-2">
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Health is not one-size-fits-all</span>
             </li>
-            <li className="flex items-start gap-2 italic">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Shame and restriction do not create lasting change</span>
             </li>
-            <li className="flex items-start gap-2 italic">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Education empowers better decisions</span>
             </li>
-            <li className="flex items-start gap-2 italic">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Support and community accelerate growth</span>
             </li>
-            <li className="flex items-start gap-2 italic">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#4a503d] shrink-0"></span>
               <span>Progress comes from consistency, not perfection</span>
             </li>
           </ul>
@@ -207,10 +207,10 @@ export default function About() {
       title: "Meet Your Coach",
       content: (
         <>
-          <p className="mb-2">
+          <p className="mb-10">
             I believe that good health isn't just about diet or exercise; it's about understanding how every part of your day influences your well-being.
           </p>
-          <p className="mb-2">
+          <p className="mb-10">
             That's why I take the time to learn about your unique routines, habits, and environment.
           </p>
           <p className="font-medium text-black">
@@ -261,7 +261,7 @@ export default function About() {
             title={cardsData[0].title}
             content={cardsData[0].content}
             imagePosition={cardsData[0].imagePosition}
-            height="h-[355px] sm:h-[395px]"
+            height="h-[475px] sm:h-[525px]"
           />
           
           {/* Card 2 - Top Right */}
@@ -272,7 +272,7 @@ export default function About() {
             title={cardsData[1].title}
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
-            height="h-[355px] sm:h-[395px]"
+            height="h-[475px] sm:h-[525px]"
           />
           
           {/* Left Column - Cards 3 and 5 Stacked */}
@@ -285,7 +285,7 @@ export default function About() {
               title={cardsData[2].title}
               content={cardsData[2].content}
               imagePosition={cardsData[2].imagePosition}
-              height="h-[355px] sm:h-[395px]"
+              height="h-[370px] sm:h-[410px]"
               compact={true}
             />
             
@@ -297,7 +297,7 @@ export default function About() {
               title={cardsData[4].title}
               content={cardsData[4].content}
               imagePosition={cardsData[4].imagePosition}
-              height="h-[355px] sm:h-[395px]"
+              height="h-[370px] sm:h-[410px]"
               compact={true}
             />
           </div>
@@ -310,7 +310,7 @@ export default function About() {
             title={cardsData[3].title}
             content={cardsData[3].content}
             imagePosition={cardsData[3].imagePosition}
-            height="h-[635px] sm:h-[715px]"
+            height="h-[752px] sm:h-[832px]"
           />
         </div>
 
