@@ -10,7 +10,7 @@ export default function LifeWave() {
       <div className="max-w-[1400px] mx-auto">
 
         {/* Hero Section */}
-        <section className="bg-white py-16 px-10 flex flex-col md:flex-row gap-10 items-center mb-8 rounded-lg max-w-[1000px] mx-auto">
+        <section className="bg-white py-20 px-12 flex flex-col md:flex-row gap-10 items-center mb-8 rounded-lg max-w-[1100px] mx-auto">
           <div className="flex-[2.5] relative aspect-video rounded overflow-hidden bg-black">
             {/* Loading Spinner */}
             {isVideoLoading && (
@@ -26,18 +26,22 @@ export default function LifeWave() {
               </div>
             )}
             
-            <iframe 
-              src="https://www.youtube.com/embed/SXMvqTQ4J1Y?start=90&autoplay=1&mute=1&loop=1&playlist=SXMvqTQ4J1Y" 
-              title="LifeWave - Be the Light"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              onLoad={() => setIsVideoLoading(false)}
-              className="w-full h-full absolute inset-0"
-            />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              onLoadedData={() => setIsVideoLoading(false)}
+              className="w-full h-full absolute inset-0 object-cover"
+            >
+              <source src="/videos/be-the-light.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           
           <div className="flex-[1]">
-            <h3 className="text-[1.5rem] font-light text-[#194D8D] mb-3">Be the Light</h3>
+            <h3 className="text-[2rem] font-light text-[#194D8D] mb-3">Be the Light</h3>
             <h5 className="text-[1.125rem] text-[#555] mb-3 leading-relaxed font-normal">
               Driven by innovation and proven by science, LifeWave is dedicated to maximizing your potential through advanced life technology. We uphold high product standards, lead with service, and strive for social responsibility.
             </h5>
@@ -48,21 +52,21 @@ export default function LifeWave() {
         </section>
 
         {/* Info Grid */}
-        <section className="flex flex-col md:flex-row gap-8 mb-12">
-          <div className="flex-1 bg-[#E5EDF2] flex flex-col md:flex-row rounded-lg overflow-hidden shadow-sm">
+        <section className="flex flex-col gap-4 mb-12">
+          <div className="w-[90%] mx-auto bg-[#E5EDF2] flex flex-col md:flex-row rounded-lg overflow-hidden shadow-sm h-[440px]">
             <img 
               src="/images/Photos by Placement/Lifewave Page/LW 1.jpg" 
               alt="LifeWave Patches"
-              className="w-full md:w-[40%] object-cover"
+              className="w-full md:w-[35%] h-full object-cover aspect-square"
             />
-            <div className="w-full md:w-[60%] p-6">
-              <h3 className="text-[1.5rem] font-light text-[#194D8D] mb-3">
+            <div className="w-full md:w-[65%] pt-10 pb-5 pl-16 pr-48">
+              <h3 className="text-[2rem] font-light text-[#194D8D] mb-6">
                 How It Works
               </h3>
-              <h5 className="text-[1.125rem] text-[#555] mb-2 leading-relaxed font-normal">
+              <h5 className="text-[1.125rem] text-[#555] mb-5 leading-relaxed font-normal">
                 Our non-transdermal patches fit simply into your daily lifestyle.
               </h5>
-              <h5 className="text-[1.125rem] font-bold text-[#555] mb-2">
+              <h5 className="text-[1.125rem] font-bold text-[#555] mb-5">
                 How do our Phototherapy Patches Work?
               </h5>
               <h5 className="text-[1.125rem] text-[#555] leading-relaxed font-normal">
@@ -71,14 +75,14 @@ export default function LifeWave() {
             </div>
           </div>
 
-          <div className="flex-1 bg-[#E5EDF2] flex flex-col md:flex-row-reverse rounded-lg overflow-hidden shadow-sm">
+          <div className="w-[90%] mx-auto bg-[#E5EDF2] flex flex-col md:flex-row-reverse rounded-lg overflow-hidden shadow-sm h-[440px]">
             <img 
               src="/images/Photos by Placement/Lifewave Page/LW 2.jpg" 
               alt="Phototherapy"
-              className="w-full md:w-[40%] object-cover"
+              className="w-full md:w-[35%] h-full object-cover aspect-square"
             />
-            <div className="w-full md:w-[60%] p-6">
-              <h3 className="text-[1.5rem] font-light text-[#194D8D] mb-3">
+            <div className="w-full md:w-[65%] pt-10 pb-5 pl-16 pr-48">
+              <h3 className="text-[2rem] font-light text-[#194D8D] mb-6">
                 Phototherapy
               </h3>
               <h5 className="text-[1.125rem] text-[#555] leading-relaxed font-normal">
@@ -92,12 +96,12 @@ export default function LifeWave() {
 
         {/* Brand Purpose & Pillars */}
         <section className="bg-white py-12 px-12 mb-12 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
-          <h3 className="text-[1.5rem] font-light text-[#194D8D] mb-5">Brand Purpose</h3>
+          <h3 className="text-[2rem] font-light text-[#194D8D] mb-5">Brand Purpose</h3>
           <h5 className="text-[1.125rem] text-[#555] max-w-[700px] mx-auto mb-10 leading-relaxed font-normal">
             Our purpose is to empower you to live in the light, maximizing your human potential, with patented life technology that enhances your life.
           </h5>
           
-          <h3 className="text-[1.5rem] font-light text-[#194D8D] mb-5">Brand Pillars</h3>
+          <h3 className="text-[2rem] font-light text-[#194D8D] mb-5">Brand Pillars</h3>
           <ul className="max-w-[800px] mx-auto list-none">
             <li className="text-center mb-3">
               <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
@@ -120,7 +124,7 @@ export default function LifeWave() {
         {/* Patch Guide */}
         <section id="patch-placement-guide" className="mb-20">
           <div className="bg-[#E5EDF2] p-12 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
-            <h3 className="text-[1.5rem] font-light text-black mb-4">
+            <h3 className="text-[2rem] font-light text-[#194D8D] mb-4">
               Patches and Placement Guide
             </h3>
             <a 

@@ -35,14 +35,14 @@ export default function Consultations() {
         
         {/* Weight Management Card */}
         <Link href="/weight-management" className="block">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-1000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
+          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
             <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 1.jpg" 
                 alt="Women stretching" 
                 fill
                 priority
-                className="object-cover hover:scale-105 transition-transform duration-1000"
+                className="object-cover hover:scale-105 transition-transform duration-2000"
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-4 px-10">
@@ -60,13 +60,13 @@ export default function Consultations() {
 
         {/* Fitness Card (Reversed) */}
         <Link href="/fitness" className="block pt-4 pb-4">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-1000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
+          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
             <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
                 alt="Women running" 
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-1000"
+                className="object-cover hover:scale-105 transition-transform duration-2000"
               />
             </div>
             <div className="flex-1 flex flex-col justify-center items-center text-center py-4 px-10">
@@ -80,13 +80,13 @@ export default function Consultations() {
 
         {/* Nutrition Card */}
         <Link href="/nutrition" className="block pb-4">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-1000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
+          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
             <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 3.jpg" 
                 alt="Healthy nutrition" 
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-1000"
+                className="object-cover hover:scale-105 transition-transform duration-2000"
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-4 px-10">
