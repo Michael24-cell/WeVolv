@@ -54,7 +54,7 @@ export default function WeightManagement() {
           </Link>
 
           {/* Card 3 - Dissolvable Strips */}
-          <div className="relative h-[185px] rounded-[12px] overflow-hidden">
+          <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
             <div className="absolute w-full h-[559px] left-0 top-[-374px]">
               <Image 
                 src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
@@ -65,10 +65,10 @@ export default function WeightManagement() {
                 quality={75}
               />
             </div>
-            <div className="absolute inset-0 bg-white/20 flex items-center p-[20px_40px] z-10">
+            <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
               <h3 className="text-[1.5rem] text-white font-semibold">Purefusion Dissolvable Strips</h3>
             </div>
-          </div>
+          </Link>
         </div>
     </section>
 
@@ -89,71 +89,71 @@ export default function WeightManagement() {
       <section className="bg-[#f4e6df] pt-[30px] pb-[60px] px-5">
         <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           
-          <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
-            <h3 className="text-[1.5rem] text-[#9abd97] mb-[15px] font-bold">This Is More Than Weight Loss</h3>
-            <h5 className="text-[1.5rem] text-[#111] mb-[35px] font-normal leading-tight mt-[10px]">Weight Management Coaching That<br />Empowers You</h5>
-            <h5 className="text-[1.125rem] text-[#111] mb-[25px] font-bold leading-relaxed">Your journey is personal—and your coaching should be too.</h5>
+          <div className="bg-white p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
+            <h2 className="text-[2rem] text-[#9abd97] mb-[14px] font-bold">This Is More Than Weight Loss</h2>
+            <h5 className="text-[1.25rem] text-[#555] mb-8 leading-relaxed whitespace-nowrap">Weight Management Coaching That Empowers You</h5>
+            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] mt-[5px] border-t border-[#9abd97] pt-[26px]">Your journey is personal—and your coaching should be too.</h5>
             <p className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">At Wevolv Wellness, we guide you step by step with:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+            <ul className="bullet-list-spacing">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Personalized one-on-one coaching built around your goals</span>
+                <span><strong>Personalized one-on-one coaching</strong> built around your goals</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Encouraging accountability to keep you moving forward</span>
+                <span><strong>Encouraging accountability</strong> to keep you moving forward</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Simple, realistic nutrition guidance you can actually sustain</span>
+                <span><strong>Simple, realistic nutrition</strong> guidance you can actually sustain</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Tools to build confidence, discipline, and momentum</span>
+                <span><strong>Tools to build confidence</strong>, discipline, and momentum</span>
               </li>
             </ul>
-            <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-5 border-t border-[#9abd97]">We don&apos;t just tell you what to do—we help you believe you can do it.</p>
+            <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-1">We don&apos;t just tell you what to do—we help you believe you can do it.</p>
           </div>
 
-          <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
-            <h3 className="text-[1.5rem] text-[#9abd97] mb-[15px] font-bold">Strategies Designed for Real Life</h3>
-            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-tight mt-[20px]">You don&apos;t need perfection—you need consistency.</h5>
+          <div className="bg-white p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
+            <h2 className="text-[2rem] text-[#9abd97] mb-[30px] font-bold">Strategies Designed for Real Life</h2>
+            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] mt-[53.5px] border-t border-[#9abd97] pt-[26px]">You don&apos;t need perfection—you need consistency.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">Our approach focuses on building sustainable habits that fit into your busy life:</h3>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+            <ul className="mb-8">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Sustainable meal planning and portion awareness</span>
+                <span><strong>Sustainable meal planning</strong> and portion awareness</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Daily routines that support metabolism, energy, and balance</span>
+                <span><strong>Daily routines</strong> that support metabolism, energy, and balance</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Mindset coaching to push through plateaus and self-doubt</span>
+                <span><strong>Mindset coaching</strong> to push through plateaus and self-doubt</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
-                <span>Simple systems that fit into busy, demanding lives</span>
+                <span><strong>Simple systems</strong> that fit into busy, demanding lives</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-white p-[60px_50px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col md:col-span-2">
-            <h3 className="text-[1.5rem] text-[#9abd97] mb-[15px] font-bold">Supplement Support With Purpose</h3>
-            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-tight mt-[20px]">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
+          <div className="bg-white p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col md:col-span-2">
+            <h2 className="text-[2rem] text-[#9abd97] mb-[30px] font-bold">Supplement Support With Purpose</h2>
+            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] border-t border-[#9abd97] pt-[26px]">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">We thoughtfully incorporate tools that support the work you&apos;re already doing:</h3>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+            <ul className="mb-8">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
                 <span>Herbalife® nutrition products, including protein shakes and meal replacements</span>
               </li>
-              <li className="flex items-start gap-3 text-[1.5rem] text-[#444]">
+              <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">
                 <span className="text-[#9abd97] text-[0.7rem] mt-[0.5rem]">●</span>
                 <span>Additional high-quality supplements selected to complement individual goals</span>
               </li>
             </ul>
-            <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-5 border-t border-[#9abd97]">Supplements are never shortcuts—they&apos;re tools that support the work you&apos;re already doing.</p>
+            <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-1">Supplements are never shortcuts—they&apos;re tools that support the work you&apos;re already doing.</p>
           </div>
 
         </div>

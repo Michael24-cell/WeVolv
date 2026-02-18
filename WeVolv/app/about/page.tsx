@@ -84,14 +84,7 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
           }}
         >
           <div className="overflow-hidden">
-            <h5 className={`font-semibold leading-tight text-black ${
-              compact ? 'text-[0.95rem] sm:text-[1rem] mb-1.5 sm:mb-2' : 'text-[1.2rem] sm:text-[1.3rem] mb-2 sm:mb-3'
-            }`}>
-              {title}
-            </h5>
-            <div className={`text-[#444] ${
-              compact ? 'text-[0.7rem] sm:text-[0.75rem] leading-snug' : 'text-[0.8rem] sm:text-[0.85rem] leading-relaxed'
-            }`}>
+            <div className="text-[1.5rem] text-[#444] leading-tight font-medium">
               {content}
             </div>
           </div>
@@ -268,7 +261,7 @@ export default function About() {
             title={cardsData[0].title}
             content={cardsData[0].content}
             imagePosition={cardsData[0].imagePosition}
-            height="h-[340px] sm:h-[380px]"
+            height="h-[400px] sm:h-[450px]"
           />
           
           {/* Card 2 - Top Right */}
@@ -279,7 +272,7 @@ export default function About() {
             title={cardsData[1].title}
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
-            height="h-[340px] sm:h-[380px]"
+            height="h-[400px] sm:h-[450px]"
           />
           
           {/* Left Column - Cards 3 and 5 Stacked */}
@@ -292,7 +285,7 @@ export default function About() {
               title={cardsData[2].title}
               content={cardsData[2].content}
               imagePosition={cardsData[2].imagePosition}
-              height="h-[218px] sm:h-[244px]"
+              height="h-[280px] sm:h-[320px]"
               compact={true}
             />
             
@@ -304,7 +297,7 @@ export default function About() {
               title={cardsData[4].title}
               content={cardsData[4].content}
               imagePosition={cardsData[4].imagePosition}
-              height="h-[218px] sm:h-[244px]"
+              height="h-[280px] sm:h-[320px]"
               compact={true}
             />
           </div>
@@ -317,6 +310,7 @@ export default function About() {
             title={cardsData[3].title}
             content={cardsData[3].content}
             imagePosition={cardsData[3].imagePosition}
+            height="h-[560px] sm:h-[640px]"
           />
         </div>
 

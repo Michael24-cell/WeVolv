@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       {/* Hero Section with Video */}
       <header className="hero-section">
-        <h2>Helping you evolve your health naturally and intentionally.</h2>
+        <h3 style={{ whiteSpace: 'nowrap', textAlign: 'center' }}>Helping you evolve your health naturally and intentionally.</h3>
         <h1>Your Life. Evolved.</h1>
         
         <div className="hero-image-container" style={{ height: 'auto', display: 'block' }}>
@@ -63,9 +63,9 @@ export default function Home() {
 
             <h2 style={{ fontWeight: 600 }}>Big Direction.</h2>
             
-            <h2>Whole person wellness intelligently aligned.</h2>
+            <h3 style={{ color: '#2D2D2D' }}>Whole person wellness intelligently aligned.</h3>
             
-            <Link href="/programs" className="btn-custom btn-outline" style={{ marginTop: '9px' }}>
+            <Link href="/programs" className="btn-custom btn-outline" style={{ marginTop: '30px' }}>
               Let&apos;s get started
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function Home() {
               />
             </div>
             
-            <h2>Where modern science meets sustainable well-being.</h2>
+            <h3 style={{ color: '#2D2D2D' }}>Where modern science meets sustainable well-being.</h3>
             
             <Link href="/consultations" className="btn-custom btn-outline" style={{ marginTop: '30px' }}>
               Are you ready to feel the difference?

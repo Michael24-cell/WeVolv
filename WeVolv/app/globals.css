@@ -107,8 +107,8 @@ h5 {
 }
 
 .btn-outline:hover {
-  background-color: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.6);
+  background-color: #455245;
+  border-color: #455245;
 }
 
 .btn-dark {
@@ -118,7 +118,7 @@ h5 {
 }
 
 .btn-dark:hover {
-  background-color: #1f261f;
+  background-color: #455245;
 }
 
 /* Hero Section */
@@ -147,17 +147,17 @@ h5 {
   font-weight: 400;
   color: #000000;
   margin-bottom: 15px;
-  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: 0.03em;
 }
 
 .hero-section h1 {
   font-family: var(--font-montserrat);
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   line-height: 1.2;
   margin-bottom: 40px;
-  font-weight: 600;
+  font-weight: 625;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -167,6 +167,7 @@ h5 {
 .hero-image-container {
   position: relative;
   margin-top: 20px;
+  padding-top: 40px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -194,7 +195,7 @@ h5 {
 /* Grid Cards */
 .grid-card {
   background-color: #EDD7CB;
-  padding: 40px;
+  padding: 50px 40px;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -209,10 +210,10 @@ h5 {
 }
 
 .grid-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
-              0 4px 8px rgba(0, 0, 0, 0.04),
-              inset 0 1px 2px rgba(255, 255, 255, 0.15),
-              inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+              0 10px 25px rgba(0, 0, 0, 0.04),
+              0 0 40px rgba(234, 220, 208, 0.4);
 }
 
 .grid-card h2 {
@@ -258,9 +259,9 @@ h5 {
 
 .grid-card .btn-outline {
   color: #ffffff;
-  background-color: #3a3a3a;
-  border: 1px solid #3a3a3a;
-  width: 70%;
+  background-color: #5B6D5B;
+  border: 1px solid #5B6D5B;
+  width: 380px;
 }
 
 .grid-card:nth-child(1) .btn-outline {
@@ -269,13 +270,17 @@ h5 {
 }
 
 .grid-card .btn-outline:hover {
-  background-color: #2a2a2a;
-  border-color: #2a2a2a;
+  background-color: #455245;
+  border-color: #455245;
 }
 
 .grid-card:nth-child(2) h2:nth-of-type(2) {
   margin-top: 20px;
   margin-bottom: 0;
+}
+
+.grid-card:nth-child(2) h3 {
+  margin-top: 88px;
 }
 
 .grid-card:nth-child(2) .btn-outline {
@@ -285,7 +290,7 @@ h5 {
 .card-img-placeholder {
   width: 100%;
   height: auto;
-  min-height: 400px;
+  aspect-ratio: 3/2;
   background-color: #4a5a4a;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -414,6 +419,41 @@ h5 {
   }
 }
 
+/* Navbar Link Underline Animation */
+.nav-link-underline {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -39px;
+  left: 17.5%;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  opacity: 1;
+  transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover {
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline.nav-link-underline-active::after {
+  width: 65%;
+}
+
+.nav-link-underline.nav-link-underline-active {
+  background-color: transparent;
+  border-radius: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-section h3 {
@@ -443,4 +483,17 @@ h5 {
   .grid-card h2 {
     font-size: 2rem;
   }
+}
+
+/* Weight Management Page Spacing Fixes */
+.divide-line-spacing {
+  margin-top: 68px;
+}
+
+.divide-padding {
+  padding-top: 20px;
+}
+
+.bullet-list-spacing {
+  margin-bottom: 1rem;
 }

@@ -35,7 +35,7 @@ export default function Consultations() {
         
         {/* Weight Management Card */}
         <Link href="/weight-management" className="block">
-          <section className="consultation-card bg-[#fafbfc] border border-[#7a8ba0] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] p-8 md:p-12 gap-6 transition-all hover:shadow-sm hover:bg-white cursor-pointer">
+          <section className="consultation-card bg-[#fafbfc] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] p-8 md:p-12 gap-6 transition-all hover:shadow-sm hover:bg-white cursor-pointer shadow-sm">
             <div className="flex-1 relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 1.jpg" 
@@ -46,10 +46,10 @@ export default function Consultations() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-4">
-              <h1 className="serif-text text-[3.5rem] mb-6 text-[#222]">Weight Management</h1>
-              <h2 className="text-[2.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
+              <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Weight Management</h2>
+              <h3 className="text-[1.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
                 Personalized natural wellness coaching to help you create a balanced, vibrant life.
-              </h2>
+              </h3>
               <p className="text-[1.25rem] font-normal text-[#666] max-w-[750px] leading-[1.3] mb-8 mt-4">
                 We combine motivational weight management coaching, proven strategies, and intentional supplement support—including Herbalife products and other trusted supplements—to help you feel stronger, healthier, and more energized in your everyday life.
               </p>
@@ -59,7 +59,7 @@ export default function Consultations() {
 
         {/* Fitness Card (Reversed) */}
         <Link href="/fitness" className="block pt-8 pb-8">
-          <section className="consultation-card bg-[#fafbfc] border border-[#7a8ba0] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] p-8 md:p-12 gap-6 transition-all hover:shadow-sm hover:bg-white cursor-pointer">
+          <section className="consultation-card bg-[#fafbfc] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] p-8 md:p-12 gap-6 transition-all hover:shadow-sm hover:bg-white cursor-pointer shadow-sm">
             <div className="flex-1 relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
@@ -69,17 +69,17 @@ export default function Consultations() {
               />
             </div>
             <div className="flex-1 flex flex-col justify-center items-center text-center py-4">
-              <h1 className="serif-text text-[3.5rem] mb-6 text-[#222]">Fitness</h1>
-              <h2 className="text-[2.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
+              <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Fitness</h2>
+              <h3 className="text-[1.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
                 Targeted solutions to support whole-body performance and boost vitality.
-              </h2>
+              </h3>
             </div>
           </section>
         </Link>
 
         {/* Nutrition Card */}
         <Link href="/nutrition" className="block pb-8">
-          <section className="consultation-card bg-[#fafbfc] border border-[#7a8ba0] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] p-8 md:p-12 gap-6 transition-all hover:shadow-sm hover:bg-white cursor-pointer">
+          <section className="consultation-card bg-[#fafbfc] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] p-8 md:p-12 gap-6 transition-all hover:shadow-sm hover:bg-white cursor-pointer shadow-sm">
             <div className="flex-1 relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 3.jpg" 
@@ -89,10 +89,10 @@ export default function Consultations() {
               />
             </div>
             <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-4">
-              <h1 className="serif-text text-[3.5rem] mb-6 text-[#222]">Nutrition</h1>
-              <h2 className="text-[2.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
+              <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Nutrition</h2>
+              <h3 className="text-[1.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
                 Science-backed products and plans that help you nourish a healthy life.
-              </h2>
+              </h3>
             </div>
           </section>
         </Link>
@@ -102,9 +102,9 @@ export default function Consultations() {
       {/* Bottom CTA */}
       <div className="w-full max-w-[98vw] mx-auto px-5 pb-[100px]">
         <div className="bg-white rounded-[20px] p-12 md:p-16 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center pt-8">
-          <h3 className="text-[2.5rem] font-semibold mb-8 text-[#333] mt-4">
+          <h2 className="text-[1.5rem] font-semibold mb-8 text-[#333] mt-4">
             This is your moment to choose growth.<br />To choose strength. To choose yourself.
-          </h3>
+          </h2>
           <p className="text-[2.5rem] text-[#555] mb-10 max-w-[1150px] mx-auto">
             Whether your goal is weight management, more energy, or renewed confidence, Wevolv Wellness is here to walk with you—every step, every win, every evolution.
           </p>

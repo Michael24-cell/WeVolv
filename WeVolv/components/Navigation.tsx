@@ -7,6 +7,17 @@ import { useState } from "react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
+  const [coachingTimeout, setCoachingTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  const handleCoachingMouseEnter = () => {
+    if (coachingTimeout) clearTimeout(coachingTimeout);
+    setIsCoachingOpen(true);
+  };
+
+  const handleCoachingMouseLeave = () => {
+    const timeout = setTimeout(() => setIsCoachingOpen(false), 150);
+    setCoachingTimeout(timeout);
+  };
 
   // Coaching dropdown items
   const coachingItems = [
@@ -44,12 +55,13 @@ export default function Navigation() {
   return (
     <nav
       style={{
-        backgroundColor: '#f4f4f4',
+        backgroundColor: '#ffffff',
         color: 'black',
         position: 'sticky',
         top: 0,
         zIndex: 100,
         fontFamily: 'var(--font-inter), Inter, sans-serif',
+        borderBottom: '1px solid #d0d0d0',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,32 +72,44 @@ export default function Navigation() {
             {/* Coaching Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setIsCoachingOpen(true)}
-              onMouseLeave={() => setIsCoachingOpen(false)}
+              onMouseEnter={handleCoachingMouseEnter}
+              onMouseLeave={handleCoachingMouseLeave}
             >
-              <button className="text-[13px] font-semibold uppercase tracking-[0.2em] hover:opacity-60 transition-opacity py-2 px-2">
+              <button className={`text-[13px] font-semibold uppercase tracking-[0.2em] py-2 px-2 nav-link-underline ${isCoachingOpen ? 'nav-link-underline-active' : ''}`}>
                 Coaching
               </button>
               {isCoachingOpen && (
-                <div className="absolute top-full left-0 pt-2 -ml-4 pl-4 pr-8">
-                  <div className="w-64 shadow-lg border border-gray-200 rounded-md py-3" style={{ backgroundColor: '#f4f4f4' }}>
-                    {coachingItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`block px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.12em] border-l-4 border-transparent hover:bg-white hover:font-bold transition-all ${
-                          item.label === "Consultations"
-                            ? "hover:border-l-[#017174]"
-                            : item.label === "Memberships"
-                            ? "hover:border-l-[#943888]"
-                            : "hover:border-l-[#ED9E52]"
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                <>
+                  {/* Invisible hover bridge - fills gap between button and dropdown */}
+                  <div
+                    className="absolute left-0 right-0"
+                    style={{
+                      top: '100%',
+                      height: '39px',
+                      pointerEvents: 'auto',
+                    }}
+                    aria-hidden="true"
+                  />
+                  <div className="absolute left-0 -ml-4 pl-4 pr-8" style={{ top: 'calc(100% + 39px)' }}>
+                    <div className="w-64 shadow-lg border border-gray-200 rounded-md py-3" style={{ backgroundColor: '#f4f4f4' }}>
+                      {coachingItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`block px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.12em] border-l-4 border-transparent hover:bg-white hover:font-bold transition-all ${
+                            item.label === "Consultations"
+                              ? "hover:border-l-[#017174]"
+                              : item.label === "Memberships"
+                              ? "hover:border-l-[#943888]"
+                              : "hover:border-l-[#ED9E52]"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </>
               )}
             </div>
             
@@ -93,7 +117,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-semibold uppercase tracking-[0.2em] hover:opacity-60 transition-opacity"
+                className="text-[13px] font-semibold uppercase tracking-[0.2em] nav-link-underline"
               >
                 {link.label}
               </Link>
@@ -121,7 +145,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-semibold uppercase tracking-[0.2em] hover:opacity-60 transition-opacity"
+                className="text-[13px] font-semibold uppercase tracking-[0.2em] nav-link-underline"
               >
                 {link.label}
               </Link>
