@@ -12,9 +12,11 @@ interface FlipCardProps {
   imagePosition?: string;
   height?: string;
   compact?: boolean;
+  verticalAlign?: 'start' | 'center' | 'end';
+  topPadding?: string;
 }
 
-function FlipCard({ image, imageAlt, title, content, imagePosition = "center", height = "h-[450px] sm:h-[500px]", compact = false }: FlipCardProps) {
+function FlipCard({ image, imageAlt, title, content, imagePosition = "center", height = "h-[450px] sm:h-[500px]", compact = false, verticalAlign = "center", topPadding }: FlipCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -66,16 +68,18 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
           />
           {/* Title overlay with localized shadow */}
           <div className="absolute top-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-b from-black/65 via-black/30 to-transparent pb-20">
-            <h3 className="text-white text-[1.5rem] font-semibold leading-tight drop-shadow-lg">
+            <h2 className="text-white text-[2rem] font-semibold leading-tight drop-shadow-lg">
               {title}
-            </h3>
+            </h2>
           </div>
         </div>
 
         {/* Back of card - Text */}
         <div 
-          className={`flip-card-face absolute w-full h-full bg-white rounded-[24px] overflow-hidden shadow-lg flex flex-col justify-center ${
-            compact ? 'pt-[40px] px-[31px] pb-[31px] sm:pt-[48px] sm:px-[35px] sm:pb-[35px]' : 'pt-[48px] px-[39px] pb-[39px] sm:pt-[56px] sm:px-[43px] sm:pb-[43px]'
+          className={`flip-card-face absolute w-full h-full bg-white rounded-[24px] overflow-hidden shadow-lg flex flex-col ${
+            verticalAlign === 'start' ? 'justify-start' : verticalAlign === 'end' ? 'justify-end' : 'justify-center'
+          } ${
+            compact ? `${topPadding ?? 'pt-[40px] sm:pt-[48px]'} px-[31px] pb-[31px] sm:px-[35px] sm:pb-[35px]` : `${topPadding ?? 'pt-[48px] sm:pt-[56px]'} px-[39px] pb-[39px] sm:px-[43px] sm:pb-[43px]`
           }`}
           style={{ 
             backfaceVisibility: 'hidden',
@@ -299,6 +303,8 @@ export default function About() {
               imagePosition={cardsData[4].imagePosition}
               height="h-[370px] sm:h-[410px]"
               compact={true}
+              verticalAlign="start"
+              topPadding="pt-[55px] sm:pt-[63px]"
             />
           </div>
 
@@ -311,6 +317,8 @@ export default function About() {
             content={cardsData[3].content}
             imagePosition={cardsData[3].imagePosition}
             height="h-[752px] sm:h-[832px]"
+            verticalAlign="start"
+            topPadding="pt-[63px] sm:pt-[71px]"
           />
         </div>
 
