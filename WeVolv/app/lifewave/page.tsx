@@ -1,10 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function LifeWave() {
-  const [isVideoLoading, setIsVideoLoading] = useState(true);
-
   return (
     <div className="bg-[#f4e6df] min-h-screen py-10 px-5">
       <div className="max-w-[1400px] mx-auto">
@@ -12,27 +8,9 @@ export default function LifeWave() {
         {/* Hero Section */}
         <section className="bg-white py-20 px-12 flex flex-col md:flex-row gap-10 items-center mb-8 rounded-lg max-w-[1100px] mx-auto">
           <div className="flex-[2.5] relative aspect-video rounded overflow-hidden bg-black">
-            {/* Loading Spinner */}
-            {isVideoLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black z-10">
-                <div style={{
-                  width: '50px',
-                  height: '50px',
-                  border: '4px solid rgba(255, 255, 255, 0.3)',
-                  borderTop: '4px solid #fff',
-                  borderRadius: '50%',
-                  animation: 'spin 1s linear infinite'
-                }} />
-              </div>
-            )}
-            
             <video
-              autoPlay
-              muted
-              loop
+              controls
               playsInline
-              preload="auto"
-              onLoadedData={() => setIsVideoLoading(false)}
               className="w-full h-full absolute inset-0 object-cover"
             >
               <source src="/videos/be-the-light.mp4" type="video/mp4" />

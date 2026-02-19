@@ -16,6 +16,7 @@ export default function Footer() {
                 width={180}
                 height={90}
                 className="object-contain"
+                style={{width: "auto", height: "auto"}}
               />
             </div>
             <p style={{ fontSize: '0.7rem', color: '#777', lineHeight: '1.5', maxWidth: '300px' }}>
