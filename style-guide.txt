@@ -1,0 +1,213 @@
+================================================================================
+  WEVOLV — DESIGN TOKENS & STYLE GUIDE
+  For use when building pages that visually match wevolv.com
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+  1. FONTS
+────────────────────────────────────────────────────────────────────────────────
+
+  Primary (used everywhere)
+    Family : Montserrat
+    Weights: 300 (light), 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
+    Source : https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap
+
+  Utility Sans (Navbar, footer elements, metadata)
+    Family : Inter
+    Weights: 400, 500, 600
+    Source : https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap
+
+────────────────────────────────────────────────────────────────────────────────
+  2. COLOR TOKENS
+────────────────────────────────────────────────────────────────────────────────
+
+  Background
+    --color-bg-page          #f4e6df   Warm pinkish-beige — site body background
+    --color-bg-card          #EDD7CB   Slightly deeper warm tone — card surfaces
+    --color-bg-footer        #f4f4f4   Near-white — footer background
+    --color-bg-faq           #e3e6e8   Cool light grey — alternate page background
+    --color-bg-white         #ffffff   Pure white — boxes / callouts
+
+  Text
+    --color-text-primary     #2D2D2D   Near-black — main body copy on light backgrounds
+    --color-text-heading     #000000   True black — hero headings
+    --color-text-mid         #555555   Medium grey — FAQ headings
+    --color-text-muted       #777777   Muted grey — subheadings, labels
+    --color-text-light       #f4f8f4   Off-white — text on dark/green backgrounds
+    --color-text-dimmed      #d1dcd3   Dimmed light — muted text on dark backgrounds
+    --color-text-placeholder #bbbbbb   Placeholder text in inputs
+
+  Brand Greens
+    --color-green-accent     #9abd97   Sage green — accent/italic highlights in headings
+    --color-green-mid        #5B6D5B   Medium sage — CTA button fill
+    --color-green-dark       #455245   Dark sage — button hover state
+    --color-green-deep       #2a332a   Deep forest — dark button fill
+    --color-green-footer     #2c2c2c   Near-black — footer text
+
+  Borders & Dividers
+    --color-border-light     #eeeeee   Hairline dividers — FAQ separators
+    --color-border-mid       #dddddd   Input borders
+    --color-border-faint     #f0f0f0   Accordion item separators
+
+────────────────────────────────────────────────────────────────────────────────
+  3. TYPOGRAPHY SCALE
+────────────────────────────────────────────────────────────────────────────────
+
+  Token                Size     Line Height   Weight   Usage
+  ───────────────────────────────────────────────────────────────────────────
+  --type-hero-xl       4.5rem   1.2           625*     Hero H1 (homepage)
+  --type-h1            3.5rem   1.2           700      Page-level H1
+  --type-h2            2.5rem   1.2           400      Section headings
+  --type-h3            1.5rem   1.3           400      Card titles, sub-sections
+  --type-h4            1.25rem  1.4           400      Component headings
+  --type-h5            1.125rem 1.4           400      Small headings
+  --type-body          1rem     1.5           400      Default body copy
+  --type-body-sm       0.95rem  1.6           400      Secondary body copy (FAQ answers)
+  --type-label         0.8rem   1.4           400      Small utility labels
+  --type-caption       0.75rem  1.4           700      Uppercase labels / search button
+  --type-tag           0.7rem   1.4           700      Accordion question text
+
+  * font-weight: 625 is intentional — Montserrat variable font supports it.
+
+  Letter Spacing
+    Headings (light)   0.03em  — hero subheads
+    Labels/tags        1px–1.5px — uppercase small caps
+
+────────────────────────────────────────────────────────────────────────────────
+  4. SPACING
+────────────────────────────────────────────────────────────────────────────────
+
+  --space-xs      4px
+  --space-sm      8px
+  --space-md      16px
+  --space-lg      24px
+  --space-xl      40px
+  --space-2xl     60px
+  --space-3xl     80px
+
+  Section vertical padding : 60px top/bottom (hero: 60px 20px)
+  Card inner padding       : 50px top/bottom, 40px left/right
+  FAQ box padding          : 50px (30px on mobile)
+  Container max-width      : 1200px (hero), 900px (FAQ)
+  Grid gap                 : 25px (FAQ card stack)
+  Button gap               : 15px
+
+────────────────────────────────────────────────────────────────────────────────
+  5. BORDER RADIUS
+────────────────────────────────────────────────────────────────────────────────
+
+  --radius-pill   50px   Buttons (fully rounded pill shape)
+  --radius-card   20px   Large cards, image wrappers, consultation cards
+  --radius-img    12px   In-card images
+  --radius-sm     10px   Hero images (slight rounding)
+  --radius-tag    20px   Nav link hover state
+
+────────────────────────────────────────────────────────────────────────────────
+  6. SHADOWS
+────────────────────────────────────────────────────────────────────────────────
+
+  Card (default)
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 4px 8px rgba(0,0,0,0.04),
+    inset 0 1px 2px rgba(255,255,255,0.15),
+    inset 0 -1px 2px rgba(0,0,0,0.05)
+
+  Card (hover)
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 10px 25px rgba(0,0,0,0.04),
+    0 0 40px rgba(234,220,208,0.4)
+
+  Elevated (shadow-lg)
+    0 0 0 1px rgba(0,0,0,0.05),
+    0 0 15px rgba(0,0,0,0.08),
+    0 0 25px rgba(0,0,0,0.04)
+
+  Elevated hover (shadow-lg)
+    0 0 0 1px rgba(0,0,0,0.08),
+    0 0 25px rgba(0,0,0,0.12),
+    0 0 40px rgba(99,102,241,0.1)
+
+  Subtle (shadow-md)
+    0 0 0 1px rgba(0,0,0,0.04),
+    0 0 12px rgba(0,0,0,0.06),
+    0 0 20px rgba(0,0,0,0.03)
+
+  FAQ box
+    0 2px 10px rgba(0,0,0,0.03)
+
+  Consultation card
+    0 1px 3px rgba(0,0,0,0.04)
+
+────────────────────────────────────────────────────────────────────────────────
+  7. TRANSITIONS
+────────────────────────────────────────────────────────────────────────────────
+
+  --transition-default   all 0.3s ease          Cards, buttons, shadows, transforms
+  --transition-color     color 0.2s ease         Accordion button hover
+  --transition-icon      transform 0.3s ease      Accordion expand icon rotate
+  --transition-panel     max-height 0.3s ease-out Accordion panel reveal
+
+────────────────────────────────────────────────────────────────────────────────
+  8. BUTTONS
+────────────────────────────────────────────────────────────────────────────────
+
+  All buttons share:
+    display       : inline-block
+    padding       : 16px 36px
+    border-radius : 50px (pill)
+    font-size     : 1rem
+    font-weight   : 700
+    font-family   : Montserrat
+    transition    : all 0.3s ease
+
+  Variants:
+    White     bg #ffffff  / text #f4e6df / border #ffffff
+              hover bg #f8f8f8
+
+    Outline   bg transparent / text #ffffff / border rgba(255,255,255,0.4)
+              backdrop-filter: blur(5px)
+              hover bg #455245 / border #455245
+
+    Dark      bg #2a332a  / text #ffffff / border #2a332a
+              hover bg #455245
+
+    Card CTA  bg #5B6D5B  / text #ffffff / border #5B6D5B  / width 380px
+              hover bg #455245
+
+────────────────────────────────────────────────────────────────────────────────
+  9. RESPONSIVE BREAKPOINTS
+────────────────────────────────────────────────────────────────────────────────
+
+  Desktop     min-width: 769px (no changes needed beyond defaults)
+  Tablet/Mid  max-width: 768px — reduce hero font sizes, static button position
+  Mobile      max-width: 600px — reduce headings, stack search bar, reduce padding
+
+  Specific changes at 768px:
+    .hero-section h1    → 2.5rem (from 4.5rem)
+    .hero-section h3    → 1.2rem (from 1.5rem), max-width: 400px
+    .hero-image-full    → border-radius: 12px
+    .hero-buttons       → position: static, margin-top: 20px
+    .grid-card h2       → 2rem (from 2.5rem)
+
+  Specific changes at 600px:
+    .faqContainer h1    → 2rem (from 3rem)
+    .box padding        → 30px 20px (from 50px)
+    .searchWrapper      → flex-direction: column, height: auto, gap: 10px
+
+────────────────────────────────────────────────────────────────────────────────
+  10. ACCESSIBILITY
+────────────────────────────────────────────────────────────────────────────────
+
+  Focus styles (use for blog-embed.css):
+    outline        : 2px solid #9abd97 (accent green)
+    outline-offset : 3px
+    No outline suppression (never use outline: none without a visible replacement)
+
+  Contrast notes:
+    #2D2D2D on #f4e6df → passes WCAG AA for body text
+    #ffffff  on #5B6D5B → passes WCAG AA for button text
+    #000000  on #f4e6df → passes WCAG AAA
+
+================================================================================
+  END OF STYLE GUIDE
+================================================================================

@@ -1,0 +1,758 @@
+/**
+ /* CSS for Wevolv */
+ * blog-embed.css — scoped blog styles under .mp-blog */
+ */
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
+.mp-blog {
+  /* Colors */
+  --mp-color-bg-page:        #f4e6df;
+  --mp-color-bg-card:        #EDD7CB;
+  --mp-color-bg-white:       #ffffff;
+  --mp-color-bg-callout:     #EDD7CB;
+  --mp-color-bg-code:        #2a332a;
+  --mp-color-bg-pre:         #1e2a1e;
+
+  --mp-color-text-heading:   #000000;
+  --mp-color-text-primary:   #2D2D2D;
+  --mp-color-text-mid:       #555555;
+  --mp-color-text-muted:     #777777;
+  --mp-color-text-subtle:    #777777;
+  --mp-color-text-light:     #f4f8f4;
+  --mp-color-text-meta:      #666666;
+
+  --mp-color-green-accent:   #9abd97;
+  --mp-color-green-mid:      #5B6D5B;
+  --mp-color-green-dark:     #455245;
+  --mp-color-green-deep:     #2a332a;
+
+  --mp-color-border-light:   #eeeeee;
+  --mp-color-border-mid:     #dddddd;
+  --mp-color-border-quote:   #9abd97;
+
+  --mp-color-link:           #5B6D5B;
+  --mp-color-link-hover:     #2a332a;
+  --mp-color-focus:          #9abd97;
+
+  /* Typography */
+  --mp-font-primary:         'Montserrat', sans-serif;
+  --mp-font-serif:           'Playfair Display', serif;
+
+  --mp-type-h1:              2.5rem;
+  --mp-type-h2:              2rem;
+  --mp-type-h3:              1.5rem;
+  --mp-type-h4:              1.25rem;
+  --mp-type-body:            1rem;
+  --mp-type-body-sm:         0.95rem;
+  --mp-type-meta:            0.85rem;
+  --mp-type-caption:         0.8rem;
+  --mp-type-code:            0.88rem;
+
+  --mp-lh-heading:           1.25;
+  --mp-lh-body:              1.7;
+  --mp-lh-relaxed:           1.8;
+
+  /* Spacing */
+  --mp-space-xs:             4px;
+  --mp-space-sm:             8px;
+  --mp-space-md:             16px;
+  --mp-space-lg:             24px;
+  --mp-space-xl:             40px;
+  --mp-space-2xl:            60px;
+
+  /* Radii */
+  --mp-radius-card:          20px;
+  --mp-radius-img:           12px;
+  --mp-radius-sm:            8px;
+  --mp-radius-pill:          50px;
+
+  /* Shadows */
+  --mp-shadow-card:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 4px 8px rgba(0,0,0,0.04),
+    inset 0 1px 2px rgba(255,255,255,0.15),
+    inset 0 -1px 2px rgba(0,0,0,0.05);
+  --mp-shadow-card-hover:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 10px 25px rgba(0,0,0,0.04),
+    0 0 40px rgba(234,220,208,0.4);
+  --mp-shadow-elevated:
+    0 0 0 1px rgba(0,0,0,0.05),
+    0 0 15px rgba(0,0,0,0.08),
+    0 0 25px rgba(0,0,0,0.04);
+  --mp-shadow-subtle:
+    0 2px 10px rgba(0,0,0,0.03);
+
+  /* Transitions */
+  --mp-transition:           all 0.3s ease;
+  --mp-transition-color:     color 0.2s ease;
+  --mp-transition-shadow:    box-shadow 0.3s ease;
+}
+
+
+/* ============================================================
+   WRAPPER & LAYOUT
+   ============================================================ */
+
+.mp-blog {
+  background-color: var(--mp-color-bg-page);
+  color: var(--mp-color-text-primary);
+  font-family: var(--mp-font-primary);
+  font-size: var(--mp-type-body);
+  line-height: var(--mp-lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: var(--mp-space-2xl) var(--mp-space-md);
+  box-sizing: border-box;
+}
+
+.mp-blog *,
+.mp-blog *::before,
+.mp-blog *::after {
+  box-sizing: inherit;
+}
+
+/* Content column — centered, readable width */
+.mp-blog__body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   ARTICLE HEADER (title + meta)
+   ============================================================ */
+
+.mp-blog__header {
+  max-width: 720px;
+  margin: 0 auto var(--mp-space-xl);
+  text-align: center;
+}
+
+.mp-blog__title {
+  font-family: var(--mp-font-primary);
+  font-size: var(--mp-type-h1);
+  font-weight: 700;
+  line-height: var(--mp-lh-heading);
+  color: var(--mp-color-text-heading);
+  margin: 0 0 var(--mp-space-lg);
+  letter-spacing: -0.01em;
+}
+
+.mp-blog__subtitle {
+  font-family: var(--mp-font-primary);
+  font-size: var(--mp-type-h3);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--mp-color-text-muted);
+  margin: 0 0 var(--mp-space-lg);
+  letter-spacing: 0.03em;
+}
+
+.mp-blog__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--mp-space-md);
+  font-family: var(--mp-font-primary);
+  font-size: var(--mp-type-meta);
+  color: var(--mp-color-text-meta);
+  font-weight: 500;
+}
+
+.mp-blog__meta-separator {
+  color: var(--mp-color-border-mid);
+}
+
+.mp-blog__tag {
+  display: inline-block;
+  background-color: var(--mp-color-green-mid);
+  color: var(--mp-color-text-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: var(--mp-space-xs) var(--mp-space-md);
+  border-radius: var(--mp-radius-pill);
+}
+
+/* Divider between header and body */
+.mp-blog__header-divider {
+  border: none;
+  border-top: 1px solid var(--mp-color-border-light);
+  max-width: 720px;
+  margin: 0 auto var(--mp-space-xl);
+}
+
+
+/* ============================================================
+   HEADINGS  h1–h4
+   ============================================================ */
+
+.mp-blog h1,
+.mp-blog h2,
+.mp-blog h3,
+.mp-blog h4 {
+  font-family: var(--mp-font-primary);
+  color: var(--mp-color-text-heading);
+  line-height: var(--mp-lh-heading);
+  margin-top: var(--mp-space-xl);
+  margin-bottom: var(--mp-space-md);
+  font-weight: 700;
+}
+
+.mp-blog h1 {
+  font-size: var(--mp-type-h1);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.mp-blog h2 {
+  font-size: var(--mp-type-h2);
+  font-weight: 600;
+  border-bottom: 1px solid var(--mp-color-border-light);
+  padding-bottom: var(--mp-space-sm);
+}
+
+.mp-blog h3 {
+  font-size: var(--mp-type-h3);
+  font-weight: 600;
+  color: var(--mp-color-text-mid);
+}
+
+.mp-blog h4 {
+  font-size: var(--mp-type-h4);
+  font-weight: 600;
+  color: var(--mp-color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* First heading after header needs no top margin */
+.mp-blog__body > h1:first-child,
+.mp-blog__body > h2:first-child {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+   BODY TEXT  p, strong, em
+   ============================================================ */
+
+.mp-blog p {
+  font-size: var(--mp-type-body);
+  line-height: var(--mp-lh-relaxed);
+  color: var(--mp-color-text-primary);
+  margin: 0 0 var(--mp-space-lg);
+}
+
+.mp-blog strong,
+.mp-blog b {
+  font-weight: 700;
+  color: var(--mp-color-text-heading);
+}
+
+.mp-blog em,
+.mp-blog i {
+  font-style: italic;
+  color: var(--mp-color-green-mid);
+}
+
+
+/* ============================================================
+   LINKS  a, a:hover
+   ============================================================ */
+
+.mp-blog a {
+  color: var(--mp-color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(91,109,91,0.4);
+  transition: var(--mp-transition-color);
+}
+
+.mp-blog a:hover {
+  color: var(--mp-color-link-hover);
+  text-decoration-color: var(--mp-color-link-hover);
+}
+
+.mp-blog a:focus-visible {
+  outline: 2px solid var(--mp-color-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   LISTS  ul, ol, li
+   ============================================================ */
+
+.mp-blog ul,
+.mp-blog ol {
+  padding-left: var(--mp-space-xl);
+  margin: 0 0 var(--mp-space-lg);
+  color: var(--mp-color-text-primary);
+}
+
+.mp-blog ul {
+  list-style-type: disc;
+}
+
+.mp-blog ol {
+  list-style-type: decimal;
+}
+
+.mp-blog li {
+  font-size: var(--mp-type-body);
+  line-height: var(--mp-lh-body);
+  margin-bottom: var(--mp-space-sm);
+}
+
+.mp-blog li::marker {
+  color: var(--mp-color-green-mid);
+}
+
+/* Nested lists */
+.mp-blog ul ul,
+.mp-blog ol ol,
+.mp-blog ul ol,
+.mp-blog ol ul {
+  margin-top: var(--mp-space-sm);
+  margin-bottom: var(--mp-space-sm);
+}
+
+
+/* ============================================================
+   BLOCKQUOTE
+   ============================================================ */
+
+.mp-blog blockquote {
+  border-left: 3px solid var(--mp-color-green-accent);
+  background-color: var(--mp-color-bg-card);
+  margin: var(--mp-space-xl) 0;
+  padding: var(--mp-space-lg) var(--mp-space-xl);
+  border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0;
+  box-shadow: var(--mp-shadow-subtle);
+}
+
+.mp-blog blockquote p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--mp-color-text-mid);
+  font-style: italic;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.mp-blog blockquote cite {
+  display: block;
+  margin-top: var(--mp-space-md);
+  font-size: var(--mp-type-caption);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mp-color-text-muted);
+}
+
+
+/* ============================================================
+   HORIZONTAL RULE  hr
+   ============================================================ */
+
+.mp-blog hr {
+  border: none;
+  border-top: 1px solid var(--mp-color-border-light);
+  margin: var(--mp-space-xl) 0;
+}
+
+
+/* ============================================================
+   IMAGES  img, figure, figcaption
+   ============================================================ */
+
+.mp-blog img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--mp-radius-img);
+  display: block;
+  margin: var(--mp-space-xl) auto;
+  box-shadow: var(--mp-shadow-elevated);
+}
+
+.mp-blog figure {
+  margin: var(--mp-space-xl) 0;
+}
+
+.mp-blog figure img {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: var(--mp-radius-img);
+  box-shadow: var(--mp-shadow-elevated);
+}
+
+.mp-blog figcaption {
+  font-size: var(--mp-type-caption);
+  color: var(--mp-color-text-muted);
+  text-align: center;
+  margin-top: var(--mp-space-sm);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   CODE  inline code + pre blocks
+   ============================================================ */
+
+.mp-blog code {
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: var(--mp-type-code);
+  background-color: var(--mp-color-bg-card);
+  color: var(--mp-color-green-deep);
+  padding: 2px 7px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.mp-blog pre {
+  background-color: var(--mp-color-bg-pre);
+  border-radius: var(--mp-radius-sm);
+  padding: var(--mp-space-lg) var(--mp-space-xl);
+  margin: var(--mp-space-xl) 0;
+  overflow-x: auto;
+  box-shadow: var(--mp-shadow-elevated);
+}
+
+.mp-blog pre code {
+  font-size: var(--mp-type-code);
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--mp-color-text-light);
+  border-radius: 0;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+.mp-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--mp-space-xl) 0;
+  font-size: var(--mp-type-body-sm);
+  border-radius: var(--mp-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--mp-shadow-subtle);
+}
+
+.mp-blog thead {
+  background-color: var(--mp-color-green-mid);
+  color: var(--mp-color-text-light);
+}
+
+.mp-blog thead th {
+  padding: var(--mp-space-md) var(--mp-space-lg);
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mp-blog tbody tr {
+  background-color: var(--mp-color-bg-white);
+  border-bottom: 1px solid var(--mp-color-border-light);
+  transition: background-color 0.2s ease;
+}
+
+.mp-blog tbody tr:last-child {
+  border-bottom: none;
+}
+
+.mp-blog tbody tr:nth-child(even) {
+  background-color: var(--mp-color-bg-page);
+}
+
+.mp-blog tbody tr:hover {
+  background-color: var(--mp-color-bg-card);
+}
+
+.mp-blog td {
+  padding: var(--mp-space-md) var(--mp-space-lg);
+  color: var(--mp-color-text-primary);
+  vertical-align: top;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.mp-blog .btn,
+.mp-blog button {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: var(--mp-radius-pill);
+  font-family: var(--mp-font-primary);
+  font-size: var(--mp-type-body);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--mp-transition);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  line-height: 1;
+}
+
+.mp-blog .btn:focus-visible,
+.mp-blog button:focus-visible {
+  outline: 2px solid var(--mp-color-focus);
+  outline-offset: 3px;
+}
+
+/* Primary (dark green) */
+.mp-blog .btn--primary {
+  background-color: var(--mp-color-green-deep);
+  color: var(--mp-color-text-light);
+  border: 1px solid var(--mp-color-green-deep);
+}
+
+.mp-blog .btn--primary:hover {
+  background-color: var(--mp-color-green-dark);
+  border-color: var(--mp-color-green-dark);
+}
+
+/* Secondary (medium green) */
+.mp-blog .btn--secondary {
+  background-color: var(--mp-color-green-mid);
+  color: var(--mp-color-text-light);
+  border: 1px solid var(--mp-color-green-mid);
+}
+
+.mp-blog .btn--secondary:hover {
+  background-color: var(--mp-color-green-dark);
+  border-color: var(--mp-color-green-dark);
+}
+
+/* Ghost / outline */
+.mp-blog .btn--outline {
+  background-color: transparent;
+  color: var(--mp-color-green-deep);
+  border: 1px solid var(--mp-color-green-mid);
+}
+
+.mp-blog .btn--outline:hover {
+  background-color: var(--mp-color-green-dark);
+  color: var(--mp-color-text-light);
+  border-color: var(--mp-color-green-dark);
+}
+
+/* White (for use on dark/image backgrounds) */
+.mp-blog .btn--white {
+  background-color: #ffffff;
+  color: var(--mp-color-bg-page);
+  border: 1px solid #ffffff;
+}
+
+.mp-blog .btn--white:hover {
+  background-color: #f8f8f8;
+}
+
+
+/* ============================================================
+   CALLOUT BOXES
+   ============================================================ */
+
+.mp-blog .callout {
+  background-color: var(--mp-color-bg-card);
+  border-radius: var(--mp-radius-card);
+  padding: var(--mp-space-lg) var(--mp-space-xl);
+  margin: var(--mp-space-xl) 0;
+  box-shadow: var(--mp-shadow-card);
+  transition: var(--mp-transition);
+  position: relative;
+}
+
+.mp-blog .callout:hover {
+  box-shadow: var(--mp-shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.mp-blog .callout__title {
+  font-family: var(--mp-font-primary);
+  font-size: var(--mp-type-h4);
+  font-weight: 700;
+  color: var(--mp-color-text-heading);
+  margin: 0 0 var(--mp-space-sm);
+}
+
+.mp-blog .callout p {
+  font-size: var(--mp-type-body-sm);
+  color: var(--mp-color-text-primary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Callout variants */
+.mp-blog .callout--tip {
+  border-left: 4px solid var(--mp-color-green-accent);
+  background-color: rgba(154,189,151,0.12);
+}
+
+.mp-blog .callout--note {
+  border-left: 4px solid #9abd97;
+  background-color: var(--mp-color-bg-card);
+}
+
+.mp-blog .callout--warning {
+  border-left: 4px solid #c9a96e;
+  background-color: rgba(201,169,110,0.1);
+}
+
+.mp-blog .callout--warning .callout__title {
+  color: #7a5c2e;
+}
+
+
+/* ============================================================
+   FOCUS STATES (accessible, global within scope)
+   ============================================================ */
+
+.mp-blog :focus-visible {
+  outline: 2px solid var(--mp-color-focus);
+  outline-offset: 3px;
+}
+
+/* Remove default outline only when we provide a custom one */
+.mp-blog :focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE  (max-width: 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .mp-blog {
+    padding: var(--mp-space-xl) var(--mp-space-md);
+  }
+
+  .mp-blog__title {
+    font-size: 2rem;
+    letter-spacing: -0.005em;
+  }
+
+  .mp-blog__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .mp-blog h1 {
+    font-size: 1.875rem;
+  }
+
+  .mp-blog h2 {
+    font-size: 1.5rem;
+  }
+
+  .mp-blog h3 {
+    font-size: 1.25rem;
+  }
+
+  .mp-blog h4 {
+    font-size: 1.1rem;
+  }
+
+  .mp-blog blockquote {
+    padding: var(--mp-space-md) var(--mp-space-lg);
+  }
+
+  .mp-blog pre {
+    padding: var(--mp-space-md);
+    border-radius: var(--mp-radius-sm);
+  }
+
+  .mp-blog table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mp-blog .callout {
+    padding: var(--mp-space-md) var(--mp-space-lg);
+    border-radius: 12px;
+  }
+
+  .mp-blog img {
+    border-radius: 10px;
+  }
+
+  .mp-blog .btn,
+  .mp-blog button {
+    width: 100%;
+    display: block;
+    padding: 14px 24px;
+  }
+
+  .mp-blog__meta {
+    gap: var(--mp-space-sm);
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE  (max-width: 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .mp-blog__title {
+    font-size: 1.75rem;
+  }
+
+  .mp-blog h1 {
+    font-size: 1.625rem;
+  }
+
+  .mp-blog h2 {
+    font-size: 1.375rem;
+  }
+
+  .mp-blog blockquote p {
+    font-size: 0.95rem;
+  }
+
+  .mp-blog pre code {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — LARGE DESKTOP  (min-width: 1024px)
+   ============================================================ */
+
+@media (min-width: 1024px) {
+  .mp-blog {
+    padding: var(--mp-space-2xl) var(--mp-space-xl);
+  }
+
+  .mp-blog__title {
+    font-size: 3.5rem;
+  }
+
+  .mp-blog__body {
+    max-width: 760px;
+  }
+
+  .mp-blog__header {
+    max-width: 760px;
+  }
+}
