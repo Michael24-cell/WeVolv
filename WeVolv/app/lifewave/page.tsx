@@ -73,30 +73,34 @@ export default function LifeWave() {
         </section>
 
         {/* Brand Purpose & Pillars */}
-        <section className="bg-white py-12 px-12 mb-16 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
-          <h3 className="text-[2rem] font-normal text-[#194D8D] mb-5">Brand Purpose</h3>
-          <h5 className="text-[1.125rem] text-[#555] max-w-[700px] mx-auto mb-10 leading-relaxed font-normal">
-            Our purpose is to empower you to live in the light, maximizing your human potential, with patented life technology that enhances your life.
-          </h5>
+        <section className="bg-white py-[63px] px-12 mb-16 rounded-lg max-w-[1100px] mx-auto text-center shadow-[0_0_0_1px_rgba(255,255,255,0.08),_0_4px_8px_rgba(0,0,0,0.04),_inset_0_1px_2px_rgba(255,255,255,0.15),_inset_0_-1px_2px_rgba(0,0,0,0.05)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),_0_10px_25px_rgba(0,0,0,0.04),_0_0_40px_rgba(244,230,223,0.4)] transition-shadow duration-300">
+          <div className="bg-[#F5F9FC] p-[47px] rounded-lg mb-10">
+            <h3 className="text-[2rem] font-normal text-[#194D8D] mb-7">Brand Purpose</h3>
+            <h5 className="text-[1.125rem] text-[#555] max-w-[700px] mx-auto leading-relaxed font-normal">
+              Our purpose is to empower you to live in the light, maximizing your human potential, with patented life technology that enhances your life.
+            </h5>
+          </div>
           
-          <h3 className="text-[2rem] font-normal text-[#194D8D] mb-5">Brand Pillars</h3>
-          <ul className="max-w-[800px] mx-auto list-none">
-            <li className="text-center mb-3">
-              <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
-                • <strong>Live Long</strong> – We are committed to redefining the future of human potential
-              </h5>
-            </li>
-            <li className="text-center mb-3">
-              <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
-                • <strong>Live Well</strong> – We are passionate about the wellness connection of mind, body, and spirit
-              </h5>
-            </li>
-            <li className="text-center mb-3">
-              <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
-                • <strong>Live Young</strong> – We believe feeling younger is a lifestyle
-              </h5>
-            </li>
-          </ul>
+          <div className="bg-[#F5F9FC] p-[47px] rounded-lg">
+            <h3 className="text-[2rem] font-normal text-[#194D8D] mb-7">Brand Pillars</h3>
+            <ul className="max-w-[800px] mx-auto list-none">
+              <li className="text-center mb-3">
+                <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
+                  <strong>Live Long</strong> – We are committed to redefining the future of human potential
+                </h5>
+              </li>
+              <li className="text-center mb-3">
+                <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
+                  <strong>Live Well</strong> – We are passionate about the wellness connection of mind, body, and spirit
+                </h5>
+              </li>
+              <li className="text-center mb-3">
+                <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
+                  <strong>Live Young</strong> – We believe feeling younger is a lifestyle
+                </h5>
+              </li>
+            </ul>
+          </div>
         </section>
 
         {/* Patch Guide */}
@@ -110,9 +114,6 @@ export default function LifeWave() {
             <h3 className="text-[2rem] font-normal text-[#194D8D]">
               Patches and Placement Guide
             </h3>
-            <p className="text-[1rem] text-[#555] mt-4 font-normal">
-              Click to view detailed patch placement information
-            </p>
           </a>
         </section>
 

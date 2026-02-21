@@ -63,6 +63,56 @@ export default function Contact() {
             border-radius: 2px;
         }
 
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .location-card {
+            flex: 0 0 auto;
+            min-width: 180px;
+            max-width: 240px;
+            padding: 0 30px;
+        }
+
+        .contact-details {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .contact-note {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .contact-note a {
+            color: #333;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .location-card h4 {
+            font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .location-card p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
         .sub-header {
             font-size: 1rem;
             letter-spacing: 2px;
@@ -87,7 +137,7 @@ export default function Contact() {
             font-family: var(--font-montserrat), 'Montserrat', sans-serif;
             font-size: 1.25rem;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 100px;
             color: #333;
             max-width: 650px;
             margin-left: auto;
@@ -98,6 +148,15 @@ export default function Contact() {
             font-size: 1.15rem;
             line-height: 1.8;
             color: #333;
+            text-align: center;
+        }
+
+        .contact-details h5 {
+            margin-bottom: 12px;
+        }
+
+        .contact-details p {
+            margin-bottom: 12px;
         }
 
         .contact-details strong {
@@ -201,18 +260,31 @@ export default function Contact() {
             Have any questions or ready to begin? Our wellness team is here to support you. Reach out and we'll respond shortly.
           </h5>
 
-          <div className="contact-details">
-            <h5>Customer Service Hours</h5>
-            <p>Monday - Friday 9am - 6pm (PST)</p>
-            <br />
-            <p>Email: <a href="mailto:connect@wevolv.us">connect@wevolv.us</a></p>
-            <br />
-            <p>Text: <a href="tel:+17025278520">(702) 527-8520</a></p>
-            <br />
-            <p>Schedule a Call <a href="https://calendly.com/wevolvlife/slink" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
-            <br />
-            <p>You can also check our <a href="/faq" style={{fontWeight: 'bold'}}>FAQ Page</a> to find answers to our most commonly asked questions.</p>
+          <div className="contact-container">
+            <div className="location-card">
+              <h4>WeVolv Wellness - Summerlin</h4>
+              <p>9440 W. Sahara Avenue</p>
+              <p>Suite 245</p>
+              <p>Las Vegas, Nevada 89117</p>
+            </div>
+
+            <div className="contact-details">
+              <h5>Appointment Hours</h5>
+              <p>Monday - Friday 9:30am - 1pm (PST)</p>
+              <p>Email: <a href="mailto:connect@wevolv.us">connect@wevolv.us</a></p>
+              <p>Call/Text: <a href="tel:+17025278520">(702) 527-8520</a></p>
+              <p>Schedule a Call <a href="https://calendly.com/wevolvlife/slink" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
+            </div>
+
+            <div className="location-card">
+              <h4>WeVolv Wellness - Southwest</h4>
+              <p>6675 S. Tenaya Way</p>
+              <p>Suite 200</p>
+              <p>Las Vegas, Nevada 89113</p>
+            </div>
           </div>
+
+          <p className="contact-note">You can also check our <a href="/faq">FAQ Page</a> to find answers to our most commonly asked questions.</p>
         </div>
 
         {/* Contact form hidden

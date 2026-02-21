@@ -135,7 +135,7 @@ export default function Navigation() {
               width={150}
               height={75}
               className="object-contain"
-              style={{width: "auto", height: "auto"}}
+              style={{width: "150px", height: "auto"}}
               priority
             />
           </Link>
@@ -167,7 +167,7 @@ export default function Navigation() {
               width={120}
               height={60}
               className="object-contain"
-              style={{width: "auto", height: "auto"}}
+              style={{width: "120px", height: "auto"}}
               priority
             />
           </Link>
