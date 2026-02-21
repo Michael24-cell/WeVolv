@@ -349,19 +349,14 @@ export default function Nutrition() {
               Your next level starts with one intentional decision.
             </h2>
             
-            <form className="flex flex-col gap-4 max-w-[320px]" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Email"
-                className="px-4 py-4 rounded-lg border-none w-full text-[1rem] outline-none text-black"
-              />
-              <button 
-                type="submit"
-                className="bg-black text-white px-4 py-4 rounded-full border-none font-semibold cursor-pointer w-full text-[0.9rem] hover:bg-gray-800 transition-colors"
+            <div className="flex flex-col gap-4 max-w-[320px]">
+              <a
+                href="mailto:christy@wevolv.us"
+                className="bg-black text-white px-4 py-4 rounded-full border-none font-semibold cursor-pointer w-full text-[0.9rem] hover:bg-gray-800 transition-colors text-center"
               >
                 Start your evolution today
-              </button>
-            </form>
+              </a>
+            </div>
 
             <p className="mt-5 text-[0.65rem] opacity-60 leading-snug">
               By creating an account using email, I agree to the <a href="#" className="text-white underline">Terms & Conditions</a> and acknowledge the <a href="#" className="text-white underline">Privacy Policy</a>.
