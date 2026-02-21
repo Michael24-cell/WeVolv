@@ -66,22 +66,27 @@ export default function Contact() {
         .contact-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 10px;
+            margin-top: 20px;
             text-align: left;
             flex-wrap: wrap;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 40px;
         }
 
         .location-card {
             flex: 0 0 auto;
             min-width: 180px;
             max-width: 240px;
-            padding: 0 30px;
         }
 
         .contact-details {
-            flex: 1;
-            min-width: 220px;
+            flex: 0 0 auto;
+            min-width: 250px;
+            max-width: 310px;
+            margin-left: 100px;
+            margin-right: 100px;
         }
 
         .contact-note {
@@ -125,7 +130,7 @@ export default function Contact() {
             font-family: var(--font-montserrat), 'Montserrat', sans-serif;
             font-size: 3.4rem;
             font-weight: 400;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #222;
         }
 
@@ -137,7 +142,7 @@ export default function Contact() {
             font-family: var(--font-montserrat), 'Montserrat', sans-serif;
             font-size: 1.25rem;
             line-height: 1.6;
-            margin-bottom: 100px;
+            margin-bottom: 75px;
             color: #333;
             max-width: 650px;
             margin-left: auto;
@@ -269,7 +274,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-details">
-              <h5>Appointment Hours</h5>
+              <h5><strong>Appointment Hours</strong></h5>
               <p>Monday - Friday 9:30am - 1pm (PST)</p>
               <p>Email: <a href="mailto:connect@wevolv.us">connect@wevolv.us</a></p>
               <p>Call/Text: <a href="tel:+17025278520">(702) 527-8520</a></p>
