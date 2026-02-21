@@ -6,7 +6,7 @@ export default function LifeWave() {
       <div className="max-w-[1400px] mx-auto">
 
         {/* Hero Section */}
-        <section className="bg-white py-20 px-12 flex flex-col md:flex-row gap-10 items-center mb-8 rounded-lg max-w-[1100px] mx-auto">
+        <section className="bg-white py-20 px-12 flex flex-col md:flex-row gap-10 items-center mb-16 rounded-lg max-w-[1100px] mx-auto">
           <div className="flex-[2.5] relative aspect-video rounded overflow-hidden bg-black">
             <video
               controls
@@ -19,26 +19,26 @@ export default function LifeWave() {
           </div>
           
           <div className="flex-[1]">
-            <h3 className="text-[2rem] font-light text-[#194D8D] mb-3">Be the Light</h3>
+            <h3 className="text-[2rem] font-normal text-[#194D8D] mb-3">Be the Light</h3>
             <h5 className="text-[1.125rem] text-[#555] mb-3 leading-relaxed font-normal">
               Driven by innovation and proven by science, LifeWave is dedicated to maximizing your potential through advanced life technology. We uphold high product standards, lead with service, and strive for social responsibility.
             </h5>
-            <h5 className="text-[1.125rem] font-normal text-[#222] mt-4">
+            <h5 className="text-[1.125rem] font-semibold text-[#222] mt-4">
               Live Long. Live Well. Live Young. With LifeWave.
             </h5>
           </div>
         </section>
 
         {/* Info Grid */}
-        <section className="flex flex-col gap-4 mb-12">
-          <div className="w-[90%] mx-auto bg-[#E5EDF2] flex flex-col md:flex-row rounded-lg overflow-hidden shadow-sm h-[440px]">
+        <section className="flex flex-col gap-6 mb-16">
+          <div className="max-w-[1100px] mx-auto bg-[#EBF1F7] flex flex-col md:flex-row md:items-center rounded-lg overflow-hidden shadow-sm h-[540px]">
             <img 
               src="/images/Photos by Placement/Lifewave Page/LW 1.jpg" 
               alt="LifeWave Patches"
-              className="w-full md:w-[35%] h-full object-cover aspect-square"
+              className="w-full md:w-[30%] h-full object-cover aspect-square"
             />
-            <div className="w-full md:w-[65%] pt-10 pb-5 pl-16 pr-48">
-              <h3 className="text-[2rem] font-light text-[#194D8D] mb-6">
+            <div className="w-full md:w-[70%] pt-10 pb-5 pl-16 pr-48">
+              <h3 className="text-[2rem] font-normal text-[#154678] mb-6">
                 How It Works
               </h3>
               <h5 className="text-[1.125rem] text-[#555] mb-5 leading-relaxed font-normal">
@@ -53,14 +53,14 @@ export default function LifeWave() {
             </div>
           </div>
 
-          <div className="w-[90%] mx-auto bg-[#E5EDF2] flex flex-col md:flex-row-reverse rounded-lg overflow-hidden shadow-sm h-[440px]">
+          <div className="max-w-[1100px] mx-auto bg-[#EBF1F7] flex flex-col md:flex-row-reverse md:items-center rounded-lg overflow-hidden shadow-sm h-[420px]">
             <img 
               src="/images/Photos by Placement/Lifewave Page/LW 2.jpg" 
               alt="Phototherapy"
-              className="w-full md:w-[35%] h-full object-cover aspect-square"
+              className="w-full md:w-[30%] h-full object-cover aspect-square"
             />
-            <div className="w-full md:w-[65%] pt-10 pb-5 pl-16 pr-48">
-              <h3 className="text-[2rem] font-light text-[#194D8D] mb-6">
+            <div className="w-full md:w-[70%] pt-20 pb-20 pl-32 pr-16">
+              <h3 className="text-[2rem] font-normal text-[#154678] mb-6">
                 Phototherapy
               </h3>
               <h5 className="text-[1.125rem] text-[#555] leading-relaxed font-normal">
@@ -73,13 +73,13 @@ export default function LifeWave() {
         </section>
 
         {/* Brand Purpose & Pillars */}
-        <section className="bg-white py-12 px-12 mb-12 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
-          <h3 className="text-[2rem] font-light text-[#194D8D] mb-5">Brand Purpose</h3>
+        <section className="bg-white py-12 px-12 mb-16 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
+          <h3 className="text-[2rem] font-normal text-[#194D8D] mb-5">Brand Purpose</h3>
           <h5 className="text-[1.125rem] text-[#555] max-w-[700px] mx-auto mb-10 leading-relaxed font-normal">
             Our purpose is to empower you to live in the light, maximizing your human potential, with patented life technology that enhances your life.
           </h5>
           
-          <h3 className="text-[2rem] font-light text-[#194D8D] mb-5">Brand Pillars</h3>
+          <h3 className="text-[2rem] font-normal text-[#194D8D] mb-5">Brand Pillars</h3>
           <ul className="max-w-[800px] mx-auto list-none">
             <li className="text-center mb-3">
               <h5 className="text-[1.125rem] text-[#555] font-normal leading-relaxed">
@@ -100,20 +100,20 @@ export default function LifeWave() {
         </section>
 
         {/* Patch Guide */}
-        <section id="patch-placement-guide" className="mb-20">
-          <div className="bg-[#E5EDF2] p-12 rounded-lg shadow-sm max-w-[1000px] mx-auto text-center">
-            <h3 className="text-[2rem] font-light text-[#194D8D] mb-4">
+        <section id="patch-placement-guide" className="mb-20 px-16">
+          <a 
+            href="https://lifewave.com/wevolv/home/patch-placement-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-[1000px] mx-auto bg-[#E5EDF2] p-10 rounded-lg shadow-sm text-center transition-all duration-300 hover:shadow-lg hover:bg-[#F0F5FA] hover:translate-y-[-5px] cursor-pointer"
+          >
+            <h3 className="text-[2rem] font-normal text-[#194D8D]">
               Patches and Placement Guide
             </h3>
-            <a 
-              href="https://lifewave.com/wevolv/home/patch-placement-guide"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[1rem] text-black hover:text-[#194D8D] underline font-normal"
-            >
-              https://lifewave.com/wevolv/home/patch-placement-guide
-            </a>
-          </div>
+            <p className="text-[1rem] text-[#555] mt-4 font-normal">
+              Click to view detailed patch placement information
+            </p>
+          </a>
         </section>
 
       </div>

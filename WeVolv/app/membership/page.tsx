@@ -63,7 +63,7 @@ export default function Membership() {
         {/* Centered Button Below */}
         <div className="flex justify-center mt-12">
           <Link 
-            href="/contact"
+            href="/membership-descriptions"
             className="btn-custom btn-dark"
           >
             Learn More

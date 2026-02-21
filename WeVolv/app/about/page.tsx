@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 // Flip Card Component
@@ -18,53 +19,37 @@ interface FlipCardProps {
 
 function FlipCard({ image, imageAlt, title, content, imagePosition = "center", height = "h-[450px] sm:h-[500px]", compact = false, verticalAlign = "center", topPadding }: FlipCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHovering(true);
-    // Auto-flip on hover for desktop
     if (window.matchMedia('(hover: hover)').matches) {
       setIsFlipped(true);
     }
   };
 
   const handleMouseLeave = () => {
-    setIsHovering(false);
-    // Auto flip back on mouse leave for desktop
     if (window.matchMedia('(hover: hover)').matches) {
       setIsFlipped(false);
     }
   };
 
   return (
-    <div 
+    <div
       className={`flip-card-container ${height} group`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ perspective: '1000px' }}
     >
-      <div 
-        className="flip-card-inner relative w-full h-full"
-        style={{
-          transformStyle: 'preserve-3d',
-          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-          transition: 'transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)',
-          willChange: 'transform'
-        }}
+      <div
+        className={`flip-card-inner relative w-full h-full ${isFlipped ? 'flipping' : ''}`}
+        style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
       >
         {/* Front of card - Image */}
-        <div 
-          className="flip-card-face absolute w-full h-full rounded-[24px] overflow-hidden shadow-sm"
-          style={{ 
-            backfaceVisibility: 'hidden',
-            WebkitBackfaceVisibility: 'hidden',
-            transform: 'translateZ(0)'
-          }}
-        >
-          <img 
+        <div className="flip-card-face flip-card-face-front absolute w-full h-full rounded-[24px] overflow-hidden shadow-sm">
+          <Image
             src={image}
             alt={imageAlt}
-            className={`w-full h-full object-cover ${imagePosition}`}
+            fill
+            className={`object-cover ${imagePosition}`}
+            sizes="(max-width: 768px) 100vw, 500px"
           />
           {/* Title overlay with localized shadow */}
           <div className="absolute top-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-b from-black/65 via-black/30 to-transparent pb-20">
@@ -75,17 +60,12 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
         </div>
 
         {/* Back of card - Text */}
-        <div 
-          className={`flip-card-face absolute w-full h-full bg-white rounded-[24px] overflow-hidden shadow-lg flex flex-col ${
+        <div
+          className={`flip-card-face flip-card-face-back absolute w-full h-full bg-white rounded-[24px] overflow-hidden shadow-lg flex flex-col ${
             verticalAlign === 'start' ? 'justify-start' : verticalAlign === 'end' ? 'justify-end' : 'justify-center'
           } ${
             compact ? `${topPadding ?? 'pt-[40px] sm:pt-[48px]'} px-[31px] pb-[31px] sm:px-[35px] sm:pb-[35px]` : `${topPadding ?? 'pt-[48px] sm:pt-[56px]'} px-[39px] pb-[39px] sm:px-[43px] sm:pb-[43px]`
           }`}
-          style={{ 
-            backfaceVisibility: 'hidden',
-            WebkitBackfaceVisibility: 'hidden',
-            transform: 'rotateY(180deg) translateZ(0)'
-          }}
         >
           <div className="overflow-hidden">
             <div className="text-[1.5rem] text-[#444] leading-tight font-medium">
@@ -96,6 +76,10 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
       </div>
 
       <style jsx>{`
+        .flip-card-container {
+          perspective: 1200px;
+          transform: translateZ(0);
+        }
         .flip-card-container:focus {
           outline: 2px solid #4a503d;
           outline-offset: 4px;
@@ -104,6 +88,23 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
         .flip-card-container:focus-visible {
           outline: 3px solid #4a503d;
           outline-offset: 4px;
+        }
+        .flip-card-inner {
+          transform-style: preserve-3d;
+          transition: transform 0.35s ease-out;
+        }
+        .flip-card-inner.flipping {
+          will-change: transform;
+        }
+        .flip-card-face {
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        .flip-card-face-front {
+          transform: translateZ(0);
+        }
+        .flip-card-face-back {
+          transform: rotateY(180deg) translateZ(0);
         }
         @media (hover: none) {
           .flip-card-container {
@@ -158,10 +159,10 @@ export default function About() {
       title: "Our Commitment",
       content: (
         <>
-          <p className="mb-4">
+          <p className="mb-6">
             WeVolv is committed to providing <span className="text-black font-semibold underline decoration-[#4a503d]/30 underline-offset-4">compassionate, inclusive, and evidence-based</span> coaching.
           </p>
-          <p className="mb-4">
+          <p className="mb-6">
             We meet people where they are, honor their lived experience, and support them in building skills they can carry forward long after coaching ends.
           </p>
           <p className="font-medium text-black">
@@ -266,6 +267,8 @@ export default function About() {
             content={cardsData[0].content}
             imagePosition={cardsData[0].imagePosition}
             height="h-[475px] sm:h-[525px]"
+            verticalAlign="start"
+            topPadding="pt-[48px] sm:pt-[56px]"
           />
           
           {/* Card 2 - Top Right */}
@@ -277,6 +280,7 @@ export default function About() {
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
             height="h-[475px] sm:h-[525px]"
+            verticalAlign="start"
           />
           
           {/* Left Column - Cards 3 and 5 Stacked */}

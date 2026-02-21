@@ -20,7 +20,7 @@ export default function Fitness() {
       {/* Header Card (Top) - Full Width */}
       <div className="bg-white pl-24 pr-20 pt-20 pb-20 overflow-visible min-h-[400px] flex flex-col justify-center relative -mt-16">
         <div className="max-w-[1100px] mx-auto px-12">
-          <h2 className="serif-text text-[2.5rem] mb-6 text-black leading-tight">Exercise Coaching at WeVolve Wellness</h2>
+          <h2 className="serif-text text-[2.5rem] mb-6 text-black leading-tight">Exercise Coaching at WeVolv Wellness</h2>
           <p className="text-[1.125rem] text-[#666666] leading-relaxed mb-8 py-6 text-left pr-[120px]">
             Our Exercise Coaching program is designed to help you build consistency, strength, and confidence through structured support and personalized guidance. We combine movement, mindset, and nutrition strategies to create sustainable results—without burnout.
           </p>

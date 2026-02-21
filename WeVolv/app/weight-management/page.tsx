@@ -32,7 +32,7 @@ export default function WeightManagement() {
               />
             </div>
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h3 className="text-[1.5rem] text-white font-semibold">Herbalife</h3>
+              <h2 className="text-[2rem] text-white font-bold">Herbalife</h2>
             </div>
           </Link>
 
@@ -49,7 +49,7 @@ export default function WeightManagement() {
               />
             </div>
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h3 className="text-[1.5rem] text-white font-semibold">Lifewave</h3>
+              <h2 className="text-[2rem] text-white font-bold">Lifewave</h2>
             </div>
           </Link>
 
@@ -66,7 +66,7 @@ export default function WeightManagement() {
               />
             </div>
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h3 className="text-[1.5rem] text-white font-semibold">Purefusion Dissolvable Strips</h3>
+              <h2 className="text-[2rem] text-white font-bold">Purefusion Dissolvable Strips</h2>
             </div>
           </Link>
         </div>
