@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: clip;
+}
+
 :root {
   /* WeVolv Color Scheme */
   --bg-color: #f4e6df;
@@ -27,6 +31,7 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
+  overflow-x: clip;
 }
 
 main {
@@ -261,7 +266,8 @@ h5 {
   color: #ffffff;
   background-color: #5B6D5B;
   border: 1px solid #5B6D5B;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
 }
 
 .grid-card:nth-child(1) .btn-outline {
@@ -452,6 +458,19 @@ h5 {
 .nav-link-underline.nav-link-underline-active {
   background-color: transparent;
   border-radius: 20px;
+}
+
+/* Mobile Proportional Scaling */
+@media (max-width: 480px) {
+  body {
+    zoom: 0.75;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    zoom: 0.85;
+  }
 }
 
 /* Responsive Design */

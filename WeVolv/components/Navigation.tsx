@@ -7,17 +7,13 @@ import { useState } from "react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
-  const [coachingTimeout, setCoachingTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
-  const handleCoachingMouseEnter = () => {
-    if (coachingTimeout) clearTimeout(coachingTimeout);
-    setIsCoachingOpen(true);
-  };
+  const handleCoachingMouseEnter = () => setIsCoachingOpen(true);
+  const handleCoachingMouseLeave = () => setIsCoachingOpen(false);
 
-  const handleCoachingMouseLeave = () => {
-    const timeout = setTimeout(() => setIsCoachingOpen(false), 150);
-    setCoachingTimeout(timeout);
-  };
+  const handleResourcesMouseEnter = () => setIsResourcesOpen(true);
+  const handleResourcesMouseLeave = () => setIsResourcesOpen(false);
 
   // Coaching dropdown items
   const coachingItems = [
@@ -26,9 +22,15 @@ export default function Navigation() {
     { href: "/membership", label: "Memberships" },
   ];
 
+  // Resources dropdown items
+  const resourcesItems = [
+    { href: "/resources", label: "Blog" },
+    { href: "/guides", label: "Downloadable Guides" },
+    { href: "/faqs", label: "FAQs" },
+  ];
+
   // Left navigation links
   const leftLinks = [
-    { href: "/resources", label: "Resources" },
     { href: "/events", label: "Events" },
   ];
 
@@ -43,6 +45,7 @@ export default function Navigation() {
   const allLinks = [
     { href: "/", label: "Home" },
     ...coachingItems,
+    ...resourcesItems,
     ...leftLinks,
     { href: "/weight-management", label: "Weight Management" },
     { href: "/fitness", label: "Fitness" },
@@ -113,6 +116,50 @@ export default function Navigation() {
               )}
             </div>
             
+            {/* Resources Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={handleResourcesMouseEnter}
+              onMouseLeave={handleResourcesMouseLeave}
+            >
+              <button className={`text-[13px] font-semibold uppercase tracking-[0.2em] py-2 px-2 nav-link-underline ${isResourcesOpen ? 'nav-link-underline-active' : ''}`}>
+                Resources
+              </button>
+              {isResourcesOpen && (
+                <>
+                  {/* Invisible hover bridge */}
+                  <div
+                    className="absolute left-0 right-0"
+                    style={{
+                      top: '100%',
+                      height: '39px',
+                      pointerEvents: 'auto',
+                    }}
+                    aria-hidden="true"
+                  />
+                  <div className="absolute left-0 -ml-4 pl-4 pr-8" style={{ top: 'calc(100% + 39px)' }}>
+                    <div className="w-64 shadow-lg border border-gray-200 rounded-md py-3" style={{ backgroundColor: '#f4f4f4' }}>
+                      {resourcesItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`block px-6 py-3 text-[13px] font-semibold uppercase tracking-[0.12em] border-l-4 border-transparent hover:bg-white hover:font-bold transition-all ${
+                            item.label === "Blog"
+                              ? "hover:border-l-[#017174]"
+                              : item.label === "FAQs"
+                              ? "hover:border-l-[#943888]"
+                              : "hover:border-l-[#ED9E52]"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+
             {leftLinks.map((link) => (
               <Link
                 key={link.href}
@@ -130,10 +177,10 @@ export default function Navigation() {
             className="absolute left-1/2 transform -translate-x-1/2 flex items-center"
           >
             <Image
-              src="/images/WeVolv-H-500x137-T.webp"
+              src="/images/WeVolv-logo-transparent.png"
               alt="WeVolv Logo"
-              width={150}
-              height={75}
+              width={450}
+              height={150}
               className="object-contain"
               style={{width: "150px", height: "auto"}}
               priority
@@ -162,10 +209,10 @@ export default function Navigation() {
             className="flex items-center"
           >
             <Image
-              src="/images/WeVolv-H-500x137-T.webp"
+              src="/images/WeVolv-logo-transparent.png"
               alt="WeVolv Logo"
-              width={120}
-              height={60}
+              width={360}
+              height={120}
               className="object-contain"
               style={{width: "120px", height: "auto"}}
               priority

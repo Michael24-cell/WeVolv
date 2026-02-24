@@ -245,7 +245,7 @@ export default function About() {
       <div className="max-w-[1000px] mx-auto space-y-10">
         
         {/* Header Card */}
-        <div className="bg-white rounded-[24px] shadow-sm p-[60px_40px]">
+        <div className="bg-white rounded-[24px] shadow-sm p-[30px_20px] sm:p-[45px_30px] lg:p-[60px_40px]">
           <header className="text-center max-w-[700px] mx-auto">
             <h1 className="text-[3rem] font-semibold mb-6 leading-tight tracking-tight text-black">
               About WeVolv Wellness
@@ -337,7 +337,7 @@ export default function About() {
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/20"></div>
 
-          <div className="relative p-[30px_40px] z-10 max-w-full md:max-w-[50%]">
+          <div className="relative p-[30px_20px] sm:p-[30px_40px] z-10 max-w-full md:max-w-[50%]">
             <h2 className="text-[2.5rem] font-normal mb-6 leading-tight">
               To get started,<br />
               schedule a discovery call
@@ -345,7 +345,9 @@ export default function About() {
             
             <div className="flex flex-col gap-4 max-w-[320px]">
               <a
-                href="mailto:christy@wevolv.us"
+                href="https://calendly.com/wevolvlife/slink"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-black text-white px-4 py-4 rounded-full border-none font-semibold cursor-pointer w-full text-[0.9rem] hover:bg-gray-800 transition-colors text-center"
               >
                 Start your evolution today

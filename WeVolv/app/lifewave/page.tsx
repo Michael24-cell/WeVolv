@@ -104,7 +104,7 @@ export default function LifeWave() {
         </section>
 
         {/* Patch Guide */}
-        <section id="patch-placement-guide" className="mb-20 px-16">
+        <section id="patch-placement-guide" className="mb-20 px-5 sm:px-16">
           <a 
             href="https://lifewave.com/wevolv/home/patch-placement-guide"
             target="_blank"

@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       {/* Hero Section with Video */}
       <header className="hero-section">
-        <h3 style={{ whiteSpace: 'nowrap', textAlign: 'center' }}>Helping you evolve your health naturally and intentionally.</h3>
+        <h3 style={{ textAlign: 'center' }}>Helping you evolve your health naturally and intentionally.</h3>
         <h1>Your Life. Evolved.</h1>
         
         <div className="hero-image-container" style={{ height: 'auto', display: 'block' }}>

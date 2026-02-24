@@ -6,26 +6,32 @@ export default function Footer() {
     <footer style={{ backgroundColor: 'var(--footer-bg)', color: 'var(--footer-text)', margin: 0, fontFamily: 'var(--font-inter), Inter, sans-serif' }}>
       <div className="border-t border-gray-300 w-full"></div>
       <div className="max-w-7xl mx-auto px-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 md:items-stretch" style={{ minHeight: '300px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-4 md:items-stretch" style={{ minHeight: '300px' }}>
           {/* Company Info */}
-          <div className="flex flex-col py-10">
+          <div className="flex flex-col py-10 md:px-5">
             <div className="mb-4">
               <Image
-                src="/images/WeVolv-H-500x137-T.webp"
+                src="/images/WeVolv-logo-transparent.png"
                 alt="WeVolv Logo"
-                width={180}
-                height={90}
+                width={540}
+                height={180}
                 className="object-contain"
-                style={{width: "auto", height: "auto"}}
+                style={{width: "180px", height: "auto"}}
               />
             </div>
-            <p style={{ fontSize: '0.7rem', color: '#777', lineHeight: '1.5', maxWidth: '300px' }}>
-              WeVolv Wellness provides wellness and lifestyle support and does not replace medical care. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment—especially if you have a medical condition, take medications, or are pregnant/nursing.
+            <p className="text-xs uppercase tracking-wide font-medium" style={{ lineHeight: '1.5', maxWidth: '300px' }}>
+              (702) 527-8520
+            </p>
+            <p className="text-xs uppercase tracking-wide font-medium" style={{ lineHeight: '1.8', maxWidth: '300px', marginTop: '0.75rem' }}>
+              Southwest<br />
+              6675 S. Tenaya Way<br />
+              Suite 200<br />
+              Las Vegas, Nevada 89113
             </p>
           </div>
           
           {/* Shop Links */}
-          <div className="border-t md:border-t-0 md:border-l border-gray-300 md:pl-10 flex flex-col py-10">
+          <div className="border-t md:border-t-0 md:border-l border-gray-300 md:px-5 flex flex-col py-10">
             <h5 className="text-2xl mb-4 font-semibold" style={{ fontFamily: 'var(--font-playfair), Playfair Display, serif' }}>Shop</h5>
             <ul className="space-y-3">
               <li className="text-xs uppercase tracking-wide font-medium">
@@ -44,6 +50,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-xs uppercase tracking-wide font-medium">
+                <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  Oral Dissolvable Strips
+                </Link>
+              </li>
+              <li className="text-xs uppercase tracking-wide font-medium">
+                <Link href="https://wevolv.herbalife.com/en-us/u" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  Herbalife
+                </Link>
+              </li>
+              <li className="text-xs uppercase tracking-wide font-medium">
                 <Link href="/membership" className="hover:opacity-70 transition-opacity">
                   Membership
                 </Link>
@@ -52,14 +68,9 @@ export default function Footer() {
           </div>
 
           {/* Learn Links */}
-          <div className="border-t md:border-t-0 md:border-l border-gray-300 md:pl-10 flex flex-col py-10">
+          <div className="border-t md:border-t-0 md:border-l border-gray-300 md:px-5 flex flex-col py-10">
             <h5 className="text-2xl mb-4 font-semibold" style={{ fontFamily: 'var(--font-playfair), Playfair Display, serif' }}>Learn</h5>
             <ul className="space-y-3">
-              <li className="text-xs uppercase tracking-wide font-medium">
-                <Link href="/about" className="hover:opacity-70 transition-opacity">
-                  About WeVolv
-                </Link>
-              </li>
               <li className="text-xs uppercase tracking-wide font-medium">
                 <Link href="/programs" className="hover:opacity-70 transition-opacity">
                   Programs
@@ -80,16 +91,21 @@ export default function Footer() {
                   Nutrition
                 </Link>
               </li>
+              <li className="text-xs uppercase tracking-wide font-medium">
+                <Link href="/faq" className="hover:opacity-70 transition-opacity">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Information Links */}
-          <div className="border-t md:border-t-0 md:border-l border-gray-300 md:pl-10 flex flex-col py-10">
-            <h5 className="text-2xl mb-4 font-semibold" style={{ fontFamily: 'var(--font-playfair), Playfair Display, serif' }}>Information</h5>
+          <div className="border-t md:border-t-0 md:border-l border-gray-300 md:px-5 flex flex-col py-10">
+            <h5 className="text-2xl mb-4 font-semibold" style={{ fontFamily: 'var(--font-playfair), Playfair Display, serif' }}>Company</h5>
             <ul className="space-y-3">
               <li className="text-xs uppercase tracking-wide font-medium">
-                <Link href="/faq" className="hover:opacity-70 transition-opacity">
-                  FAQ
+                <Link href="/about" className="hover:opacity-70 transition-opacity">
+                  About WeVolv
                 </Link>
               </li>
               <li className="text-xs uppercase tracking-wide font-medium">

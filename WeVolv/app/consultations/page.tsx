@@ -103,10 +103,10 @@ export default function Consultations() {
       {/* Bottom CTA */}
       <div className="w-full max-w-[98vw] mx-auto px-5 pb-[100px]">
         <div className="bg-white rounded-[20px] p-12 md:p-16 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center pt-8">
-          <h3 className="text-[1.5rem] font-semibold mb-8 text-[#333] mt-4 whitespace-nowrap">
+          <h3 className="text-[1.5rem] font-semibold mb-8 text-[#333] mt-4">
             This is your moment to choose growth. To choose strength. To choose yourself.
           </h3>
-          <h4 className="text-[1.25rem] font-normal text-[#555] mb-16 max-w-[1150px] mx-auto px-32">
+          <h4 className="text-[1.25rem] font-normal text-[#555] mb-16 max-w-[1150px] mx-auto px-0 sm:px-16 lg:px-32">
             Whether your goal is weight management, more energy, or renewed confidence, Wevolv Wellness is here to walk with you—every step, every win, every evolution.
           </h4>
           

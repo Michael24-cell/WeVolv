@@ -5,7 +5,7 @@ export default function WeightManagement() {
   return (
     <div className="bg-[#f4e6df] min-h-screen font-sans text-[#222]">
       {/* --- Section 1: Labs Reveal --- */}
-      <section className="max-w-[1000px] bg-white mx-auto mb-[30px] py-[60px] px-[80px] text-center rounded-[8px] shadow-sm">
+      <section className="max-w-[1000px] bg-white mx-auto mb-[30px] py-[60px] px-5 sm:px-[40px] lg:px-[80px] text-center rounded-[8px] shadow-sm">
         <div className="max-w-[900px] mx-auto">
           <h1 className="text-[2.8rem] leading-[1.1] mb-5 text-[#111] font-medium">
             Evolve Your Health.<br />
@@ -66,7 +66,7 @@ export default function WeightManagement() {
               />
             </div>
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h2 className="text-[2rem] text-white font-bold">Purefusion Dissolvable Strips</h2>
+              <h2 className="text-[2rem] text-white font-bold">Oral Dissolvable Strips</h2>
             </div>
           </Link>
         </div>
@@ -89,9 +89,9 @@ export default function WeightManagement() {
       <section className="bg-[#f4e6df] pt-[30px] pb-[60px] px-5">
         <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           
-          <div className="bg-white p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
+          <div className="bg-white p-[40px_30px] sm:p-[60px_50px] lg:p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
             <h2 className="text-[2rem] text-[#9abd97] mb-[14px] font-bold">This Is More Than Weight Loss</h2>
-            <h5 className="text-[1.25rem] text-[#555] mb-8 leading-relaxed whitespace-nowrap">Weight Management Coaching That Empowers You</h5>
+            <h5 className="text-[1.25rem] text-[#555] mb-8 leading-relaxed">Weight Management Coaching That Empowers You</h5>
             <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] mt-[5px] border-t border-[#9abd97] pt-[26px]">Your journey is personal—and your coaching should be too.</h5>
             <p className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">At Wevolv Wellness, we guide you step by step with:</p>
             <ul className="bullet-list-spacing">
@@ -115,7 +115,7 @@ export default function WeightManagement() {
             <p className="font-normal text-[1.5rem] text-[#222] mt-0 pt-1">We don&apos;t just tell you what to do—we help you believe you can do it.</p>
           </div>
 
-          <div className="bg-white p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
+          <div className="bg-white p-[40px_30px] sm:p-[60px_50px] lg:p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
             <h2 className="text-[2rem] text-[#9abd97] mb-[30px] font-bold">Strategies Designed for Real Life</h2>
             <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] mt-[53.5px] border-t border-[#9abd97] pt-[26px]">You don&apos;t need perfection—you need consistency.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">Our approach focuses on building sustainable habits that fit into your busy life:</h3>
@@ -139,7 +139,7 @@ export default function WeightManagement() {
             </ul>
           </div>
 
-          <div className="bg-white p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col md:col-span-2">
+          <div className="bg-white p-[40px_30px] sm:p-[60px_50px] lg:p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col md:col-span-2">
             <h2 className="text-[2rem] text-[#9abd97] mb-[30px] font-bold">Supplement Support With Purpose</h2>
             <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] border-t border-[#9abd97] pt-[26px]">When paired with the right habits, supplements can help accelerate progress and support overall wellness.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">We thoughtfully incorporate tools that support the work you&apos;re already doing:</h3>
