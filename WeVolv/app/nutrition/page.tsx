@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import IframeModal from "@/components/IframeModal";
 
 // Flip Card Component
 interface FlipCardProps {
@@ -117,6 +117,8 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
 }
 
 export default function Nutrition() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const cardsData = [
     {
       id: 1,
@@ -350,12 +352,12 @@ export default function Nutrition() {
             </h2>
             
             <div className="flex flex-col gap-4 max-w-[320px]">
-              <a
-                href="mailto:christy@wevolv.us"
+              <button
+                onClick={() => setModalOpen(true)}
                 className="bg-black text-white px-4 py-4 rounded-full border-none font-semibold cursor-pointer w-full text-[0.9rem] hover:bg-gray-800 transition-colors text-center"
               >
                 Start your evolution today
-              </a>
+              </button>
             </div>
 
             <p className="mt-5 text-[0.65rem] opacity-60 leading-snug">
@@ -365,6 +367,13 @@ export default function Nutrition() {
         </section>
 
       </div>
+
+      <IframeModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        src="https://portal.wevolvlife.com/web-lead"
+        title="Start Your Evolution"
+      />
     </div>
   );
 }

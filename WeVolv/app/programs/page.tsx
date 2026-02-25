@@ -20,12 +20,12 @@ export default function Programs() {
     </header>
 
       {/* Content Section */}
-      <main className="w-full max-w-[95vw] mx-auto px-5 pt-6 pb-10">
+      <main className="w-full md:max-w-[98vw] md:mx-auto px-2 md:px-5 pt-6 pb-10">
         
         {/* Weight Management Card (Reversed) */}
-        <div className="bg-[#f5f6f8] shadow-sm rounded-md mb-8 p-4">
-          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row-reverse p-5 md:p-8 gap-6 md:gap-8">
-            <div className="flex-1 relative h-[240px] md:h-[280px] rounded-xl overflow-hidden shadow-inner">
+        <div className="mb-8">
+          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row-reverse py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
+            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs 1.jpg" 
                 alt="Programs" 
@@ -33,8 +33,8 @@ export default function Programs() {
                 className="object-cover"
               />
             </div>
-            <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">Why inside-out coaching?</h3>
+            <div className="flex-[1.2] flex flex-col justify-center items-center text-center pt-3 pb-6 px-4 md:py-3 md:px-0">
+              <h3 className="serif-text text-[1.5rem] mb-8 text-[#222] leading-tight">Why inside-out coaching?</h3>
               <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-4">
                 Many coaching approaches focus on changing what you do. That matters—but lasting change begins with understanding why you do it. When beliefs, emotions, and identity are ignored, new habits struggle to stick.
               </p>
@@ -46,9 +46,9 @@ export default function Programs() {
         </div>
 
         {/* Fitness Card */}
-        <div className="bg-[#f5f6f8] shadow-sm rounded-md mb-8 p-4">
-          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row md:items-center p-5 md:p-8 gap-6 md:gap-8">
-            <div className="flex-1 relative h-[240px] md:h-[280px] rounded-xl overflow-hidden shadow-inner">
+        <div className="mb-8">
+          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row md:items-center py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
+            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs Image 2.jpg" 
                 alt="Programs training" 
@@ -56,8 +56,8 @@ export default function Programs() {
                 className="object-cover"
               />
             </div>
-            <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">Collaborative Process</h3>
+            <div className="flex-[1.2] flex flex-col justify-center items-center text-center pt-3 pb-6 px-4 md:py-3 md:px-0">
+              <h3 className="serif-text text-[1.5rem] mb-8 text-[#222] leading-tight">Collaborative Process</h3>
               <p className="text-base font-semibold text-[#444] mb-4">We work together to:</p>
               <ul className="space-y-3 text-left max-w-[550px] mb-5">
                 <li className="text-base font-normal text-[#666] leading-relaxed">
@@ -78,9 +78,9 @@ export default function Programs() {
         </div>
 
         {/* Nutrition Card (Reversed) */}
-        <div className="bg-[#f5f6f8] shadow-sm rounded-md mb-8 p-4">
-          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row-reverse p-5 md:p-8 gap-6 md:gap-8">
-            <div className="flex-1 relative h-[240px] md:h-[280px] rounded-xl overflow-hidden shadow-inner">
+        <div className="mb-8">
+          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row-reverse py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
+            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs 3.jpeg" 
                 alt="Programs nutrition" 
@@ -88,8 +88,8 @@ export default function Programs() {
                 className="object-cover"
               />
             </div>
-            <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">Who is this for?</h3>
+            <div className="flex-[1.2] flex flex-col justify-center items-center text-center pt-3 pb-6 px-4 md:py-3 md:px-0">
+              <h3 className="serif-text text-[1.5rem] mb-8 text-[#222] leading-tight">Who is this for?</h3>
               <p className="text-base font-normal text-[#666] max-w-[550px] leading-relaxed mb-4">
                 Inside-Out Coaching is ideal for anyone who:
               </p>
@@ -118,18 +118,18 @@ export default function Programs() {
         </div>
 
         {/* Fourth Card */}
-        <div className="bg-[#f5f6f8] shadow-sm rounded-md mb-8 p-4">
-          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row p-5 md:p-8 gap-6 md:gap-8">
-            <div className="flex-1 relative h-[240px] md:h-[280px] rounded-xl overflow-hidden shadow-inner">
+        <div className="mb-8">
+          <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
+            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
               <Image 
-                src="/images/Photos by Placement/Programs Page/Programs 4.jpg" 
-                alt="Programs wellness" 
+                src="/images/Photos by Placement/Programs Page/Programs 4.jpg"
+                alt="Programs wellness"
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-3">
-              <h3 className="serif-text text-[1.5rem] mb-5 text-[#222] leading-tight">What you can expect</h3>
+            <div className="flex-[1.2] flex flex-col justify-center items-center text-center pt-3 pb-6 px-4 md:py-3 md:px-0">
+              <h3 className="serif-text text-[1.5rem] mb-8 text-[#222] leading-tight">What you can expect</h3>
               <div className="w-full flex justify-center">
                 <ul className="space-y-3 text-left max-w-[550px] list-none">
                   <li className="text-base font-normal text-[#666] leading-relaxed">
@@ -153,7 +153,7 @@ export default function Programs() {
     </main>
 
       {/* Bottom CTA */}
-      <div className="w-full max-w-[98vw] mx-auto px-5 pb-[100px]">
+      <div className="w-full md:max-w-[98vw] md:mx-auto px-2 md:px-5 pb-[100px]">
         <div className="bg-white rounded-[20px] p-12 md:p-16 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center pt-8">
           <h3 className="text-[1.5rem] font-semibold mb-8 text-[#333] mt-4">
             This is your moment to choose growth. To choose strength. To choose yourself.

@@ -66,27 +66,33 @@ export default function Contact() {
         .contact-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 20px;
             margin-top: 20px;
             text-align: left;
             flex-wrap: wrap;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            padding: 40px;
+            padding: 0;
         }
 
         .location-card {
             flex: 0 0 auto;
             min-width: 180px;
             max-width: 240px;
+            min-height: 280px;
+            background-color: #faf8f5;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .contact-details {
             flex: 0 0 auto;
             min-width: 250px;
             max-width: 310px;
-            margin-left: 100px;
-            margin-right: 100px;
+            min-height: 320px;
+            background-color: #faf8f5;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .contact-note {
@@ -157,7 +163,7 @@ export default function Contact() {
         }
 
         .contact-details h5 {
-            margin-bottom: 12px;
+            margin-bottom: 5px;
         }
 
         .contact-details p {
@@ -274,9 +280,12 @@ export default function Contact() {
             </div>
 
             <div className="contact-details">
-              <h5><strong>Appointment Hours</strong></h5>
+              <h5><strong>Customer Service Hours</strong></h5>
+              <p>Monday - Friday 9am - 6pm (PST)</p>
+              
+              <h5 style={{marginTop: '30px'}}><strong>Appointment Hours</strong></h5>
               <p>Monday - Friday 9:30am - 1pm (PST)</p>
-              <p>Email: <a href="mailto:connect@wevolv.us">connect@wevolv.us</a></p>
+              <p style={{marginTop: '35px'}}>Email: <a href="mailto:connect@wevolv.us">connect@wevolv.us</a></p>
               <p>Call/Text: <a href="tel:+17025278520">(702) 527-8520</a></p>
               <p>Schedule a Call <a href="https://calendly.com/wevolvlife/slink" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
             </div>

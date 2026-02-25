@@ -53,8 +53,8 @@ export default function WeightManagement() {
             </div>
           </Link>
 
-          {/* Card 3 - Dissolvable Strips */}
-          <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+          {/* Card 3 - Dissolvable Strips (hidden, bring back later) */}
+          {/* <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
             <div className="absolute w-full h-[559px] left-0 top-[-374px]">
               <Image 
                 src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
@@ -68,7 +68,7 @@ export default function WeightManagement() {
             <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
               <h2 className="text-[2rem] text-white font-bold">Oral Dissolvable Strips</h2>
             </div>
-          </Link>
+          </Link> */}
         </div>
     </section>
 

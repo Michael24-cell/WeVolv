@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import IframeModal from "@/components/IframeModal";
+
 export default function MembershipDescriptions() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="bg-[#f4e6df] min-h-screen">
       {/* Content Section */}
@@ -48,7 +55,24 @@ export default function MembershipDescriptions() {
           </section>
 
         </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center mt-12">
+          <button
+            className="btn-custom btn-dark"
+            onClick={() => setModalOpen(true)}
+          >
+            Schedule Call
+          </button>
+        </div>
       </main>
+
+      <IframeModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        src="https://portal.wevolvlife.com/web-lead"
+        title="Schedule a Call"
+      />
     </div>
   );
 }

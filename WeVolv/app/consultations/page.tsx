@@ -31,11 +31,11 @@ export default function Consultations() {
     </header>
 
       {/* Content Section */}
-      <main className="w-full max-w-[98vw] mx-auto px-5 pt-32 pb-10">
+      <main className="w-full md:max-w-[98vw] md:mx-auto px-2 md:px-5 pt-32 pb-10">
         
         {/* Weight Management Card */}
         <Link href="/weight-management" className="block">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
+          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-2 px-0 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
             <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 1.jpg" 
@@ -45,7 +45,7 @@ export default function Consultations() {
                 className="object-cover hover:scale-105 transition-transform duration-2000"
               />
             </div>
-            <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-4 px-10">
+            <div className="flex-[1.2] flex flex-col justify-center items-center text-center pt-4 pb-8 px-4 md:py-4 md:px-10">
               <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Weight Management</h2>
               <h3 className="text-[1.5rem] mb-3 text-[#333333] leading-tight font-normal tracking-[0.02em]">
                 Personalized natural wellness coaching to help you create a balanced, vibrant life.
@@ -60,7 +60,7 @@ export default function Consultations() {
 
         {/* Fitness Card (Reversed) */}
         <Link href="/fitness" className="block pt-4 pb-4">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
+          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] py-2 px-0 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
             <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
@@ -69,7 +69,7 @@ export default function Consultations() {
                 className="object-cover hover:scale-105 transition-transform duration-2000"
               />
             </div>
-            <div className="flex-1 flex flex-col justify-center items-center text-center py-4 px-10">
+            <div className="flex-1 flex flex-col justify-center items-center text-center pt-4 pb-8 px-4 md:py-4 md:px-10">
               <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Fitness</h2>
               <h3 className="text-[1.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
                 Targeted solutions to support whole-body performance and boost vitality.
@@ -80,7 +80,7 @@ export default function Consultations() {
 
         {/* Nutrition Card */}
         <Link href="/nutrition" className="block pb-4">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-4 px-8 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
+          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-2 px-0 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
             <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Consultations Page/Consult 3.jpg" 
@@ -89,7 +89,7 @@ export default function Consultations() {
                 className="object-cover hover:scale-105 transition-transform duration-2000"
               />
             </div>
-            <div className="flex-[1.2] flex flex-col justify-center items-center text-center py-4 px-10">
+            <div className="flex-[1.2] flex flex-col justify-center items-center text-center pt-4 pb-8 px-4 md:py-4 md:px-10">
               <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Nutrition</h2>
               <h3 className="text-[1.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
                 Science-backed products and plans that help you nourish a healthy life.
@@ -101,7 +101,7 @@ export default function Consultations() {
     </main>
 
       {/* Bottom CTA */}
-      <div className="w-full max-w-[98vw] mx-auto px-5 pb-[100px]">
+      <div className="w-full md:max-w-[98vw] md:mx-auto px-2 md:px-5 pb-[100px]">
         <div className="bg-white rounded-[20px] p-12 md:p-16 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center pt-8">
           <h3 className="text-[1.5rem] font-semibold mb-8 text-[#333] mt-4">
             This is your moment to choose growth. To choose strength. To choose yourself.
