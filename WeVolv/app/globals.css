@@ -12,7 +12,7 @@ html {
   --text-light: #f4f8f4;
   --text-muted: #d1dcd3;
   --accent-green: #9abd97;
-  --footer-bg: #f4f4f4;
+  --footer-bg: #ffffff;
   --footer-text: #2c2c2c;
   
   /* Typography */
@@ -335,13 +335,9 @@ h5 {
 
 /* Consultation Cards */
 .consultation-card {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(31, 42, 68, 0.03);
+  border: 1px solid rgba(31, 42, 68, 0.05);
   border-radius: 20px;
-}
-
-.consultation-card:hover {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 /* Hero Image Section */

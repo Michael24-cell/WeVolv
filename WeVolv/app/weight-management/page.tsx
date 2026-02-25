@@ -117,7 +117,7 @@ export default function WeightManagement() {
 
           <div className="bg-white p-[40px_30px] sm:p-[60px_50px] lg:p-[73px_63px] border border-[#dcdcdc] rounded-[12px] shadow-md text-left flex flex-col h-full">
             <h2 className="text-[2rem] text-[#9abd97] mb-[30px] font-bold">Strategies Designed for Real Life</h2>
-            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] mt-[53.5px] border-t border-[#9abd97] pt-[26px]">You don&apos;t need perfection—you need consistency.</h5>
+            <h5 className="text-[1.125rem] text-[#111] mb-[35px] font-bold leading-[1.5] md:mt-[53.5px] border-t border-[#9abd97] pt-[26px]">You don&apos;t need perfection—you need consistency.</h5>
             <h3 className="text-[1.5rem] text-[#555] mb-8 leading-relaxed">Our approach focuses on building sustainable habits that fit into your busy life:</h3>
             <ul className="mb-8">
               <li className="flex items-start gap-3 text-[1.5rem] text-[#444] mb-[26px]">

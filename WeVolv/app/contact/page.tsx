@@ -66,37 +66,47 @@ export default function Contact() {
         .contact-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             margin-top: 20px;
             text-align: left;
             flex-wrap: wrap;
+            background-color: #fff;
+            border-radius: 8px;
             padding: 0;
+            align-items: stretch;
+            min-height: 500px;
         }
 
         .location-card {
-            flex: 0 0 auto;
+            flex: 1;
             min-width: 180px;
-            max-width: 240px;
-            min-height: 280px;
-            background-color: #faf8f5;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background-color: #f5f5f5;
+            padding: 50px 40px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 0 15px rgba(31, 42, 68, 0.03);
+            border: 1px solid rgba(31, 42, 68, 0.05);
         }
 
         .contact-details {
-            flex: 0 0 auto;
+            flex: 1;
             min-width: 250px;
-            max-width: 310px;
-            min-height: 320px;
-            background-color: #faf8f5;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-left: 0;
+            margin-right: 0;
+            background-color: #f5f5f5;
+            padding: 50px 40px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 0 15px rgba(31, 42, 68, 0.03);
+            border: 1px solid rgba(31, 42, 68, 0.05);
         }
 
         .contact-note {
-            margin-top: 30px;
+            margin-top: 50px;
             font-size: 1.1rem;
             color: #333;
             line-height: 1.6;
@@ -259,6 +269,11 @@ export default function Contact() {
             .form-wrapper { padding: 20px; }
             .header-section { padding: 30px 20px; }
             .form-container { padding: 30px 20px; }
+            .location-card,
+            .contact-details { flex: 1 1 100%; width: 100%; }
+            .contact-details { order: 1; }
+            .location-card-summerlin { order: 2; }
+            .location-card-southwest { order: 3; }
         }
       `}</style>
 
@@ -272,7 +287,7 @@ export default function Contact() {
           </h5>
 
           <div className="contact-container">
-            <div className="location-card">
+            <div className="location-card location-card-summerlin">
               <h4>WeVolv Wellness - Summerlin</h4>
               <p>9440 W. Sahara Avenue</p>
               <p>Suite 245</p>
@@ -280,7 +295,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-details">
-              <h5><strong>Customer Service Hours</strong></h5>
+              <h5 style={{marginTop: '0'}}><strong>Customer Service Hours</strong></h5>
               <p>Monday - Friday 9am - 6pm (PST)</p>
               
               <h5 style={{marginTop: '30px'}}><strong>Appointment Hours</strong></h5>
@@ -290,7 +305,7 @@ export default function Contact() {
               <p>Schedule a Call <a href="https://calendly.com/wevolvlife/slink" target="_blank" rel="noopener noreferrer" style={{fontWeight: 'bold'}}>here</a></p>
             </div>
 
-            <div className="location-card">
+            <div className="location-card location-card-southwest">
               <h4>WeVolv Wellness - Southwest</h4>
               <p>6675 S. Tenaya Way</p>
               <p>Suite 200</p>

@@ -32,11 +32,18 @@ function FlipCard({ image, imageAlt, title, content, imagePosition = "center", h
     }
   };
 
+  const handleClick = () => {
+    if (!window.matchMedia('(hover: hover)').matches) {
+      setIsFlipped(prev => !prev);
+    }
+  };
+
   return (
     <div
       className={`flip-card-container ${height} group`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <div
         className={`flip-card-inner relative w-full h-full ${isFlipped ? 'flipping' : ''}`}
@@ -257,7 +264,8 @@ export default function About() {
         </div>
 
         {/* Flip Cards Grid - Bento Box Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <p className="md:hidden text-center text-sm text-[#999] -mb-7">Tap to Flip</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Card 1 - Top Left */}
           <FlipCard
             key={cardsData[0].id}
@@ -279,12 +287,12 @@ export default function About() {
             title={cardsData[1].title}
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
-            height="h-[475px] sm:h-[525px]"
+            height="h-[575px] sm:h-[525px]"
             verticalAlign="start"
           />
           
           {/* Left Column - Cards 3 and 5 Stacked */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-5">
             {/* Card 3 - Middle Left Top */}
             <FlipCard
               key={cardsData[2].id}
@@ -293,7 +301,7 @@ export default function About() {
               title={cardsData[2].title}
               content={cardsData[2].content}
               imagePosition={cardsData[2].imagePosition}
-              height="h-[370px] sm:h-[410px]"
+              height="h-[470px] sm:h-[410px]"
               compact={true}
             />
             
