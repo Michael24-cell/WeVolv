@@ -20,11 +20,11 @@ export default function Consultations() {
         </div>
 
         <div className="max-w-[900px] mx-auto px-5 pb-16 flex flex-col items-center text-center">
-          <h3 className="text-[1.5rem] font-semibold leading-tight mb-10 text-black whitespace-nowrap">
+          <h3 className="text-[1.1rem] md:text-[1.5rem] font-semibold leading-tight mb-10 text-black md:whitespace-nowrap">
             Better health starts with insight.
           </h3>
           <div className="w-[80px] h-[2px] bg-[#556b7f] mb-10"></div>
-          <h2 className="text-[2.5rem] font-semibold leading-tight text-black">
+          <h2 className="text-[1.3rem] md:text-[2.5rem] font-semibold leading-tight text-black">
             A whole person approach to nutrition that integrates science, lifestyle and self-care to optimize how you feel and live.
           </h2>
         </div>

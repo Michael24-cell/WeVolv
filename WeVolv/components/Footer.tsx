@@ -133,8 +133,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-base md:text-xs uppercase tracking-widest font-medium">
-                <Link href="/resources" className="hover:opacity-70 transition-opacity">
-                  Resources
+                <Link href="/blog" className="hover:opacity-70 transition-opacity">
+                  Blog
                 </Link>
               </li>
               <li className="text-base md:text-xs uppercase tracking-widest font-medium">

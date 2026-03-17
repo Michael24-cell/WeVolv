@@ -26,7 +26,7 @@ export default function Navigation() {
 
   // Resources dropdown items
   const resourcesItems = [
-    { href: "/resources", label: "Blog" },
+    { href: "/blog", label: "Blog" },
     { href: "/guides", label: "Downloadable Guides" },
     { href: "/faqs", label: "FAQs" },
   ];
