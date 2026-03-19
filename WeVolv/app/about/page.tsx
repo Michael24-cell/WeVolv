@@ -274,7 +274,7 @@ export default function About() {
             title={cardsData[0].title}
             content={cardsData[0].content}
             imagePosition={cardsData[0].imagePosition}
-            height="h-[475px] sm:h-[525px]"
+            height="h-[560px] sm:h-[525px]"
             verticalAlign="start"
             topPadding="pt-[48px] sm:pt-[56px]"
           />
@@ -287,7 +287,7 @@ export default function About() {
             title={cardsData[1].title}
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
-            height="h-[575px] sm:h-[525px]"
+            height="h-[660px] sm:h-[525px]"
             verticalAlign="start"
           />
           
@@ -301,7 +301,7 @@ export default function About() {
               title={cardsData[2].title}
               content={cardsData[2].content}
               imagePosition={cardsData[2].imagePosition}
-              height="h-[470px] sm:h-[410px]"
+              height="h-[555px] sm:h-[410px]"
               compact={true}
             />
             
