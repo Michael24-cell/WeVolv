@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import ConditionalFooter from "@/components/ConditionalFooter";
 import { Montserrat, Inter, Playfair_Display } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <Navigation />
         <main className="flex-grow">{children}</main>
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );

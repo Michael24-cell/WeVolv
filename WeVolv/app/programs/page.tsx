@@ -8,7 +8,7 @@ export default function Programs() {
       <header className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden pt-12 pb-8 bg-[#f4e6df]">
         {/* Background Layer - Constrained Width */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-full max-w-[95vw] h-full opacity-90">
+          <div className="relative w-full max-w-[90vw] md:max-w-[95vw] h-full opacity-90">
             <Image 
               src="/images/Photos by Placement/Programs Page/Programs Hero 1.jpg" 
               alt="Programs hero" 
@@ -25,7 +25,7 @@ export default function Programs() {
         {/* Weight Management Card (Reversed) */}
         <div className="mb-8">
           <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row-reverse py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
-            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
+            <div className="w-full relative aspect-[4/3] md:flex-1 md:rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs 1.jpg" 
                 alt="Programs" 
@@ -48,7 +48,7 @@ export default function Programs() {
         {/* Fitness Card */}
         <div className="mb-8">
           <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row md:items-center py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
-            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
+            <div className="w-full relative aspect-[4/3] md:flex-1 md:rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs Image 2.jpg" 
                 alt="Programs training" 
@@ -80,7 +80,7 @@ export default function Programs() {
         {/* Nutrition Card (Reversed) */}
         <div className="mb-8">
           <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row-reverse py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
-            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
+            <div className="w-full relative aspect-[4/3] md:flex-1 md:rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs 3.jpeg" 
                 alt="Programs nutrition" 
@@ -120,7 +120,7 @@ export default function Programs() {
         {/* Fourth Card */}
         <div className="mb-8">
           <section className="consultation-card bg-white rounded-md overflow-hidden flex flex-col md:flex-row py-2 px-0 md:p-8 gap-6 md:gap-8 min-h-[400px] md:min-h-[500px]">
-            <div className="w-full relative aspect-[4/3] md:flex-1 rounded-xl overflow-hidden shadow-inner">
+            <div className="w-full relative aspect-[4/3] md:flex-1 md:rounded-xl overflow-hidden shadow-inner">
               <Image 
                 src="/images/Photos by Placement/Programs Page/Programs 4.jpg"
                 alt="Programs wellness"
@@ -156,7 +156,9 @@ export default function Programs() {
       <div className="w-full md:max-w-[98vw] md:mx-auto px-2 md:px-5 pb-[100px]">
         <div className="bg-white rounded-[20px] p-12 md:p-16 shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center pt-8">
           <h3 className="text-[1.5rem] font-semibold mb-8 text-[#333] mt-4">
-            This is your moment to choose growth. To choose strength. To choose yourself.
+            This is your moment to choose growth.{" "}
+            <br className="md:hidden" />To choose strength.{" "}
+            <br className="md:hidden" />To choose yourself.
           </h3>
           <h4 className="text-[1.25rem] font-normal text-[#555] mb-16 max-w-[1150px] mx-auto px-0 sm:px-16 lg:px-32">
             Whether your goal is weight management, more energy, or renewed confidence, Wevolv Wellness is here to walk with you—every step, every win, every evolution.

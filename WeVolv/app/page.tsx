@@ -86,7 +86,8 @@ export default function Home() {
             <h3 style={{ color: '#2D2D2D' }}>Where modern science meets sustainable well-being.</h3>
             
             <Link href="/consultations" className="btn-custom btn-outline" style={{ marginTop: '30px' }}>
-              Feel the difference
+              <span className="md:hidden">Feel the difference</span>
+              <span className="hidden md:inline">Are you ready to feel the difference?</span>
             </Link>
           </div>
         </div>

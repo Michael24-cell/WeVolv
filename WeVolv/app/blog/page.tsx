@@ -11,6 +11,7 @@ export default function Blog() {
         src="https://portal.wevolvlife.com/blog"
         title="Blog"
         className="w-full h-full border-0"
+        style={{ willChange: 'transform', transform: 'translateZ(0)' }}
         allowFullScreen
       />
     </div>

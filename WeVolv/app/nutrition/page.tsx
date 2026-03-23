@@ -284,7 +284,7 @@ export default function Nutrition() {
             title={cardsData[0].title}
             content={cardsData[0].content}
             imagePosition={cardsData[0].imagePosition}
-            height="h-[710px] sm:h-[570px]"
+            height="h-[790px] sm:h-[570px]"
             verticalAlign="start"
             topPadding="pt-[48px] sm:pt-[56px]"
           />
@@ -297,7 +297,7 @@ export default function Nutrition() {
             title={cardsData[1].title}
             content={cardsData[1].content}
             imagePosition={cardsData[1].imagePosition}
-            height="h-[640px] sm:h-[570px]"
+            height="h-[790px] sm:h-[570px]"
           />
           
           {/* Left Column - Cards 3 and 5 Stacked */}
@@ -310,7 +310,7 @@ export default function Nutrition() {
               title={cardsData[2].title}
               content={cardsData[2].content}
               imagePosition={cardsData[2].imagePosition}
-              height="h-[500px] sm:h-[455px]"
+              height="h-[580px] sm:h-[455px]"
               compact={true}
             />
             
@@ -337,7 +337,7 @@ export default function Nutrition() {
             title={cardsData[3].title}
             content={cardsData[3].content}
             imagePosition={cardsData[3].imagePosition}
-            height="h-[822px] sm:h-[902px]"
+            height="h-[700px] sm:h-[902px]"
             verticalAlign="start"
             topPadding="pt-[63px] sm:pt-[71px]"
           />

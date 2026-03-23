@@ -5,6 +5,7 @@ export default function Portal() {
         src="https://portal.wevolvlife.com"
         title="WeVolv Portal"
         className="w-full h-full border-0"
+        style={{ willChange: 'transform', transform: 'translateZ(0)' }}
         allowFullScreen
       />
     </div>
