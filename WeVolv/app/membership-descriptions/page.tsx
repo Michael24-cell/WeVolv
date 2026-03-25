@@ -13,7 +13,7 @@ export default function MembershipDescriptions() {
         <div className="bg-white rounded-2xl overflow-hidden">
 
           {/* 1:1 Coaching Online */}
-          <section className="pl-[89px] pr-[114px] py-[66px]">
+          <section id="coaching-online" className="pl-[89px] pr-[114px] py-[66px] scroll-mt-28">
             <div className="w-fit mb-3">
               <h2 className="text-[1.5rem] leading-[1.3] font-semibold text-[#2D2D2D]">1:1 Coaching Online</h2>
               <div className="h-px bg-[#eeeeee] w-full mt-2"></div>
@@ -27,7 +27,7 @@ export default function MembershipDescriptions() {
           </section>
 
           {/* 1:1 Coaching In-Person */}
-          <section className="pl-[89px] pr-[114px] py-[66px]">
+          <section id="coaching-in-person" className="pl-[89px] pr-[114px] py-[66px] scroll-mt-28">
             <div className="w-fit mb-3">
               <h2 className="text-[1.5rem] leading-[1.3] font-semibold text-[#2D2D2D]">1:1 Coaching In-Person</h2>
               <div className="h-px bg-[#eeeeee] w-full mt-2"></div>
@@ -41,7 +41,7 @@ export default function MembershipDescriptions() {
           </section>
 
           {/* Group Coaching */}
-          <section className="pl-[89px] pr-[114px] py-[66px]">
+          <section id="group-coaching" className="pl-[89px] pr-[114px] py-[66px] scroll-mt-28">
             <div className="w-fit mb-3">
               <h2 className="text-[1.5rem] leading-[1.3] font-semibold text-[#2D2D2D]">Group Coaching</h2>
               <div className="h-px bg-[#eeeeee] w-full mt-2"></div>
