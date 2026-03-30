@@ -1,11 +1,10 @@
-"use client";
-
-import { useState } from "react";
-import IframeModal from "@/components/IframeModal";
+import { notFound } from "next/navigation";
 
 export default function MembershipDescriptions() {
-  const [modalOpen, setModalOpen] = useState(false);
+  notFound();
+}
 
+function _MembershipDescriptions() {
   return (
     <div className="bg-[#f4e6df] min-h-screen">
       {/* Content Section */}

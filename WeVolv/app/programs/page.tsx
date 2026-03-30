@@ -164,12 +164,14 @@ export default function Programs() {
             Whether your goal is weight management, more energy, or renewed confidence, Wevolv Wellness is here to walk with you—every step, every win, every evolution.
           </h4>
           
-          <Link 
-            href="/contact"
+          <a 
+            href="https://portal.wevolvlife.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#5B6D5B] border border-[#5B6D5B] text-white px-[56px] py-4 font-bold no-underline uppercase text-[0.8rem] tracking-wide rounded transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.1)] hover:bg-[#455245] hover:border-[#455245] mb-6 text-center"
           >
             Start Your Wevolv Journey
-          </Link>
+          </a>
         </div>
       </div>
     </div>
