@@ -65,7 +65,7 @@ export default function IframeModal({ isOpen, onClose, src, title = "Schedule" }
           src={src}
           title={title}
           className="flex-1 w-full border-none"
-          allow="camera; microphone"
+          allow=""
         />
       </div>
     </div>
