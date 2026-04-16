@@ -65,7 +65,9 @@ export default function IframeModal({ isOpen, onClose, src, title = "Schedule" }
           src={src}
           title={title}
           className="flex-1 w-full border-none"
+          sandbox="allow-scripts allow-forms allow-same-origin"
           allow=""
+          allowFullScreen={false}
         />
       </div>
     </div>
