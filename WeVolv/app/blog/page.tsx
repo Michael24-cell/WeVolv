@@ -1,19 +1,7 @@
-import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Blog",
-};
+const REDIRECT_URL = "https://portal.wevolvlife.com/blog";
 
 export default function Blog() {
-  return (
-    <div className="w-full h-[calc(100vh-5rem)] lg:h-[calc(100vh-7rem)]">
-      <iframe
-        src="https://portal.wevolvlife.com/blog"
-        title="Blog"
-        className="w-full h-full border-0"
-        style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-        allowFullScreen
-      />
-    </div>
-  );
+  redirect(REDIRECT_URL);
 }

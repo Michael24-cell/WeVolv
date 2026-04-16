@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface IframeModalProps {
   isOpen: boolean;
@@ -10,9 +11,12 @@ interface IframeModalProps {
 }
 
 export default function IframeModal({ isOpen, onClose, src, title = "Schedule" }: IframeModalProps) {
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      setIframeLoaded(false);
     } else {
       document.body.style.overflow = "";
     }
@@ -60,14 +64,27 @@ export default function IframeModal({ isOpen, onClose, src, title = "Schedule" }
           </button>
         </div>
 
+        {/* Loading state */}
+        {!iframeLoaded && (
+          <div className="absolute inset-0 top-[57px] flex items-center justify-center bg-white z-10">
+            <Image
+              src="/icon.png"
+              alt="WeVolv"
+              width={56}
+              height={56}
+              className="animate-pulse opacity-70"
+            />
+          </div>
+        )}
+
         {/* iFrame */}
         <iframe
           src={src}
           title={title}
           className="flex-1 w-full border-none"
-          sandbox="allow-scripts allow-forms allow-same-origin"
+          sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox"
           allow=""
-          allowFullScreen={false}
+          onLoad={() => setIframeLoaded(true)}
         />
       </div>
     </div>

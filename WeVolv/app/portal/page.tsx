@@ -1,13 +1,7 @@
+import { redirect } from "next/navigation";
+
+const PORTAL_URL = "https://portal.wevolvlife.com";
+
 export default function Portal() {
-  return (
-    <div className="w-full h-[calc(100vh-5rem)] lg:h-[calc(100vh-7rem)]">
-      <iframe
-        src="https://portal.wevolvlife.com"
-        title="WeVolv Portal"
-        className="w-full h-full border-0"
-        style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-        allowFullScreen
-      />
-    </div>
-  );
+  redirect(PORTAL_URL);
 }
