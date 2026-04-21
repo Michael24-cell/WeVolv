@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import ConditionalFooter from "@/components/ConditionalFooter";
@@ -28,14 +29,18 @@ export const metadata: Metadata = {
   description: "Your partner in health and wellness transformation. Expert consultations, weight management, fitness, and nutrition programs.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const nonce = headersList.get("x-nonce") ?? undefined;
+
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable} ${playfair.variable}`}>
       <head>
+        {nonce && <meta property="csp-nonce" content={nonce} />}
       </head>
       <body className="flex flex-col min-h-screen">
         <Navigation />

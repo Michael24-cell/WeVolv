@@ -92,22 +92,12 @@ export default function Footer() {
                   Fitness Programs
                 </Link>
               </li>
-              <li className="text-base md:text-xs uppercase tracking-widest font-medium">
-                <Link href="/lifewave" className="hover:opacity-70 transition-opacity">
-                  Lifewave Technology
-                </Link>
-              </li>
               {/* Oral Dissolvable Strips link hidden, bring back later */}
               {/* <li className="text-base md:text-xs uppercase tracking-widest font-medium">
                 <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                   Oral Dissolvable Strips
                 </Link>
               </li> */}
-              <li className="text-base md:text-xs uppercase tracking-widest font-medium">
-                <Link href="https://wevolv.herbalife.com/en-us/u" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                  Herbalife
-                </Link>
-              </li>
               <li className="text-base md:text-xs uppercase tracking-widest font-medium">
                 <Link href="/membership" className="hover:opacity-70 transition-opacity">
                   Membership

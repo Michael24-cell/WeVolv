@@ -17,41 +17,19 @@ export default function WeightManagement() {
           </div>
         </div>
 
-        <div className="w-full max-w-[750px] mx-auto flex flex-col gap-[2px] relative">
-          {/* Card 1 - Herbalife */}
-          <Link href="https://wevolv.herbalife.com/en-us/u" target="_blank" rel="noopener noreferrer" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
-            <div className="absolute w-full h-[559px] left-0 top-0">
-              <Image 
-                src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
-                alt="Herbalife" 
-                fill
-                sizes="(max-width: 768px) 100vw, 750px"
-                className="object-cover"
-                quality={75}
-                priority
-              />
-            </div>
-            <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h2 className="text-[2rem] text-white font-bold">Herbalife</h2>
-            </div>
-          </Link>
-
-          {/* Card 2 - Lifewave */}
-          <Link href="/lifewave" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
-            <div className="absolute w-full h-[559px] left-0 top-[-187px]">
-              <Image 
-                src="/images/Photos by Placement/Weight Management Page/WM 1.jpg" 
-                alt="Lifewave" 
-                fill
-                sizes="(max-width: 768px) 100vw, 750px"
-                className="object-cover"
-                quality={75}
-              />
-            </div>
-            <div className="absolute inset-0 bg-white/20 hover:bg-white/10 flex items-center p-[20px_40px] z-10 transition-colors duration-300">
-              <h2 className="text-[2rem] text-white font-bold">Lifewave</h2>
-            </div>
-          </Link>
+        <div className="w-full max-w-[750px] mx-auto relative">
+          <div className="relative h-[372px] rounded-[12px] overflow-hidden transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+            <Image
+              src="/images/Photos by Placement/Weight Management Page/WM 1.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 750px"
+              className="object-cover object-[center_25%]"
+              quality={75}
+              priority
+            />
+            <div className="absolute inset-0 bg-white/20 hover:bg-white/10 z-10 transition-colors duration-300" />
+          </div>
 
           {/* Card 3 - Dissolvable Strips (hidden, bring back later) */}
           {/* <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="relative h-[185px] rounded-[12px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
