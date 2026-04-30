@@ -58,26 +58,6 @@ export default function Consultations() {
           </section>
         </Link>
 
-        {/* Fitness Card (Reversed) */}
-        <Link href="/fitness" className="block pt-4 pb-4">
-          <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row-reverse min-h-[500px] md:min-h-[500px] py-2 px-0 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">
-            <div className="flex-[0.95] relative aspect-[4/3] rounded overflow-hidden shadow-inner">
-              <Image 
-                src="/images/Photos by Placement/Consultations Page/Consult 2.jpg" 
-                alt="Women running" 
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-2000"
-              />
-            </div>
-            <div className="flex-1 flex flex-col justify-center items-center text-center pt-4 pb-8 px-4 md:py-4 md:px-10">
-              <h2 className="serif-text text-[2.5rem] mb-6 text-[#222]">Fitness</h2>
-              <h3 className="text-[1.5rem] mb-4 text-[#333333] leading-tight font-normal tracking-[0.02em]">
-                Targeted solutions to support whole-body performance and boost vitality.
-              </h3>
-            </div>
-          </section>
-        </Link>
-
         {/* Nutrition Card */}
         <Link href="/nutrition" className="block pb-4">
           <section className="consultation-card bg-white/80 backdrop-blur-[10px] rounded mb-8 overflow-hidden flex flex-col md:flex-row min-h-[500px] md:min-h-[500px] py-2 px-0 md:py-6 md:px-12 gap-6 transition-all duration-2000 hover:shadow-sm hover:bg-white/90 hover:scale-[1.007] cursor-pointer shadow-sm border border-white/20">

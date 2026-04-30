@@ -87,11 +87,6 @@ export default function Footer() {
                   Weight Management
                 </Link>
               </li>
-              <li className="text-base md:text-xs uppercase tracking-widest font-medium">
-                <Link href="/fitness" className="hover:opacity-70 transition-opacity">
-                  Fitness Programs
-                </Link>
-              </li>
               {/* Oral Dissolvable Strips link hidden, bring back later */}
               {/* <li className="text-base md:text-xs uppercase tracking-widest font-medium">
                 <Link href="https://wevolvstore.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">

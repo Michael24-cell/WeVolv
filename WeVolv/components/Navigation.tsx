@@ -282,13 +282,6 @@ export default function Navigation() {
                         Weight Management
                       </Link>
                       <Link
-                        href="/fitness"
-                        className="block px-3 py-1.5 text-[11px] font-medium uppercase tracking-wider text-gray-600 hover:bg-gray-50 hover:text-black transition-colors"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Fitness
-                      </Link>
-                      <Link
                         href="/nutrition"
                         className="block px-3 py-1.5 text-[11px] font-medium uppercase tracking-wider text-gray-600 hover:bg-gray-50 hover:text-black transition-colors"
                         onClick={() => setIsOpen(false)}
