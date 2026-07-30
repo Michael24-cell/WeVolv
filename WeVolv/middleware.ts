@@ -1,5 +1,35 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// Toggle to take the site down without touching any page code.
+// Set to false (or delete this block) to restore the live site instantly.
+const MAINTENANCE_MODE = true;
+
+const MAINTENANCE_HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Site Unavailable</title>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
+    color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 24px;
+  }
+  p { font-size: 1.25rem; max-width: 32rem; }
+</style>
+</head>
+<body>
+  <p>This website is temporarily unavailable.</p>
+</body>
+</html>`;
+
 function buildCsp(nonce: string): string {
   return [
     "default-src 'self'",
@@ -20,7 +50,15 @@ function buildCsp(nonce: string): string {
 }
 
 export async function middleware(request: NextRequest) {
-
+  if (MAINTENANCE_MODE) {
+    return new NextResponse(MAINTENANCE_HTML, {
+      status: 503,
+      headers: {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
 
   // Generate a per-request nonce and thread it to the layout via request header
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
