@@ -1,7 +1,6 @@
 {
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "public": true,
   "env": {},
   "headers": [
     {
