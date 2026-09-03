@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Toggle to take the site down without touching any page code.
 // Set to false (or delete this block) to restore the live site instantly.
-const MAINTENANCE_MODE = false;
+const MAINTENANCE_MODE = true;
 
 const MAINTENANCE_HTML = `<!DOCTYPE html>
 <html lang="en">
